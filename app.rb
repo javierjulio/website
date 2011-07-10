@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'erb'
+require 'thin'
 
 set :public, File.dirname(__FILE__) + '/assets'
 
