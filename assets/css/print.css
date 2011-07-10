@@ -1,0 +1,39 @@
+/* reset to none any structural element that is floated */
+body, #container, #header, #primary, #secondary, #tertiary, #footer {
+	float: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: auto !important;
+}
+
+/* hide columns, nav, designated elements */
+#navigation, .hide, .print-hide {display: none !important;}
+
+/* remove any borders */
+body *, #container {border-width: 0;}
+
+/* add borders to header and footer for presentation */
+#header, #footer {border: solid 1px #000; border-width: 1px 0; padding: 0.5em;}
+
+/* add the full url for href's that start with a slash */
+#content a[href^="/"]:after, #highlight a[href^="/"]:after {
+	content: " (http://www.yoururl.com" attr(href) ") ";
+}
+#primary a:link:after, #primary a:visited:after, 
+#secondary a:link:after, #secondary a:visited:after, 
+#tertiary a:link:after, #tertiary a:visited:after {
+   content: " (" attr(href) ") ";
+}
+
+/* no need to differentiate links from text, remove formatting */
+a, a:link, a:visited {background-color: inherit; color: inherit; text-decoration: underline;}
+
+/* add bottom border and bold for captions so its clearly visible */
+table caption {border-bottom: 1px solid #000;}
+table th {font-weight: bold;}
+
+/* set all columns to have some right side spacing and set an auto width */
+table, table tr th, table tr td {padding-right: 1.5em; width: auto;}
+
+/* simple catch-all so we have no colored items in print out */
+body * {background: none !important; color: #000 !important;}
