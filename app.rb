@@ -150,3 +150,51 @@ get '/resume.cfm' do
 	redirect to('/resume')
 end
 
+get '/recipes/pasta/farfalle_spring.cfm' do
+	redirect to('/recipes/farfalle-with-spring-onions')
+end
+
+get '/recipes/pasta/farfalle_tonno.cfm' do
+	redirect to('/recipes/farfalle-tonno')
+end
+
+get '/recipes/pasta/fusilli_mozzarella.cfm' do
+	redirect to('/recipes/fusilli-mozzarella')
+end
+
+get '/recipes/pasta/linguine_shrimp.cfm' do
+	redirect to('/recipes/tuscan-linguine-shrimp')
+end
+
+get '/recipes/pasta/linguine_tonno.cfm' do
+	redirect to('/recipes/linguine-con-tonno-e-olive')
+end
+
+get '/recipes/pasta/penne_tonno_mozzarella.cfm' do
+	redirect to('/recipes/penne-con-tonno-e-mozzarella')
+end
+
+get '/recipes/pasta/rigatoni_italiano.cfm' do
+	redirect to('/recipes/rigatoni-italiano')
+end
+
+get '/recipes/pasta/spaghetti_alla_puttanesca.cfm' do
+	redirect to('/recipes/spaghetti-alla-puttanesca')
+end
+
+get '/recipes/pasta/spaghetti_tonno.cfm' do
+	redirect to('/recipes/spaghetti-con-accinghe-e-tonno')
+end
+
+get '/recipes/pasta/tortellini_rosa.cfm' do
+	redirect to('/recipes/tortellini-rosa')
+end
+
+
+=begin
+get '/recipes/pasta/.cfm' do
+	redirect to('/recipes/')
+end
+=end
+
+
