@@ -2,8 +2,12 @@ require 'sinatra'
 require 'erb'
 require 'thin'
 
+# public folder is the assets folder
 set :public, File.dirname(__FILE__) + '/assets'
 
+# 
+# Main Website Routes
+# 
 
 get '/' do
 	@section = 'home'
@@ -122,9 +126,9 @@ end
 
 
 
-#
+#	RECIPES (redirects)
+# 
 # Redirect from old URLs to new ones
-#
 
 get '/index.cfm' do
 	redirect to('/')
@@ -190,9 +194,8 @@ get '/recipes/pasta/tortellini_rosa.cfm' do
 	redirect to('/recipes/tortellini-rosa')
 end
 
-
 =begin
-get '/recipes/pasta/.cfm' do
+get '/recipes/meat/.cfm' do
 	redirect to('/recipes/')
 end
 =end
