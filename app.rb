@@ -124,11 +124,84 @@ get '/recipes/tortellini-rosa' do
 	erb :'recipes/pasta/tortellini_rosa'
 end
 
+get '/recipes/bell-pepper-chicken' do
+	@section = 'recipes'
+	@title = 'Recipe for Bell Pepper Chicken'
+	@contentTitle = 'Bell Pepper Chicken'
+	
+	erb :'recipes/meat/bell_pepper_chicken'
+end
+
+get '/recipes/chicken-milanesas' do
+	@section = 'recipes'
+	@title = 'Recipe for Chicken Milanesas'
+	@contentTitle = 'Chicken Milanesas'
+	
+	erb :'recipes/meat/chicken_milanesas'
+end
+
+get '/recipes/chicken-romano' do
+	@section = 'recipes'
+	@title = 'Recipe for Chicken Romano'
+	@contentTitle = 'Chicken Romano'
+	
+	erb :'recipes/meat/chicken_romano'
+end
+
+get '/recipes/garlic-chicken' do
+	@section = 'recipes'
+	@title = 'Recipe for Garlic Chicken'
+	@contentTitle = 'Garlic Chicken'
+	
+	erb :'recipes/meat/garlic_chicken'
+end
+
+get '/recipes/italian-hamburgers' do
+	@section = 'recipes'
+	@title = 'Recipe for Italian Hamburgers aka Javi-burgers'
+	@contentTitle = 'Italian Hamburgers aka Javi-burgers'
+	
+	erb :'recipes/meat/hamburgers'
+end
+
+get '/recipes/marinated-steak' do
+	@section = 'recipes'
+	@title = 'Recipe for Marinated'
+	@contentTitle = 'Marinated Steak'
+	
+	erb :'recipes/meat/marinated_steak'
+end
+
+get '/recipes/steak-with-shallots-and-red-wine-vinegar' do
+	@section = 'recipes'
+	@title = 'Recipe for Steak with Shallots and Red Wine Vinegar'
+	@contentTitle = 'Steak with Shallots and Red Wine Vinegar'
+	
+	erb :'recipes/meat/steak_shallots_red_wine'
+end
+
+get '/recipes/ensaladilla' do
+	@section = 'recipes'
+	@title = 'Recipe for Ensaladilla'
+	@contentTitle = 'Ensaladilla'
+	
+	erb :'recipes/salads/ensaladilla'
+end
+
+get '/recipes/european-salad' do
+	@section = 'recipes'
+	@title = 'Recipe for European Salad'
+	@contentTitle = 'European Salad'
+	
+	erb :'recipes/salads/european_salad'
+end
 
 
+#
 #	RECIPES (redirects)
 # 
 # Redirect from old URLs to new ones
+#
 
 get '/index.cfm' do
 	redirect to('/')
@@ -194,10 +267,38 @@ get '/recipes/pasta/tortellini_rosa.cfm' do
 	redirect to('/recipes/tortellini-rosa')
 end
 
-=begin
-get '/recipes/meat/.cfm' do
-	redirect to('/recipes/')
+get '/recipes/meat/bell_pepper_chicken.cfm' do
+	redirect to('/recipes/bell-pepper-chicken')
 end
-=end
 
+get '/recipes/meat/chicken_milanesas.cfm' do
+	redirect to('/recipes/chicken-milanesas')
+end
 
+get '/recipes/meat/chicken_romano.cfm' do
+	redirect to('/recipes/chicken-romano')
+end
+
+get '/recipes/meat/garlic_chicken.cfm' do
+	redirect to('/recipes/garlic-chicken')
+end
+
+get '/recipes/meat/hamburgers.cfm' do
+	redirect to('/recipes/italian-hamburgers')
+end
+
+get '/recipes/meat/marinated_steak.cfm' do
+	redirect to('/recipes/marinated-steak')
+end
+
+get '/recipes/meat/sirloin_steak.cfm' do
+	redirect to('/recipes/steak-with-shallots-and-red-wine-vinegar')
+end
+
+get '/recipes/salads/ensaladilla.cfm' do
+	redirect to('/recipes/ensaladilla')
+end
+
+get '/recipes/salads/european_salad.cfm' do
+	redirect to('/recipes/european-salad')
+end
