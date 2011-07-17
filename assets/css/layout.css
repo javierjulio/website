@@ -240,7 +240,7 @@ h2 {border-bottom: 1px solid #ccc;}
 		box-shadow: 0 3px 5px rgba(0,0,0,.25);
 	}
 	#header .inner {
-		padding: 1em;
+		padding: 0.5em 1em;
 	}
 	#header img.figure {
 		display: none;
@@ -284,7 +284,7 @@ h2 {border-bottom: 1px solid #ccc;}
 	}
 	#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
 		display: block;
-		padding: 10px 12px;
+		padding: 10px 15px;
 		-webkit-transition: none;
 		-moz-transition: none;
 		-o-transition: none;
