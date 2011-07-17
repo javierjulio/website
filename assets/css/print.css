@@ -7,22 +7,20 @@ body, #container, #header, #primary, #secondary, #tertiary, #footer {
 }
 
 /* hide columns, nav, designated elements */
-#navigation, .hide, .print-hide {display: none !important;}
+#header .figure, #nav, .elsewhere, #footer, .hide, .print-hide {display: none !important;}
 
 /* remove any borders */
 body *, #container {border-width: 0;}
 
-/* add borders to header and footer for presentation */
-#header, #footer {border: solid 1px #000; border-width: 1px 0; padding: 0.5em;}
-
-/* add the full url for href's that start with a slash */
-#content a[href^="/"]:after, #highlight a[href^="/"]:after {
-	content: " (http://www.yoururl.com" attr(href) ") ";
+#header {
+	border-bottom: solid 1px #000;
+	padding: 0.5em;
 }
-#primary a:link:after, #primary a:visited:after, 
-#secondary a:link:after, #secondary a:visited:after, 
-#tertiary a:link:after, #tertiary a:visited:after {
-   content: " (" attr(href) ") ";
+
+#header .title {
+	display: block;
+	font-size: 28px;
+	font-weight: bold;
 }
 
 /* no need to differentiate links from text, remove formatting */
