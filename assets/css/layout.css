@@ -220,81 +220,81 @@ h2 {border-bottom: 1px solid #ccc;}
 
 
 /* tested on iPhone 4 only */
-@media only screen and (max-device-width: 480px) {
-
-
-#container {
-	font-size: 1.3em;
-	text-align: left;
-	margin: 0;
-	width: auto;
-}
-#header {
-	background: url(../images/bg-body.png) repeat #f4f4f4;
-	float: none;
-	margin: 0;
-	padding: 1.5em 0 .8em 0;
-	position: static;
-	text-align: left;
-	width: auto;
-	-webkit-box-shadow: 0 3px 5px rgba(0,0,0,.25);
-	-moz-box-shadow: 0 3px 5px rgba(0,0,0,.25);
-	box-shadow: 0 3px 5px rgba(0,0,0,.25);
-}
-#header img.figure {
-	display: none;
-}
-#header .elsewhere {
-	list-style: none;
-	margin: 0 auto;
-	padding: 0;
-	text-align: center;
-}
-#header .elsewhere li {
-	display: inline;
-	list-style: none;
-	margin: 0 8px;
-	padding: 0;
-}
-#nav {
-	margin: 0;
-	padding: 0 0 1.5em 0;
-}
-#nav ul, #nav li {
-	text-align: center;
-}
-#nav ul {
-	margin: 0;
-	padding: 0;
-}
-#nav ul li {
-	display: inline;
-	padding: 0 0 0 0;
-}
-#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
-	display: inline;
-	padding: 0 6px;
-	-webkit-transition: none;
-	-moz-transition: none;
-	-o-transition: none;
-	transition: none;
-	text-transform: uppercase;
-}
-#content {
-	border: 0;
-	margin: 0;
-	padding: 1em;
-	width: auto;
-}
-#content .inner {
-	padding: 0;
-}
-#footer {
-	font-size: 10px;
-	margin: 0;
-	padding: 1.5em 1em 2em 1em;
-	width: auto;
-}
-
-	
+@media only screen and (max-device-width: 480px) 
+{
+	#container {
+		font-size: 1.3em;
+		text-align: left;
+		margin: 0;
+		width: auto;
+	}
+	#header {
+		background: url(../images/bg-body.png) repeat #f4f4f4;
+		float: none;
+		margin: 0;
+		padding: 0;
+		position: static;
+		text-align: left;
+		width: auto;
+		-webkit-box-shadow: 0 3px 5px rgba(0,0,0,.25);
+		-moz-box-shadow: 0 3px 5px rgba(0,0,0,.25);
+		box-shadow: 0 3px 5px rgba(0,0,0,.25);
+	}
+	#header .inner {
+		padding: 1em;
+	}
+	#header img.figure {
+		display: none;
+	}
+	#header .elsewhere {
+		list-style: none;
+		margin: 0 auto;
+		padding: 0;
+		text-align: center;
+	}
+	#header .elsewhere li {
+		display: inline;
+		list-style: none;
+		margin: 0 3px;
+		padding: 0;
+	}
+	#nav {
+		margin: 0;
+		padding: 0 0 1.5em 0;
+	}
+	#nav ul, #nav li {
+		text-align: center;
+	}
+	#nav ul {
+		margin: 0;
+		padding: 0;
+	}
+	#nav ul li {
+		display: inline;
+		padding: 0 0 0 0;
+	}
+	#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
+		display: inline;
+		padding: 8px;
+		-webkit-transition: none;
+		-moz-transition: none;
+		-o-transition: none;
+		transition: none;
+		text-transform: uppercase;
+	}
+	#content {
+		border: 0;
+		margin: 0;
+		padding: 1em;
+		width: auto;
+	}
+	#content .inner {
+		padding: 0;
+	}
+	#footer {
+		font-size: 11px;
+		margin: 0;
+		padding: 1.5em 1em 2em 1em;
+		width: auto;
+	}	
 }
