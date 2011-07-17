@@ -229,12 +229,11 @@ h2 {border-bottom: 1px solid #ccc;}
 		width: auto;
 	}
 	#header {
-		background: url(../images/bg-body.png) repeat #f4f4f4;
 		float: none;
 		margin: 0;
 		padding: 0;
 		position: static;
-		text-align: left;
+		text-align: center;
 		width: auto;
 		-webkit-box-shadow: 0 3px 5px rgba(0,0,0,.25);
 		-moz-box-shadow: 0 3px 5px rgba(0,0,0,.25);
@@ -255,7 +254,7 @@ h2 {border-bottom: 1px solid #ccc;}
 	#header .elsewhere li {
 		display: inline;
 		list-style: none;
-		margin: 0 3px;
+		margin: 0 2px;
 		padding: 0;
 	}
 	#nav {
@@ -271,11 +270,11 @@ h2 {border-bottom: 1px solid #ccc;}
 	}
 	#nav ul li {
 		display: inline;
-		padding: 0 0 0 0;
+		padding: 8px;
 	}
 	#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
 		display: inline;
-		padding: 8px;
+		padding: 0;
 		-webkit-transition: none;
 		-moz-transition: none;
 		-o-transition: none;
@@ -284,6 +283,7 @@ h2 {border-bottom: 1px solid #ccc;}
 	}
 	#content {
 		border: 0;
+		border-radius: 0;
 		margin: 0;
 		padding: 1em;
 		width: auto;
