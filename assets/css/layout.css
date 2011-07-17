@@ -246,6 +246,7 @@ h2 {border-bottom: 1px solid #ccc;}
 		display: none;
 	}
 	#header .elsewhere {
+		clear: left;
 		list-style: none;
 		margin: 0 auto;
 		padding: 0;
@@ -259,10 +260,18 @@ h2 {border-bottom: 1px solid #ccc;}
 	}
 	#nav {
 		margin: 0;
-		padding: 0 0 1.5em 0;
+		padding: 0 0 1em 0;
 	}
 	#nav ul, #nav li {
 		text-align: center;
+	}
+	#nav:after
+	{
+		content: ".";
+		display: block;
+		line-height: 1px;
+		font-size: 1px;
+		clear: both;
 	}
 	#nav ul {
 		margin: 0;
@@ -275,7 +284,7 @@ h2 {border-bottom: 1px solid #ccc;}
 	}
 	#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
 		display: block;
-		padding: 10px;
+		padding: 10px 12px;
 		-webkit-transition: none;
 		-moz-transition: none;
 		-o-transition: none;
