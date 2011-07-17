@@ -269,12 +269,13 @@ h2 {border-bottom: 1px solid #ccc;}
 		padding: 0;
 	}
 	#nav ul li {
-		display: inline;
-		padding: 8px;
+		display: block;
+		float: left;
+		padding: 0;
 	}
 	#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
-		display: inline;
-		padding: 0;
+		display: block;
+		padding: 10px;
 		-webkit-transition: none;
 		-moz-transition: none;
 		-o-transition: none;
@@ -292,7 +293,7 @@ h2 {border-bottom: 1px solid #ccc;}
 		padding: 0;
 	}
 	#footer {
-		font-size: 11px;
+		font-size: 12px;
 		margin: 0;
 		padding: 1.5em 1em 2em 1em;
 		width: auto;
