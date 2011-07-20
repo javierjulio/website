@@ -44,6 +44,14 @@ end
 # RECIPES
 #
 
+get '/recipes/paella' do
+	@section = 'recipes'
+	@title = 'Recipe for Paella'
+	@contentTitle = 'Paella'
+	
+	erb :'recipes/paella'
+end
+
 get '/recipes/farfalle-with-spring-onions' do
 	@section = 'recipes'
 	@title = 'Recipe for Farfalle with Spring Onions'
