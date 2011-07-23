@@ -293,7 +293,7 @@ img.figure {
 	#social .elsewhere {
 		clear: left;
 		list-style: none;
-		margin: 0 auto;
+		margin: 20px auto 0 auto;
 		padding: 0;
 		position: static;
 		text-align: center;
@@ -301,12 +301,12 @@ img.figure {
 	#social .elsewhere li {
 		display: inline;
 		list-style: none;
-		margin: 0 2px;
+		margin: 0 4px;
 		padding: 0;
 	}
 	#nav {
 		margin: 0;
-		padding: 8px 0;
+		padding: 8px;
 		width: auto;
 	}
 	#nav ul, #nav li {
@@ -337,6 +337,9 @@ img.figure {
 		-moz-transition: none;
 		-o-transition: none;
 		transition: none;
+	}
+	#nav ul li.current a {
+		background: transparent;
 	}
 	#content {
 		border: none;
