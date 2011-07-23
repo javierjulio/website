@@ -51,26 +51,61 @@ table {
 
 /* main styles
 --------------------------------------------- */
+#header .elsewhere {
+	list-style: none;
+	margin: 2em 0 0 0;
+	padding: 0;
+}
+#nav {
+	margin-top: 1em;
+}
+#nav ul, #nav li {
+	font: normal 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+	list-style: none;
+}
+#nav ul, #nav ul li {
+	margin: 0;
+	padding: 0;
+}
+#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
+	display: block;
+	padding: 10px 15px;
+	border: none;
+	color: #888;
+	font-weight: bold;
+	text-decoration: none;
+	-webkit-transition: color 0.5s ease-out;
+	-moz-transition: color 0.5s ease-out;
+	-o-transition: color .0.5s ease-out;
+	transition: color 0.5s ease-out;
+	text-transform: uppercase;
+}
+#nav ul li a:hover, #nav ul li.current a {
+	background: rgba(0, 0, 0, .35);
+	color: #fff;
+	text-decoration: none;
+}
+
 body {
 	background: #e9e9e9/* url(http://static.tumblr.com/vookvsa/UKqlmwwnd/main.bg.png)*/;
-	color: #4E443C;
-	font: normal 13px "Lucida Grande", "HelveticaNeue", Helvetica, Arial, sans-serif;
+	font: normal 12px "Lucida Grande", "HelveticaNeue", Helvetica, Arial, sans-serif;
+
 }
 #container {
-	margin: 0 auto;
 	text-align: left;
+	margin: 0 auto;
 	width: 700px;
 }
 #header {
 	background: #212121 url(http://static.tumblr.com/vookvsa/XiXlmwwqn/linen.bg.png);
-	bottom: 0;
-	box-shadow: 0 0 9px #000;
-	margin-left: 20px;
 	position: fixed;
-	text-align: right;
 	top: 0;
+	bottom: 0;
+	margin-left: 20px;
 	width: 150px;
 	-webkit-box-shadow: 0 0 9px #000;
+	box-shadow: 0 0 9px #000;
+	text-align: right;
 }
 #header .title {
 	display: none;
@@ -85,62 +120,21 @@ body {
 #header .inner {
 	padding: 60px 0 35px 0;
 }
-#header .elsewhere {
-	list-style: none;
-	margin: 2em 0 0 0;
-	padding: 0;
-}
-#nav {
-	font-size: 12px;
-	margin-top: 1em;
-}
-#nav ul, #nav li {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-#nav ul li a, 
-#nav ul li a:active, 
-#nav ul li a:visited {
-	border: 1px solid transparent;
-	border-width: 1px 0;
-	color: #777;
-	display: block;
-	font-weight: bold;
-	padding: 10px 15px;
-	text-decoration: none;
-	-webkit-transition: color 0.5s ease-out;
-	-moz-transition: color 0.5s ease-out;
-	-o-transition: color .0.5s ease-out;
-	transition: color 0.5s ease-out;
-}
-#nav ul li a:hover, 
-#nav ul li.current a {
-	color: #fff;
-	text-decoration: none;
-}
-#nav ul li.current a {
-	background: rgba(0, 0, 0, .35);
-	border-bottom: solid 1px #333;
-	border-top: solid 1px #2b2b2b;
-}
 #content {
+	margin: 35px 0;
+	color: #4E443C;
 	background: white;
-	/*border-left: 6px solid #974C4C;*/
 	border-radius: 5px;
-	-webkit-box-shadow: 0 2px 12px #bbb;
-	-moz-box-shadow: 0 2px 12px #bbb;
-	-o-box-shadow: 0 2px 12px #bbb;
-	box-shadow: 0px 2px 12px #bbb;
-	margin: 30px 0 0 165px;
+	/*border-left: 6px solid #974C4C;*/
+	-webkit-box-shadow: 0 2px 15px #BBB;
+	box-shadow: 0px 2px 15px #BBB;
 }
 #content .inner {
-	padding: 20px 20px 20px 30px;
+	padding: 20px 20px 20px 195px;
 }
 #footer {
 	color: #666;
-	font-size: 12px;
-	margin: 25px 0 30px 220px;
+	margin: 25px 0 30px 195px;
 }
 #footer p {
 	padding: 0;
@@ -149,16 +143,15 @@ body {
 
 /* element specific default styles 
 --------------------------------------------- */
-abbr, 
-acronym {
+abbr, acronym {
 	border-bottom: 1px dotted #000;
 	cursor: help;
 	font-style: normal;
 }
 a {
-	color: #974C4C;
-	outline: none;
+	color: #974C4C; /*537AA0*/
 	text-decoration: underline;
+	outline: none;
 }
 a:hover {
 	color: #537AA0;
@@ -185,34 +178,16 @@ ul, ol {
 ul li, ol li {
 	padding: 0px 0px 6px;
 }
-h1 {
-	font-size: 46px;
-	margin-bottom: 20px;
-}
-h2 {
-	border-bottom: 1px solid #ccc;
-	font-size: 22px;
-	margin-bottom: 20px;
-	padding-bottom: 15px;
-text-transform: uppercase;
-letter-spacing: 1px;
-text-shadow: 0 1px 2px #999;
-}
-h3 {
-	font-size: 18px;
-	margin-bottom: 15px;
-}
-h4 {
-	font-size: 14px;
-	margin-bottom: 8px;
-}
-h5 {
-	font-size: 12px;
-	font-weight: bold;
-}
-h6 {
-	font-size: 12px;
-}
+
+/* ----- HEADINGS ----- */
+h1 { font-size: 46px; margin-bottom: 20px; }
+h2 { font-size: 22px; margin-bottom: 20px; padding-bottom: 15px;}
+h3 { font-size: 18px; margin-bottom: 15px; }
+h4 { font-size: 14px; margin-bottom: 8px; }
+h5 { font-size: 12px; font-weight: bold;}
+h6 { font-size: 12px; }
+
+h2 {border-bottom: 1px solid #ccc;}
 
 
 /* page specific styles 
@@ -238,37 +213,31 @@ h6 {
 	padding-top: 0;
 }
 
-
-/* misc. 
---------------------------------------------- */
-.hide {
-	display: none;
-}
-.icon {
-	padding: 1px 0 1px 20px;
-}
+/* ----- CLASS HELPERS ----- */
+.hide {display: none;}
+.icon {padding: 1px 0 1px 20px;}
 
 
-/* tested on iPhone 4 and Nexus One only */
+
+/* tested on iPhone 4 only */
 @media only screen and (max-device-width: 480px) 
 {
 	#container {
 		font-size: 1.3em;
-		margin: 0;
 		text-align: left;
+		margin: 0;
 		width: auto;
 	}
 	#header {
-		-webkit-box-shadow: 0 3px 5px rgba(0,0,0,.25);
-		-moz-box-shadow: 0 3px 5px rgba(0,0,0,.25);
-		-o-box-shadow: 0 3px 5px rgba(0,0,0,.25);
-		box-shadow: 0 3px 5px rgba(0,0,0,.25);
 		float: none;
 		margin: 0;
 		padding: 0;
 		position: static;
 		text-align: center;
 		width: auto;
+		-webkit-box-shadow: 0 3px 5px rgba(0,0,0,.25);
+		-moz-box-shadow: 0 3px 5px rgba(0,0,0,.25);
+		box-shadow: 0 3px 5px rgba(0,0,0,.25);
 	}
 	#header .inner {
 		padding: 0.5em 1em;
@@ -298,11 +267,11 @@ h6 {
 	}
 	#nav:after
 	{
-		clear: both;
 		content: ".";
 		display: block;
-		font-size: 1px;
 		line-height: 1px;
+		font-size: 1px;
+		clear: both;
 	}
 	#nav ul {
 		margin: 0;
@@ -316,14 +285,14 @@ h6 {
 	#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
 		display: block;
 		padding: 10px 15px;
-		text-transform: uppercase;
 		-webkit-transition: none;
 		-moz-transition: none;
 		-o-transition: none;
 		transition: none;
+		text-transform: uppercase;
 	}
 	#content {
-		border: none;
+		border: 0;
 		border-radius: 0;
 		margin: 0;
 		padding: 1em;
