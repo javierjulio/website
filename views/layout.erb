@@ -3,14 +3,12 @@
 <head> 
 <meta charset="utf-8" /> 
 <meta name="author" content="Javier Julio" /> 
-<meta name="description" content="Javier Julio is a software developer and speaker living in Brooklyn, New York. He designs and creates rich applications for the web, mobile, and desktop environments at 9mmedia in the trendy Soho neighborhood of Manhattan." /> 
-<meta name="keywords" content="Javier Julio, software developer, web programmer, web developer, flex, html, css, ajax, jquery, coldfusion, ruby, couchdb, resume, presentations, speaker" /> 
+<meta name="description" content="Javier Julio is a software developer and speaker living in Brooklyn, New York. He designs and creates rich applications for the web, mobile, and desktop environments at 9mmedia in the trendy Soho neighborhood of Manhattan." />
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" /> 
 <link rel="shortcut icon" href="/images/avatar_16.png"> 
 <title><% unless @title.nil? %><%= @title %> - <% end %>Javier Julio</title> 
-<link rel="stylesheet" media="screen,projection" href="/css/layout.css" /> 
-<link rel="stylesheet" media="screen,projection" href="/css/color.css" /> 
-<link rel="stylesheet" media="print" href="/css/print.css" />
+<link type="text/css" rel="stylesheet" media="screen,projection" href="/css/layout.css" />
+<link type="text/css" rel="stylesheet" media="print" href="/css/print.css" />
 </head> 
 <body<% unless @section.nil? %> id="<%= @section %>"<% end %>>
 
@@ -24,9 +22,9 @@
 			<div id="nav"> 
 				<ul> 
 					<li <% if @section == 'home' %>class="current" <% end %>><a href="/">Javier Julio</a></li>
-					<li <% if @section == 'presentations' %>class="current" <% end %>><a href="/presentations">Presentations</a></li> 
-					<li <% if @section == 'recipes' %>class="current"<% end %>><a href="/recipes">Recipes</a></li> 
 					<li <% if @section == 'resume' %>class="current" <% end %>><a href="/resume">Resume</a></li> 
+					<li <% if @section == 'recipes' %>class="current"<% end %>><a href="/recipes">Recipes</a></li> 
+					<li <% if @section == 'presentations' %>class="current" <% end %>><a href="/presentations">Presentations</a></li>
 					<li><a href="mailto:jjfutbol@gmail.com">Contact</a></li> 
 				</ul> 
 			</div> 
@@ -42,13 +40,13 @@
 	</div> 
 	
 	<div id="content">
-	
+		
 		<div class="inner">
 		
 		<h2><%= @contentTitle %></h2>
 		
 		<%= yield %>
-	
+		
 		</div><!-- /inner --> 
 		
 	</div><!-- /content --> 
