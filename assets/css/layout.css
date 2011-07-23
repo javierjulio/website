@@ -306,14 +306,13 @@ img.figure {
 	}
 	#nav {
 		margin: 0;
-		padding: 8px;
+		padding: 5px 0;
 		width: auto;
 	}
 	#nav ul, #nav li {
 		text-align: center;
 	}
-	#nav:after
-	{
+	#nav:after {
 		clear: both;
 		content: ".";
 		display: block;
@@ -331,15 +330,15 @@ img.figure {
 	}
 	#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
 		display: block;
-		padding: 10px 15px;
-		text-transform: uppercase;
+		padding: 8px 12px;
 		-webkit-transition: none;
 		-moz-transition: none;
 		-o-transition: none;
 		transition: none;
 	}
+	#nav ul li a:hover, 
 	#nav ul li.current a {
-		background: transparent;
+		background: none;
 	}
 	#content {
 		border: none;
