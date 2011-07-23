@@ -303,7 +303,7 @@ img.figure {
 		line-height: 1px;
 	}
 	#nav ul {
-		margin: 0;
+		margin: 0 0 0 2px;
 		padding: 0;
 	}
 	#nav ul li {
@@ -313,7 +313,7 @@ img.figure {
 	}
 	#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
 		display: block;
-		padding: 8px 10px;
+		padding: 8px 9px;
 		-webkit-transition: none;
 		-moz-transition: none;
 		-o-transition: none;
