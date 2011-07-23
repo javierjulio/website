@@ -21,7 +21,7 @@
 			<li <% if @section == 'home' %>class="current" <% end %>><a href="/">Home</a></li>
 			<li <% if @section == 'resume' %>class="current" <% end %>><a href="/resume">Resume</a></li>
 			<li <% if @section == 'recipes' %>class="current"<% end %>><a href="/recipes">Recipes</a></li>
-			<li <% if @section == 'presentations' %>class="current" <% end %>><a href="/presentations">Presentations</a></li>
+			<li <% if @section == 'presentations' %>class="current" <% end %>><a href="/presentations">Talks</a></li>
 			<li><a href="mailto:jjfutbol@gmail.com">Contact</a></li>
 		</ul>
 	</div>
@@ -54,7 +54,7 @@
 	
 	<div id="footer"> 
 		<p>
-			&copy; 2004-<%= Time.new.year() %> <a href="http://www.javier-julio.com/">Javier Julio</a> - 
+			&copy; 2004 - <%= Time.new.year() %> <a href="http://www.javier-julio.com/">Javier Julio</a> | 
 			<a href="http://paulrobertlloyd.com/2009/06/social_media_icons" title="Social Network Icon Pack">Icons</a>
 		</p>
 	</div><!-- /footer --> 
