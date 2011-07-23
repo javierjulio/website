@@ -317,6 +317,7 @@ img.figure {
 	#nav {
 		margin: 0;
 		padding: 0 0 1em 0;
+		width: auto;
 	}
 	#nav ul, #nav li {
 		text-align: center;
