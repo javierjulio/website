@@ -278,16 +278,11 @@ img.figure {
 @media only screen and (max-device-width: 480px) 
 {
 	#container {
-		font-size: 1.3em;
 		margin: 0;
 		text-align: left;
 		width: auto;
 	}
 	#header {
-		-webkit-box-shadow: 0 3px 5px rgba(0,0,0,.25);
-		-moz-box-shadow: 0 3px 5px rgba(0,0,0,.25);
-		-o-box-shadow: 0 3px 5px rgba(0,0,0,.25);
-		box-shadow: 0 3px 5px rgba(0,0,0,.25);
 		float: none;
 		margin: 0;
 		padding: 0;
@@ -295,20 +290,15 @@ img.figure {
 		text-align: center;
 		width: auto;
 	}
-	#header .inner {
-		padding: 0.5em 1em;
-	}
-	#header img.figure {
-		display: none;
-	}
-	#header .elsewhere {
+	#social .elsewhere {
 		clear: left;
 		list-style: none;
 		margin: 0 auto;
 		padding: 0;
+		position: static;
 		text-align: center;
 	}
-	#header .elsewhere li {
+	#social .elsewhere li {
 		display: inline;
 		list-style: none;
 		margin: 0 2px;
@@ -316,7 +306,7 @@ img.figure {
 	}
 	#nav {
 		margin: 0;
-		padding: 0 0 1em 0;
+		padding: 8px 0;
 		width: auto;
 	}
 	#nav ul, #nav li {
