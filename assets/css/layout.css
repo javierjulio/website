@@ -52,51 +52,62 @@ table {
 /* main styles
 --------------------------------------------- */
 body {
-	background: #e9e9e9/* url(http://static.tumblr.com/vookvsa/UKqlmwwnd/main.bg.png)*/;
-	color: #4E443C;
-	font: normal 13px "Lucida Grande", "HelveticaNeue", Helvetica, Arial, sans-serif;
+	color: #4D4E52;
+	font: normal 14px "Lucida Grande", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 #container {
+	background: white;
 	margin: 0 auto;
 	text-align: left;
-	width: 700px;
+	width: 600px;
 }
 #header {
 	background: #212121 url(http://static.tumblr.com/vookvsa/XiXlmwwqn/linen.bg.png);
-	bottom: 0;
-	box-shadow: 0 0 9px #000;
-	margin-left: 20px;
+	left: 0;
 	position: fixed;
-	text-align: right;
+	right: 0;
 	top: 0;
-	width: 150px;
-	-webkit-box-shadow: 0 0 9px #000;
+	z-index: 999;
 }
 #header .title {
 	display: none;
 }
-#header img {
-	border: none;
-	margin-right: 15px;
-}
-#header img.figure {
-	border: 2px solid #e9e9e9;
-}
-#header .inner {
-	padding: 60px 0 35px 0;
-}
-#header .elsewhere {
+#social .elsewhere {
 	list-style: none;
-	margin: 2em 0 0 0;
+	margin: 15px 0 0 -55px;
+	padding: 0;
+	position: fixed;
+}
+#social .elsewhere li {
+	list-style: none;
+	margin: 0 0 3px 0;
 	padding: 0;
 }
 #nav {
-	font-size: 12px;
-	margin-top: 1em;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	width: 600px;
 }
 #nav ul, #nav li {
-	list-style: none;
+	text-align: center;
+}
+#nav:after
+{
+	clear: both;
+	content: ".";
+	display: block;
+	font-size: 1px;
+	line-height: 1px;
+}
+#nav ul {
+	font-size: 14px;
 	margin: 0;
+	padding: 0;
+}
+#nav ul li {
+	display: block;
+	float: left;
 	padding: 0;
 }
 #nav ul li a, 
@@ -104,43 +115,33 @@ body {
 #nav ul li a:visited {
 	border: 1px solid transparent;
 	border-width: 1px 0;
-	color: #777;
+	color: #888;
 	display: block;
-	font-weight: bold;
-	padding: 10px 15px;
+	padding: 15px;
 	text-decoration: none;
-	-webkit-transition: color 0.5s ease-out;
-	-moz-transition: color 0.5s ease-out;
-	-o-transition: color .0.5s ease-out;
-	transition: color 0.5s ease-out;
+	-webkit-transition: color 0.5s ease-out, background-color 0.5s ease-out;
+	-moz-transition: color 0.5s ease-out, background-color 0.5s ease-out;
+	-o-transition: color .0.5s ease-out, background-color 0.5s ease-out;
+	transition: color 0.5s ease-out, background-color 0.5s ease-out;
 }
 #nav ul li a:hover, 
 #nav ul li.current a {
 	color: #fff;
+	background: rgba(0, 0, 0, .6);
 	text-decoration: none;
 }
-#nav ul li.current a {
-	background: rgba(0, 0, 0, .35);
-	border-bottom: solid 1px #333;
-	border-top: solid 1px #2b2b2b;
-}
 #content {
-	background: white;
-	/*border-left: 6px solid #974C4C;*/
-	border-radius: 5px;
-	-webkit-box-shadow: 0 2px 12px #bbb;
-	-moz-box-shadow: 0 2px 12px #bbb;
-	-o-box-shadow: 0 2px 12px #bbb;
-	box-shadow: 0px 2px 12px #bbb;
-	margin: 30px 0 0 165px;
+	margin-top: 70px;
 }
 #content .inner {
-	padding: 20px 20px 20px 30px;
+	padding: 12px;
 }
 #footer {
+	border-top: 1px solid #ccc;
 	color: #666;
 	font-size: 12px;
-	margin: 25px 0 30px 220px;
+	margin: 0 12px;
+	padding: 25px 0;
 }
 #footer p {
 	padding: 0;
@@ -156,12 +157,12 @@ acronym {
 	font-style: normal;
 }
 a {
-	color: #974C4C;
+	color: #B00000;
 	outline: none;
 	text-decoration: underline;
 }
 a:hover {
-	color: #537AA0;
+	color: #2D648A;
 }
 strong {
 	font-weight: bold;
@@ -191,16 +192,17 @@ h1 {
 }
 h2 {
 	border-bottom: 1px solid #ccc;
+	color: #535458;
 	font-size: 22px;
+	letter-spacing: 1px;
 	margin-bottom: 20px;
 	padding-bottom: 15px;
-text-transform: uppercase;
-letter-spacing: 1px;
-text-shadow: 0 1px 2px #999;
+	text-transform: uppercase;
 }
 h3 {
 	font-size: 18px;
 	margin-bottom: 15px;
+	text-transform: uppercase;
 }
 h4 {
 	font-size: 14px;
@@ -236,6 +238,29 @@ h6 {
 }
 #recipes p {
 	padding-top: 0;
+}
+
+
+/* ----- FIGURES ----- */
+span.figure {
+	background: #ccc;
+	display: block;
+	padding: 2px;
+	margin-bottom: 0;
+	text-align: center;
+}
+span.figure.gutter {
+	float: left;
+	margin: 0 1em 0 0;
+}
+span.figure img {
+	display: block;
+}
+span.figure strong {
+	text-transform: uppercase;
+}
+img.figure {
+	padding: 6px;
 }
 
 
