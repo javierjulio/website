@@ -5,11 +5,15 @@
 <meta name="author" content="Javier Julio" /> 
 <meta name="description" content="Javier Julio is a software developer and speaker living in Brooklyn, New York. He designs and creates rich applications for the web, mobile, and desktop environments at 9mmedia in the trendy Soho neighborhood of Manhattan." />
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" /> 
-<link rel="shortcut icon" href="/images/avatar_16.png"> 
+<link rel="shortcut icon" type="image/png" href="/images/avatar_16.png"> 
 <title><% unless @title.nil? %><%= @title %> - <% end %>Javier Julio</title> 
 <link type="text/css" rel="stylesheet" media="screen,projection" href="/css/layout.css" />
 <link type="text/css" rel="stylesheet" media="print" href="/css/print.css" />
-</head> 
+<!-- enables HTML5 elements in IE7 and IE8 --> 
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
 <body<% unless @section.nil? %> id="<%= @section %>"<% end %>>
 
 <div id="header">
@@ -60,6 +64,16 @@
 	</div><!-- /footer --> 
 	
 </div><!-- /container -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3924916-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
 
 </body> 
 </html>
