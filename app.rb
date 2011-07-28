@@ -11,7 +11,7 @@ set :public, File.dirname(__FILE__) + '/assets'
 
 get '/' do
 	@section = 'home'
-	@contentTitle = 'About Javier Julio'
+	@contentTitle = 'About'
 	
 	erb :index
 end
