@@ -1,0 +1,19 @@
+<div class="article">
+  
+  <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
+  
+  <div class="date"><%= article.date.formatted %></div> 
+  
+  <div class="body">
+    
+    <% if summary_only %>
+      <%= article.summary.formatted %>
+      <% if article.summary.length != article.body.length %>
+        <span class="read-more"><a href="<%= article.url %>">read on...</a></span>
+      <% end %>
+    <% else %>
+      <%= article.body.formatted %>
+    <% end %>
+  </div>
+
+</div>

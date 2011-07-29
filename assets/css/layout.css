@@ -233,6 +233,16 @@ footer#content-footer nav#social ul li {
   padding: 0 0 0 18px;
 }
 
+/* blog specific styles 
+--------------------------------------------- */
+.article .date {
+  padding: 0 0 10px 0;
+  font-weight: bold;
+}
+.article .body {
+  padding: 0 0 25px 0;
+}
+
 /* page specific styles 
 --------------------------------------------- */
 #recipes #content .icon {
