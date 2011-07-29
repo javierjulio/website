@@ -16,54 +16,62 @@
 </head>
 <body<% unless @section.nil? %> id="<%= @section %>"<% end %>>
 
-<div id="header">
-	
-	<h1 class="title">Javier Julio</h1>
-	
-	<div id="nav"> 
-		<ul>
-			<li <% if @section == 'home' %>class="current" <% end %>><a href="/">Home</a></li>
-			<li <% if @section == 'resume' %>class="current" <% end %>><a href="/resume">Resume</a></li>
-			<li <% if @section == 'recipes' %>class="current"<% end %>><a href="/recipes">Recipes</a></li>
-			<li <% if @section == 'presentations' %>class="current" <% end %>><a href="/presentations">Talks</a></li>
-			<li><a href="mailto:jjfutbol@gmail.com">Contact</a></li>
-		</ul>
-	</div>
-	
-</div>
-
 <div id="container">
+  
+  <header id="banner">
+    
+    <a href="/" id="logo">JJ</a>
+    
+    <h1 class="title">Javier Julio</h1>
+    
+  </header>
+  
+  <nav id="nav">
+    
+    <ul>
+      <li<% if @section == 'home' %> class="current"<% end %>><a href="/">Javier Julio</a></li>
+      <li<% if @section == 'resume' %> class="current"<% end %>><a href="/resume">Resume</a></li>
+      <li<% if @section == 'recipes' %> class="current"<% end %>><a href="/recipes">Recipes</a></li>
+      <li<% if @section == 'presentations' %> class="current"<% end %>><a href="/presentations">Talks</a></li>
+      <li><a href="mailto:jjfutbol@gmail.com">Contact</a></li>
+    </ul>
+    
+  </nav>
+  
+  <section id="content">
+  
+    <div class="inner">
+      
+      <h2><%= @contentTitle %></h2>
+      
+      <%= yield %>
+      
+    </div><!-- /inner --> 
+  
+  </section><!-- /content --> 
 	
-	<div id="social">
-		<ul class="elsewhere"> 
-			<li><a href="http://www.twitter.com/javierjulio"><img src="/images/twitter_32.png" alt="Twitter" height="32" width="32" /></a></li> 
-			<li><a href="http://javierjulio.tumblr.com/"><img src="/images/tumblr_32.png" alt="Tumblr" height="32" width="32" /></a></li> 
-			<li><a href="https://github.com/javierjulio"><img src="/images/github_32.png" alt="Tumblr" height="32" width="32" /></a></li> 
-			<li><a href="http://www.facebook.com/javierjulio"><img src="/images/facebook_32.png" alt="Facebook" height="32" width="32" /></a></li> 
-			<li><a href="http://www.linkedin.com/in/javierjulio"><img src="/images/linkedin_32.png" alt="LinkedIn" height="32" width="32" /></a></li> 
-		</ul> 
-	</div>
-	
-	<div id="content">
-		
-		<div class="inner">
-		
-		<h2><%= @contentTitle %></h2>
-		
-		<%= yield %>
-		
-		</div><!-- /inner --> 
-		
-	</div><!-- /content --> 
-	
-	<div id="footer"> 
-		<p>
-			&copy; 2004 - <%= Time.new.year() %> <a href="http://www.javier-julio.com/">Javier Julio</a> | 
-			<a href="http://paulrobertlloyd.com/2009/06/social_media_icons" title="Social Network Icon Pack">Icons</a>
-		</p>
-	</div><!-- /footer --> 
+  <footer id="content-footer"> 
+  
+    <p>
+      &copy; 2004 - <%= Time.new.year() %> <a href="http://www.javier-julio.com/">Javier Julio</a> | 
+      <a href="http://paulrobertlloyd.com/2009/06/social_media_icons" title="Social Network Icon Pack">Icons</a>
+    </p>
+    
+    <nav id="social">
+      <ul class="elsewhere"> 
+        <li><a href="http://www.twitter.com/javierjulio"><img src="/images/twitter_32.png" alt="Twitter" height="24" width="24" /></a></li> 
+        <li><a href="http://javierjulio.tumblr.com/"><img src="/images/tumblr_32.png" alt="Tumblr" height="24" width="24" /></a></li> 
+        <li><a href="https://github.com/javierjulio"><img src="/images/github_32.png" alt="Tumblr" height="24" width="24" /></a></li> 
+        <li><a href="http://www.facebook.com/javierjulio"><img src="/images/facebook_32.png" alt="Facebook" height="24" width="24" /></a></li> 
+        <li><a href="http://www.linkedin.com/in/javierjulio"><img src="/images/linkedin_32.png" alt="LinkedIn" height="24" width="24" /></a></li> 
+      </ul> 
+    </nav>
+    
+  </footer><!-- /footer --> 
 	
 </div><!-- /container -->
+
+<a href="http://github.com/javierjulio"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
