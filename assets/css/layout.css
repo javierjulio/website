@@ -199,8 +199,7 @@ nav#nav ul li {
   padding: 3px 0;
 }
 nav#nav ul li a, 
-nav#social ul li a, 
-nav#nav ul li.current a:hover {
+nav#social ul li a {
   color: #aaa;
   text-decoration: none;
 }

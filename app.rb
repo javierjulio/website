@@ -12,31 +12,27 @@ class MyApp < Serious
   # Main Website Routes
   # 
   
-  get '/about' do
-  	@section = 'about'
+  get '/about/?' do
   	@contentTitle = 'About'
   	
   	erb :about
   end
   
-  get '/presentations' do
-  	@section = 'presentations'
+  get '/presentations/?' do
   	@title = 'Presentations'
   	@contentTitle = 'Presentations'
   	
   	erb :presentations
   end
   
-  get '/resume' do
-  	@section = 'resume'
+  get '/resume/?' do
   	@title = 'Resume'
   	@contentTitle = 'Resume'
   	
   	erb :resume
   end
   
-  get '/recipes' do
-  	@section = 'recipes'
+  get '/recipes/?' do
   	@title = 'Recipes for home cooking'
   	@contentTitle = 'Recipes'
   	
@@ -48,7 +44,6 @@ class MyApp < Serious
   #
   
   get '/recipes/paella' do
-  	@section = 'recipes'
   	@title = 'Recipe for Paella'
   	@contentTitle = 'Paella'
   	
@@ -56,7 +51,6 @@ class MyApp < Serious
   end
   
   get '/recipes/farfalle-with-spring-onions' do
-  	@section = 'recipes'
   	@title = 'Recipe for Farfalle with Spring Onions'
   	@contentTitle = 'Farfalle with Spring Onions'
   	
@@ -64,7 +58,6 @@ class MyApp < Serious
   end
   
   get '/recipes/farfalle-tonno' do
-  	@section = 'recipes'
   	@title = 'Recipe for Farfalle Tonno'
   	@contentTitle = 'Farfalle Tonno'
   	
@@ -72,7 +65,6 @@ class MyApp < Serious
   end
   
   get '/recipes/fusilli-mozzarella' do
-  	@section = 'recipes'
   	@title = 'Recipe for Fusilli Mozzarella'
   	@contentTitle = 'Fusilli Mozzarella'
   	
@@ -80,7 +72,6 @@ class MyApp < Serious
   end
   
   get '/recipes/tuscan-linguine-shrimp' do
-  	@section = 'recipes'
   	@title = 'Recipe for Tuscan Linguine Shrimp'
   	@contentTitle = 'Tuscan Linguine Shrimp'
   	
@@ -88,7 +79,6 @@ class MyApp < Serious
   end
   
   get '/recipes/linguine-con-tonno-e-olive' do
-  	@section = 'recipes'
   	@title = 'Recipe for Linguine con Tonno e Olive'
   	@contentTitle = 'Linguine con Tonno e Olive'
   	
@@ -96,7 +86,6 @@ class MyApp < Serious
   end
   
   get '/recipes/penne-con-tonno-e-mozzarella' do
-  	@section = 'recipes'
   	@title = 'Recipe for Penne con Tonno e Olive'
   	@contentTitle = 'Penne con Tonno e Mozzarella'
   	
@@ -104,7 +93,6 @@ class MyApp < Serious
   end
   
   get '/recipes/rigatoni-italiano' do
-  	@section = 'recipes'
   	@title = 'Recipe for Rigatoni Italiano'
   	@contentTitle = 'Rigatoni Italiano'
   	
@@ -120,7 +108,6 @@ class MyApp < Serious
   end
   
   get '/recipes/spaghetti-con-accinghe-e-tonno' do
-  	@section = 'recipes'
   	@title = 'Recipe for Spaghetti con Accinghe e Tonno'
   	@contentTitle = 'Spaghetti con Accinghe e Tonno'
   	
@@ -128,7 +115,6 @@ class MyApp < Serious
   end
   
   get '/recipes/tortellini-rosa' do
-  	@section = 'recipes'
   	@title = 'Recipe for Tortellini Rosa'
   	@contentTitle = 'Tortellini Rosa'
   	
@@ -136,7 +122,6 @@ class MyApp < Serious
   end
   
   get '/recipes/bell-pepper-chicken' do
-  	@section = 'recipes'
   	@title = 'Recipe for Bell Pepper Chicken'
   	@contentTitle = 'Bell Pepper Chicken'
   	
@@ -144,7 +129,6 @@ class MyApp < Serious
   end
   
   get '/recipes/chicken-milanesas' do
-  	@section = 'recipes'
   	@title = 'Recipe for Chicken Milanesas'
   	@contentTitle = 'Chicken Milanesas'
   	
@@ -152,7 +136,6 @@ class MyApp < Serious
   end
   
   get '/recipes/chicken-romano' do
-  	@section = 'recipes'
   	@title = 'Recipe for Chicken Romano'
   	@contentTitle = 'Chicken Romano'
   	
@@ -160,7 +143,6 @@ class MyApp < Serious
   end
   
   get '/recipes/garlic-chicken' do
-  	@section = 'recipes'
   	@title = 'Recipe for Garlic Chicken'
   	@contentTitle = 'Garlic Chicken'
   	
@@ -168,7 +150,6 @@ class MyApp < Serious
   end
   
   get '/recipes/italian-hamburgers' do
-  	@section = 'recipes'
   	@title = 'Recipe for Italian Hamburgers aka Javi-burgers'
   	@contentTitle = 'Italian Hamburgers aka Javi-burgers'
   	
@@ -176,7 +157,6 @@ class MyApp < Serious
   end
   
   get '/recipes/marinated-steak' do
-  	@section = 'recipes'
   	@title = 'Recipe for Marinated'
   	@contentTitle = 'Marinated Steak'
   	
@@ -184,7 +164,6 @@ class MyApp < Serious
   end
   
   get '/recipes/steak-with-shallots-and-red-wine-vinegar' do
-  	@section = 'recipes'
   	@title = 'Recipe for Steak with Shallots and Red Wine Vinegar'
   	@contentTitle = 'Steak with Shallots and Red Wine Vinegar'
   	
@@ -192,7 +171,6 @@ class MyApp < Serious
   end
   
   get '/recipes/ensaladilla' do
-  	@section = 'recipes'
   	@title = 'Recipe for Ensaladilla'
   	@contentTitle = 'Ensaladilla'
   	
@@ -200,7 +178,6 @@ class MyApp < Serious
   end
   
   get '/recipes/european-salad' do
-  	@section = 'recipes'
   	@title = 'Recipe for European Salad'
   	@contentTitle = 'European Salad'
   	
