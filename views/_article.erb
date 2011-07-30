@@ -1,11 +1,12 @@
-<div class="article">
+<article>
   
-  <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
+  <header>
+    <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
+  </header>
   
   <div class="date"><%= article.date.formatted %></div> 
   
   <div class="body">
-    
     <% if summary_only %>
       <%= article.summary.formatted %>
       <% if article.summary.length != article.body.length %>
@@ -16,4 +17,4 @@
     <% end %>
   </div>
 
-</div>
+</article>

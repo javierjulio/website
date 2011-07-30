@@ -34,8 +34,9 @@
       <li<% if @section == 'home' %> class="current"<% end %>><a href="/">Blog</a></li>
       <li<% if @section == 'archives' %> class="current"<% end %>><a href="/archives">Archives</a></li>
       <li<% if @section == 'resume' %> class="current"<% end %>><a href="/resume">Resume</a></li>
+      <li<% if @section == 'presentations' %> class="current"<% end %>><a href="/presentations">Presentations</a></li>
       <li<% if @section == 'recipes' %> class="current"<% end %>><a href="/recipes">Recipes</a></li>
-      <li<% if @section == 'presentations' %> class="current"<% end %>><a href="/presentations">Talks</a></li>
+      <li<% if @section == 'about' %> class="current"<% end %>><a href="/about">About</a></li>
       <li><a href="mailto:jjfutbol@gmail.com">Contact</a></li>
     </ul>
     
@@ -44,6 +45,8 @@
   <section id="content">
   
     <div class="inner">
+      
+      <% if @contentTitle %><h2><%= @contentTitle %></h2><% end %>
       
       <%= yield %>
       
@@ -60,11 +63,11 @@
     
     <nav id="social">
       <ul class="elsewhere"> 
-        <li><a href="http://www.twitter.com/javierjulio"><img src="/images/twitter_32.png" alt="Twitter" height="24" width="24" /></a></li> 
-        <li><a href="http://javierjulio.tumblr.com/"><img src="/images/tumblr_32.png" alt="Tumblr" height="24" width="24" /></a></li> 
-        <li><a href="https://github.com/javierjulio"><img src="/images/github_32.png" alt="Tumblr" height="24" width="24" /></a></li> 
-        <li><a href="http://www.facebook.com/javierjulio"><img src="/images/facebook_32.png" alt="Facebook" height="24" width="24" /></a></li> 
-        <li><a href="http://www.linkedin.com/in/javierjulio"><img src="/images/linkedin_32.png" alt="LinkedIn" height="24" width="24" /></a></li> 
+        <li><a href="http://www.twitter.com/javierjulio"><img src="/images/twitter_32.png" alt="Twitter" height="18" width="18" /></a></li> 
+        <li><a href="http://javierjulio.tumblr.com/"><img src="/images/tumblr_32.png" alt="Tumblr" height="18" width="18" /></a></li> 
+        <li><a href="https://github.com/javierjulio"><img src="/images/github_32.png" alt="Tumblr" height="18" width="18" /></a></li> 
+        <li><a href="http://www.facebook.com/javierjulio"><img src="/images/facebook_32.png" alt="Facebook" height="18" width="18" /></a></li> 
+        <li><a href="http://www.linkedin.com/in/javierjulio"><img src="/images/linkedin_32.png" alt="LinkedIn" height="18" width="18" /></a></li> 
       </ul> 
     </nav>
     
