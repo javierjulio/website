@@ -262,14 +262,11 @@ section#content ul.archives li {
 
 /* page specific styles 
 --------------------------------------------- */
-#recipes #content .icon {
-	padding: 1px 20px 1px 0;
-}
-#resume .job-title, #recipes .recipe-title {
+.job-title, .recipe-title {
 	font-weight: bold;
 	margin: 0 0 8px 0;
 }
-#resume .job-date {
+.job-date {
   color: #5d5d5d;
 	margin: 0 0 8px 0;
 }
