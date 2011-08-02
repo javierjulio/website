@@ -207,12 +207,6 @@ nav#nav ul li a:hover,
 nav#nav ul li.current a {
   color: #5D6361;
 }
-nav#github {
-  border: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
 section#content {
   border-bottom: 1px solid #ccc;
   padding: 70px 0 10px 0;
@@ -237,6 +231,12 @@ footer#content-footer nav#social ul li {
   display: inline;
   margin: 0;
   padding: 0 0 0 18px;
+}
+#github-fork {
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 /* blog specific styles 

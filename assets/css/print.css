@@ -7,31 +7,33 @@ body, #container, #header, #primary, #secondary, #tertiary, #footer {
 }
 
 /* hide columns, nav, designated elements */
-#header .figure, #nav, .elsewhere, #footer, .hide, .print-hide {display: none !important;}
-
-/* remove any borders */
-body *, #container {border-width: 0;}
-
-#header {
-	border-bottom: solid 1px #000;
-	padding: 0.5em;
+#header .figure, 
+#nav, 
+footer#content-footer, 
+#logo, 
+#github-fork, 
+.hide, 
+.print-hide {
+  display: none !important;
 }
 
-#header .title {
-	display: block;
-	font-size: 28px;
-	font-weight: bold;
+/* remove any borders */
+body *, 
+#container {
+  border-width: 0;
 }
 
 /* no need to differentiate links from text, remove formatting */
-a, a:link, a:visited {background-color: inherit; color: inherit; text-decoration: underline;}
-
-/* add bottom border and bold for captions so its clearly visible */
-table caption {border-bottom: 1px solid #000;}
-table th {font-weight: bold;}
-
-/* set all columns to have some right side spacing and set an auto width */
-table, table tr th, table tr td {padding-right: 1.5em; width: auto;}
+a, 
+a:link, 
+a:visited {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: underline;
+}
 
 /* simple catch-all so we have no colored items in print out */
-body * {background: none !important; color: #000 !important;}
+body * {
+  background: none !important;
+  color: #000 !important;
+}
