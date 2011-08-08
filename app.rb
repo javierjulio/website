@@ -1,10 +1,4 @@
-require 'sinatra'
-require 'erb'
-require 'thin'
 require 'serious'
-
-# public folder is the assets folder
-set :public, File.dirname(__FILE__) + '/assets'
 
 class MyApp < Serious
 	
