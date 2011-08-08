@@ -1,5 +1,10 @@
-require './app'
+require 'rubygems'
+require 'bundler'
+
+Bundler.require
+
 require 'serious'
+require './app'
 
 Serious.set :title, 'Javier Julio'
 Serious.set :author, 'Javier Julio'
