@@ -39,6 +39,10 @@ class MyApp < Serious
   	erb :recipes
   end
   
+  get '/rss/?' do
+    redirect to('http://feeds.feedburner.com/javierjulio')
+  end
+  
   #
   # RECIPES
   #
@@ -186,9 +190,10 @@ class MyApp < Serious
   
   
   #
-  #	RECIPES (redirects)
+  #	REDIRECTS
   # 
-  # Redirect from old URLs to new ones
+  # Redirect from old URLs to new ones. Accounts for pages, folders
+  # and all possible combinations of the two.
   #
   
   get '/index.cfm' do
