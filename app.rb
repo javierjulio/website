@@ -13,7 +13,7 @@ class MyApp < Serious
   # 
   
   get '/about/?' do
-  	@contentTitle = 'About'
+  	@contentTitle = 'About Me'
   	
   	erb :about
   end
