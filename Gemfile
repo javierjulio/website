@@ -1,2 +1,2 @@
 source 'http://rubygems.org'
-gem 'serious'
+gem 'serious', '0.3.1'
