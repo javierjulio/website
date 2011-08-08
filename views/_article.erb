@@ -14,7 +14,9 @@
       <% end %>
     <% else %>
       <%= article.body.formatted %>
+      
+      <p class="subscribe">Enjoyed the read? Follow me on <a href="http://twitter.com/javierjulio">twitter</a> or subscribe to my <a href="<%= Serious.feed_url %>">feed</a>.</p>
     <% end %>
   </div>
-
+  
 </article>
