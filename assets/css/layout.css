@@ -58,17 +58,22 @@ acronym {
 	cursor: help;
 	font-style: normal;
 }
-a:link, a:visited, a:active {
-	color: #901B0F;
+a, a:link, a:visited, a:active {
+  border-bottom: 1px solid #C0C0C0;
+	color: #5D5E72;
 	outline: none;
-	text-decoration: underline;
+	text-decoration: none;
 	-webkit-transition: color 0.5s ease-out;
 	-moz-transition: color 0.5s ease-out;
 	-o-transition: color .0.5s ease-out;
 	transition: color 0.5s ease-out;
 }
 a:hover {
-	color: #DD565C;
+	color: #901B0F;
+	text-decoration: none;
+}
+em {
+  font-style: italic;
 }
 strong {
 	font-weight: bold;
@@ -81,7 +86,7 @@ blockquote {
 }
 p {
 	line-height: 150%;
-	margin: 0 0 14px 0;
+	margin: 0 0 18px 0;
 	padding: 0;
 }
 ul {
@@ -98,34 +103,28 @@ ul, ol {
 ul li, ol li {
 	padding: 0px 0px 6px;
 }
-h1, h2, h3 {
-  font: normal 14px Georgia, Times, serif;
+h1, h2, h3, h4, h5 {
+  font-family: Georgia, Times, serif;
 }
 h1 {
 	font-size: 20px;
 	margin-bottom: 5px;
-	text-transform: uppercase;
 }
 h2 {
-  border-bottom: 1px solid #ccc;
-	font-size: 24px;
+	font-size: 30px;
 	margin-bottom: 20px;
-	padding-bottom: 15px;
 }
 h3 {
-	font-size: 20px;
+	font-size: 22px;
 	margin-bottom: 15px;
 }
 h4 {
-	font-size: 14px;
+	font-size: 18px;
 	margin-bottom: 8px;
 }
-h5 {
-	font-size: 12px;
+h5, h6 {
+	font-size: 14px;
 	font-weight: bold;
-}
-h6 {
-	font-size: 12px;
 }
 
 /* layout 
@@ -133,104 +132,78 @@ h6 {
 body {
   background: #fff;
   color: #4D4E52;
-  font: normal 14px "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font: 18px "Hoefler Text", "Myriad Pro", Arial, serif;
+  line-height: 30px;
 }
 #container {
 	margin: 0 auto;
 	position: relative;
 	text-align: left;
-	width: 700px;
+	width: 680px;
 }
-header#banner {
-  left: 0;
-  margin: 0;
-  padding: 0;
+#banner {
   position: absolute;
-  top: 56px;
-  text-align: right;
-  width: 100px;
+  top: 40px;
+  left: 0;
 }
-#logo {
-  background: #5D6361;
-  border-radius: 5px;
-  color: #fff;
-  display: block;
-  font-family: Menlo, Verdana, sans-serif;
-  font-size: 24px;
-  left: 0;
-  letter-spacing: 1px;
-  padding: 15px;
-  position: absolute;
-  text-align: center;
+#banner h1, 
+#nav {
+  font-family: "Helvetica", Arial, serif;
+}
+#banner h1 a {
+  border: none;
   text-decoration: none;
-  top: 0;
-	-webkit-transition: background-color 0.5s ease-out;
-	-moz-transition: background-color 0.5s ease-out;
-	-o-transition: background-color .0.5s ease-out;
-	transition: background-color 0.5s ease-out;
 }
-#logo:hover {
-  background: #BF5F5C;
-}
-h1.title {
-  left: 70px;
+#nav {
   position: absolute;
-  top: 4px;
-  display: none;
+  top: 75px;
+  left: 0px;
 }
-nav#nav {
+#nav ul {
   font-size: 14px;
-  font-weight: bold;
-  left: 0;
+  list-style-image: none;
+  list-style-type: none;
   margin: 0;
-  padding: 0 0 0 5px;
-  position: absolute;
-  top: 130px;
-  text-align: left;
-  width: 100px;
+  padding: 0; 
 }
-nav#nav ul, 
-nav#nav ul li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+#nav li {display: inline; }
+#nav ul li a {
+  border: none;
+  margin: 5px 5px 5px 0;
+	padding: 5px 5px 5px 0;
+	text-decoration:none;
 }
-nav#nav ul li {
-  padding: 3px 0;
+#nav ul li a:hover {
+  
 }
-nav#nav ul li a, 
-nav#social ul li a {
-  color: #aaa;
-  text-decoration: none;
+#nav ul li.current a {
+  color: #901B0F;
 }
-nav#nav ul li a:hover, 
-nav#nav ul li.current a {
-  color: #5D6361;
-}
-section#content {
-  border-bottom: 1px solid #ccc;
-  padding: 70px 0 10px 0;
-  margin-left: 150px;
+#content {
+  padding: 150px 0 10px 0;
 }
 footer#content-footer {
 	color: #666;
-	font-size: 12px;
-  margin: 30px 0;
-  padding: 0 0 0 150px;
-  position: relative;
+	font-size: 14px;
+  margin: 60px 0 30px 0;
+  padding: 0;
+  text-align: center;
 }
 footer#content-footer nav#social {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  position: absolute;
-  right: 0;
-  top: -3px;
 }
+footer#content-footer nav#social ul, 
 footer#content-footer nav#social ul li {
   list-style: none;
   display: inline;
   margin: 0;
-  padding: 0 0 0 18px;
+  padding: 0;
+}
+footer#content-footer nav#social ul li a {
+  border: none;
+  margin: 5px;
+  padding: 5px;
 }
 #github-fork {
   border: none;
@@ -241,14 +214,18 @@ footer#content-footer nav#social ul li {
 
 /* blog specific styles 
 --------------------------------------------- */
-section#content article .date {
-  color: #6D6E72;
-  font-size: 12px;
+section#content article .date, 
+section#content article .subscribe {
+  color: #999;
 }
 section#content article .body {
-  padding: 18px 0 40px 0;
+  padding: 15px 0 45px 0;
+}
+section#content article .subscribe {
+  font-size: 16px;
 }
 section#content ul.archives .date {
+  color: #999;
   display: block;
 }
 section#content ul.archives, section#content ul.archives li {
@@ -262,18 +239,18 @@ section#content ul.archives li {
 
 /* page specific styles 
 --------------------------------------------- */
-.job-title, .recipe-title {
+.job-title {
 	font-weight: bold;
 	margin: 0 0 8px 0;
 }
 .job-date {
   color: #5d5d5d;
+  font-size: 16px;
+  font-weight: bold;
 	margin: 0 0 8px 0;
 }
-
-/* ----- FIGURES ----- */
 span.figure {
-	background: #ccc;
+	background: #555;
 	display: block;
 	padding: 2px;
 	margin-bottom: 0;
@@ -286,22 +263,6 @@ span.figure.gutter {
 span.figure img {
 	display: block;
 }
-span.figure strong {
-	text-transform: uppercase;
-}
-img.figure {
-	padding: 6px;
-}
-
-/* misc. 
---------------------------------------------- */
-.hide {
-	display: none;
-}
-.icon {
-	padding: 1px 0 1px 20px;
-}
-
 
 /* tested on iPhone 4 and Nexus One only */
 @media only screen and (max-device-width: 480px) 

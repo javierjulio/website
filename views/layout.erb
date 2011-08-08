@@ -16,27 +16,24 @@
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
-<body<% unless @section.nil? %> id="<%= @section %>"<% end %>>
+<body>
 
 <div id="container">
   
   <header id="banner">
     
-    <a href="/" id="logo">JJ</a>
-    
-    <h1 class="title">Javier Julio</h1>
+    <h1 class="title"><a href="/"><span class="first-name">Javier</span> <span class="last-name">Julio</span></a></h1>
     
   </header>
   
   <nav id="nav">
     
     <ul>
-      <li<% if request.path_info == '/' %> class="current"<% end %>><a href="/">Blog</a></li>
       <li<% if request.path_info.include? 'archives' %> class="current"<% end %>><a href="/archives">Archives</a></li>
       <li<% if request.path_info.include? 'resume' %> class="current"<% end %>><a href="/resume">Resume</a></li>
       <li<% if request.path_info.include? 'presentations' %> class="current"<% end %>><a href="/presentations">Presentations</a></li>
       <li<% if request.path_info.include? 'recipes' %> class="current"<% end %>><a href="/recipes">Recipes</a></li>
-      <li><a href="<%= Serious.feed_url %>">RSS</li>
+      <li><a href="<%= Serious.feed_url %>">RSS</a></li>
       <li<% if request.path_info.include? 'about' %> class="current"<% end %>><a href="/about">About</a></li>
       <li><a href="mailto:jjfutbol@gmail.com">Contact</a></li>
     </ul>
@@ -59,16 +56,17 @@
   
     <p>
       &copy; 2004 - <%= Time.new.year() %> <a href="http://www.javier-julio.com/">Javier Julio</a> | 
-      <a href="http://paulrobertlloyd.com/2009/06/social_media_icons" title="Social Network Icon Pack">Icons</a>
+      <a href="http://paulrobertlloyd.com/2009/06/social_media_icons" title="Social Network Icon Pack">Icons</a> | 
+      Powered by <a href="">Serious</a>
     </p>
     
     <nav id="social">
       <ul class="elsewhere"> 
-        <li><a href="http://www.twitter.com/javierjulio"><img src="/images/twitter_32.png" alt="Twitter" height="18" width="18" /></a></li> 
-        <li><a href="http://javierjulio.tumblr.com/"><img src="/images/tumblr_32.png" alt="Tumblr" height="18" width="18" /></a></li> 
-        <li><a href="https://github.com/javierjulio"><img src="/images/github_32.png" alt="Tumblr" height="18" width="18" /></a></li> 
-        <li><a href="http://www.facebook.com/javierjulio"><img src="/images/facebook_32.png" alt="Facebook" height="18" width="18" /></a></li> 
-        <li><a href="http://www.linkedin.com/in/javierjulio"><img src="/images/linkedin_32.png" alt="LinkedIn" height="18" width="18" /></a></li> 
+        <li><a href="http://www.twitter.com/javierjulio"><img src="/images/twitter_32.png" alt="Twitter" height="24" width="24" /></a></li> 
+        <li><a href="http://javierjulio.tumblr.com/"><img src="/images/tumblr_32.png" alt="Tumblr" height="24" width="24" /></a></li> 
+        <li><a href="https://github.com/javierjulio"><img src="/images/github_32.png" alt="Tumblr" height="24" width="24" /></a></li> 
+        <li><a href="http://www.facebook.com/javierjulio"><img src="/images/facebook_32.png" alt="Facebook" height="24" width="24" /></a></li> 
+        <li><a href="http://www.linkedin.com/in/javierjulio"><img src="/images/linkedin_32.png" alt="LinkedIn" height="24" width="24" /></a></li> 
       </ul> 
     </nav>
     
