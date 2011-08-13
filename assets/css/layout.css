@@ -137,14 +137,11 @@ body {
 }
 #container {
 	margin: 0 auto;
-	position: relative;
 	text-align: left;
 	width: 680px;
 }
 #banner {
-  position: absolute;
-  top: 40px;
-  left: 0;
+  padding-top: 40px;
 }
 #banner h1, 
 #nav {
@@ -155,9 +152,7 @@ body {
   text-decoration: none;
 }
 #nav {
-  position: absolute;
-  top: 75px;
-  left: 0px;
+  
 }
 #nav ul {
   font-size: 14px;
@@ -166,7 +161,9 @@ body {
   margin: 0;
   padding: 0; 
 }
-#nav li {display: inline; }
+#nav li {
+  display: inline;
+}
 #nav ul li a {
   border: none;
   margin: 5px 5px 5px 0;
@@ -180,7 +177,7 @@ body {
   color: #901B0F;
 }
 #content {
-  padding: 150px 0 10px 0;
+  padding: 50px 0 10px 0;
 }
 footer#content-footer {
 	color: #666;
@@ -252,22 +249,22 @@ section#content ul.archives li {
   font-weight: bold;
 	margin: 0 0 8px 0;
 }
-span.figure {
+.figure {
 	background: #555;
 	display: block;
+	float: left;
 	padding: 2px;
-	margin-bottom: 0;
+	margin: 0 1em 0 0;
 	text-align: center;
 }
-span.figure.gutter {
-	float: left;
-	margin: 0 1em 0 0;
-}
-span.figure img {
+.figure img {
 	display: block;
 }
 
-/* tested on iPhone 4 and Nexus One only */
+
+/* Mobile (tested: iPhone 4, Nexus One)
+--------------------------------------------- */
+
 @media only screen and (max-device-width: 480px) 
 {
 	#container {
@@ -275,21 +272,13 @@ span.figure img {
 		text-align: left;
 		width: auto;
 	}
-	#header {
-		float: none;
-		margin: 0;
-		padding: 0;
-		position: static;
-		text-align: center;
-		width: auto;
-	}
+	#banner {
+		
+  }
 	#nav {
 		margin: 0;
 		padding: 5px 0;
 		width: auto;
-	}
-	#nav ul, #nav li {
-		text-align: center;
 	}
 	#nav:after {
 		clear: both;
@@ -297,6 +286,9 @@ span.figure img {
 		display: block;
 		font-size: 1px;
 		line-height: 1px;
+	}
+	#nav ul, #nav li {
+		text-align: center;
 	}
 	#nav ul {
 		margin: 0 0 0 4px;
@@ -334,11 +326,13 @@ span.figure img {
 		padding: 0;
 	}
 	#content {
-		margin: 0;
-		width: auto;
+		padding: 50px 5px 10px 5px;
 	}
 	#footer {
 		font-size: 12px;
 		width: auto;
-	}	
+	}
+	#github-fork {
+    display: none;
+  }
 }
