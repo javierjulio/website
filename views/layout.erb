@@ -29,12 +29,12 @@
   <nav id="nav">
     
     <ul>
-      <li<% if request.path_info.include? 'archives' %> class="current"<% end %>><a href="/archives">Archives</a></li>
-      <li<% if request.path_info.include? 'resume' %> class="current"<% end %>><a href="/resume">Resume</a></li>
-      <li<% if request.path_info.include? 'presentations' %> class="current"<% end %>><a href="/presentations">Presentations</a></li>
-      <li<% if request.path_info.include? 'recipes' %> class="current"<% end %>><a href="/recipes">Recipes</a></li>
+      <li<% if urlContains 'archives' %> class="current"<% end %>><a href="/archives">Archives</a></li>
+      <li<% if urlContains 'resume' %> class="current"<% end %>><a href="/resume">Resume</a></li>
+      <li<% if urlContains 'presentations' %> class="current"<% end %>><a href="/presentations">Presentations</a></li>
+      <li<% if urlContains 'recipes' %> class="current"<% end %>><a href="/recipes">Recipes</a></li>
       <li><a href="<%= Serious.feed_url %>">RSS</a></li>
-      <li<% if request.path_info.include? 'about' %> class="current"<% end %>><a href="/about">About</a></li>
+      <li<% if urlContains 'about' %> class="current"<% end %>><a href="/about">About</a></li>
       <li><a href="mailto:jjfutbol@gmail.com">Contact</a></li>
     </ul>
     

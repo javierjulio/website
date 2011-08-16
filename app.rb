@@ -2,6 +2,18 @@ require 'serious'
 
 class MyApp < Serious
 	
+	#
+	# Helpers
+	#
+	
+  helpers do
+    
+    def urlContains(name)
+      request.path_info.include? name
+    end
+    
+  end
+  
   # 
   # Main Website Routes
   # 
