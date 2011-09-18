@@ -246,6 +246,9 @@ section#content ul.archives, section#content ul.archives li {
 section#content ul.archives li {
   padding-bottom: 12px;
 }
+section#content .older {
+  margin-bottom: 45px;
+}
 
 /* page specific styles 
 --------------------------------------------- */
