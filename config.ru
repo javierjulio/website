@@ -10,7 +10,7 @@ Serious.set :public, File.join(Dir.getwd, 'assets')
 Serious.set :views, File.join(Dir.getwd, 'views')
 Serious.set :articles, File.join(Dir.getwd, 'posts')
 
-Serious.set :items_on_index, 3
+Serious.set :items_on_index, 4
 Serious.set :archived_on_index, 25
 
 Serious.set :feed_url, 'http://feeds.feedburner.com/javierjulio'
