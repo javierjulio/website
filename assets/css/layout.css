@@ -58,15 +58,17 @@ acronym {
 	cursor: help;
 	font-style: normal;
 }
-a, a:link, a:visited, a:active {
+a {
+  -webkit-transition: color 0.5s ease-out;
+	-moz-transition: color 0.5s ease-out;
+	-o-transition: color .0.5s ease-out;
+	transition: color 0.5s ease-out;
+}
+a:link, a:visited, a:active {
   border-bottom: 1px solid #C0C0C0;
 	color: #5D5E72;
 	outline: none;
 	text-decoration: none;
-	-webkit-transition: color 0.5s ease-out;
-	-moz-transition: color 0.5s ease-out;
-	-o-transition: color .0.5s ease-out;
-	transition: color 0.5s ease-out;
 }
 a:hover {
 	color: #901B0F;
