@@ -1,2 +1,2 @@
-source 'http://rubygems.org'
-gem 'serious', '0.3.1'
+source :rubygems
+gem 'serious', :git => "git://github.com/colszowka/serious.git"
