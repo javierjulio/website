@@ -1,24 +1,32 @@
+GIT
+  remote: git://github.com/colszowka/serious.git
+  revision: 41b749fab601ba40a905a9eefad83aedf71fc638
+  specs:
+    serious (0.3.2)
+      builder (>= 2.1.2)
+      sinatra (>= 1.0.0)
+      stupid_formatter (>= 0.2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
     builder (3.0.0)
-    coderay (0.9.8)
-    rack (1.3.2)
+    coderay (1.0.0)
+    rack (1.3.4)
+    rack-protection (1.1.2)
+      rack
     rdiscount (1.6.8)
-    serious (0.3.1)
-      builder (>= 2.1.2)
-      sinatra (>= 1.0.0)
-      stupid_formatter (>= 0.2.0)
-    sinatra (1.2.6)
-      rack (~> 1.1)
-      tilt (>= 1.2.2, < 2.0)
+    sinatra (1.3.0)
+      rack (~> 1.3)
+      rack-protection (~> 1.1)
+      tilt (~> 1.3)
     stupid_formatter (0.2.0)
       coderay (>= 0.9.0)
       rdiscount (>= 1.5.0)
-    tilt (1.3.2)
+    tilt (1.3.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  serious (= 0.3.1)
+  serious!
