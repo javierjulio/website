@@ -1,4 +1,7 @@
-require 'serious'
+require 'rubygems'
+require 'bundler'
+Bundler.require
+
 require './app'
 
 Serious.set :title, 'Javier Julio'
@@ -6,7 +9,7 @@ Serious.set :author, 'Javier Julio'
 Serious.set :url, 'http://www.javier-julio.com'
 
 Serious.set :root, Dir.getwd
-Serious.set :public, File.join(Dir.getwd, 'assets')
+Serious.set :public_folder, File.join(Dir.getwd, 'assets')
 Serious.set :views, File.join(Dir.getwd, 'views')
 Serious.set :articles, File.join(Dir.getwd, 'posts')
 
