@@ -239,6 +239,12 @@ td { vertical-align: top; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
+/* Enable an element to be resizable without JS */
+.resizable {
+  resize: both;
+  overflow: auto;
+}
+
 /* Shamelessly stolen from railscasts.com - thank you Ryan! */
 .CodeRay pre {
   background-color: #eee;
