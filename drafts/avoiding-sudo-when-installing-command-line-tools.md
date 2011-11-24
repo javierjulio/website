@@ -14,4 +14,4 @@ I've grown used to installing from source where in the past I wouldn't have but 
 
 Essentially, what I've learned on how to avoid ```sudo``` is to checkout the source of what tool I need into a hidden folder in my home directory (e.g. ~/.node) and follow the installation instructions which usually as some point involve updating your path (e.g. ~/.bash_profile). This way I have control over how to update and is not really any different from what I'm already used to doing.
 
-TWEET: Avoiding sudo on command line tools by installing from source [URL] Tips learned from installing Node.js and @sstephenson's rbenv
+TWEET: Avoid sudo on command line tools by installing from source [URL] Tips from installing Node.js and @sstephenson's rbenv
