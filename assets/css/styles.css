@@ -404,16 +404,14 @@ body {
 }
 #nav ul li a {
   border: none;
-  color: #AAB3B7;
+  color: #6B8A96;
   margin: 5px 5px 5px 0;
 	padding: 5px 5px 5px 0;
 	text-decoration: none;
 }
-#nav ul li a:hover {
-  color: #BA9471;
-}
+#nav ul li a:hover, 
 #nav ul li.current a {
-  color: #686F73;
+  color: #BA9471;
 }
 #content {
   padding: 50px 0 10px 0;
@@ -465,7 +463,7 @@ section#content article header a:hover {
 }
 section#content article .date, 
 section#content article .subscribe {
-  color: #aaa;
+  color: #999;
   font-size: .9em;
 }
 section#content article .body {
