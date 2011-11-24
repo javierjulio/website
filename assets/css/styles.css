@@ -359,7 +359,7 @@ html {
   border-top: 15px solid #525B61;
 }
 body {
-  background: #fefefe;
+  background: #f5f6f6 url('/images/background-pattern.png');
   border-top: 5px solid #CC9A66;
   color: #525B61;
   font-family: "Helvetica Neue", Helvetica, Calibri, Arial, serif;
