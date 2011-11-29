@@ -298,17 +298,24 @@ a:hover {
 	color: #BA9471;
 	text-decoration: underline;
 }
-pre {
-  background-color: #f4f4f4;
-  border: 1px solid #ddd;
-  box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px inset;
+pre, code {
+  background-color: #fff;
+  border: 1px solid #ccc;
   color: #444;
   font-family: 'Bitstream Vera Sans Mono','Courier',monospace;
+}
+code {
+  padding: 0 .2em;
+}
+pre {
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0 2px 3px inset;
   margin: 0 0 18px 0;
   padding: 7px 5px;
 }
 pre code {
-  font-family: 'Bitstream Vera Sans Mono','Courier',monospace;
+  border: none;
+  padding: 0;
 }
 blockquote {
   border-left: 5px solid #dfdfdf;
