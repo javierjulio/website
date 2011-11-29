@@ -4,6 +4,9 @@ Bundler.require
 
 require './app'
 
+# do NOT show posts with a future date
+Serious.set :future, false
+
 Serious.set :title, 'Javier Julio'
 Serious.set :author, 'Javier Julio'
 Serious.set :url, 'http://www.javier-julio.com'
