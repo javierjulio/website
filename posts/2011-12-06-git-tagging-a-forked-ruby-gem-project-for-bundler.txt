@@ -1,4 +1,4 @@
-# Git tagging a forked Ruby gem project for Bundler
+title: Git tagging a forked Ruby gem project for Bundler
 
 If you ever have to customize or patch a Ruby gem and you are using Bundler, its a good idea when forking that project to create a branch and then [tag new releases](http://gitref.org/branching/#tag).
 
