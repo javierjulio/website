@@ -1,13 +1,7 @@
-# Using git tag in Bundler Gemfile for forked Ruby gem projects
+# Git tagging a forked Ruby gem project for Bundler
 
-On a recent project I was tasked with syncing data from our database to Salesforce for reporting. I searched for Ruby gems and came across databasedotcom and salesforce_bulk. Sadly, I had issues with both but thankfully since they were hosted on GitHub it was as easy as forking both and creating branches with fixes.
+If you ever have to customize or patch a Ruby gem and you are using Bundler, its a good idea when forking that project to create a branch and then [tag new releases](http://gitref.org/branching/#tag).
 
-I updated the project's Gemfile with my forked copies and ran ```bundle install```. Afterwards though I realized I had to make more changes to the branch and that running ```bundle install``` wouldn't reinstall from git source. So I looked up how to tag in git and started tagging minor releases so as I updated the ```Gemfile``` with a new tag version, running ```bundle install``` would reinstall the gem from my fork.
+I found this out recently as I used two Ruby gems, databasedotcom and salesforce_bulk, to sync data to Salesforce for reporting. I ran into showstoppers with both but luckily they are hosted on GitHub so I was able to fork them and make the necessary changes to resolve the issues I encountered while being able to contribute those changes back.
 
-
-- task to sync project data to Salesforce for reporting
-- available gems, found: databasedotcom and salesforce_bulk
-- issues with both gems that I could not wait on
-- open source so I'll patch it myself
-- forked the project and created a branch with custom changes required for my work project
-- I started using the branch option in Bundler but I realized as I developed further changes Bundler wouldn't reinstall from git so I looked up [how to tag in git](http://gitref.org/branching/#tag) and created versions so that way Bundler would update if I changed the tag version for that project in my Gemfile.
+The project ```Gemfile``` was updated with my two forked git branches and then I ran ```bundle install```. While Bundler does support specifying a git branch I found that as I made further code updates and would run ```bundle install``` again, Bundler wouldn't download those latest changes. I figured out that I should be [tagging releases of that branch](http://gitref.org/branching/#tag) instead as that would require the ```Gemfile``` to be updated with a new tagged release. Once running ```bundle install``` would download the latest changes I made.
