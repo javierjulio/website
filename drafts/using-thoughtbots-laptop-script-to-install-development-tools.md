@@ -1,4 +1,4 @@
-# Using A Laptop Script To Install and Document Development Tools
+# Using a Laptop Script to Install (and Document) Development Tools
 
 Not to long ago I read Thoughbot's excellent [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/post/8700977975/2011-rubyists-guide-to-a-mac-os-x-development) that lists all the development tools they install on their laptops. The big takeaway for me was the last step their laptop script which is just a bash script that runs various install commands for Ruby Gems and other tools. While it may seem so simple I couldn't believe I didn't think about this before. What a useful tool. This inspired me to create [my own laptop script](https://github.com/javierjulio/laptop).
 
