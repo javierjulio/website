@@ -138,6 +138,13 @@ class MyApp < Serious
   	erb :'recipes/meat/bell_pepper_chicken'
   end
   
+  get '/recipes/steak-milanesas' do
+    @title = 'Recipe for Steak Milanesas'
+    @contentTitle = 'Steak Milanesas'
+    
+    erb :'recipes/meat/steak_milanesas'
+  end
+  
   get '/recipes/chicken-milanesas' do
   	@title = 'Recipe for Chicken Milanesas'
   	@contentTitle = 'Chicken Milanesas'
