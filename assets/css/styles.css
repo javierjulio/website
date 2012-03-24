@@ -361,54 +361,63 @@ h5, h6 {
 
 /* layout 
 --------------------------------------------- */
-html {
-  background: #fff;
-  border-top: 15px solid #525B61;
-}
 body {
   background: #f5f6f6 url('/images/background-pattern.png');
-  border-top: 5px solid #CC9A66;
+  border-top: 10px solid #525B61;
   color: #525B61;
   font-family: "Helvetica Neue", Helvetica, Calibri, Arial, serif;
-  margin-top: 2px;
 }
+
 #container {
+  background-color: #fff; /* fallback */
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 3px solid #ddd;
   font-size: 1.3em;
-	margin: 0 auto;
-	width: 600px;
+	margin: 30px auto;
+	padding: 0 30px;
+	width: 640px;
 }
+
 #banner {
-  padding-top: 40px;
+  padding-top: 30px;
 }
+
 #banner h1, 
 #nav {
   font-weight: normal;
 }
+
 #banner h1 a {
   color: #686F73;
   font-size: 1.2em;
   text-decoration: none;
 }
+
 .first-name, .last-name {
   font-family: Menlo, "Helvetica Neue", Helvetica, Calibri, Arial, serif;
 }
+
 .last-name {
   color: #9EA7AE;
 }
+
 #nav {
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
 }
+
 #nav ul {
-  font-size: .8em;
+  font-size: .9em;
   list-style-image: none;
   list-style-type: none;
   margin: 10px 0 0 0;
   padding: 0;
 }
+
 #nav li {
   display: inline;
 }
+
 #nav ul li a {
   border: none;
   color: #6B8A96;
@@ -416,25 +425,30 @@ body {
 	padding: 5px 5px 5px 0;
 	text-decoration: none;
 }
+
 #nav ul li a:hover, 
 #nav ul li.current a {
   color: #BA9471;
 }
+
 #content {
-  padding: 50px 0 10px 0;
+  padding: 10px 0;
 }
+
 footer#content-footer {
   border-top: 1px solid #ddd;
 	color: #9EA7AE;
 	font-size: .8em;
-  margin: 50px 0 80px 0;
-  padding: 1.5em 0 0 0;
+  margin-top: 20px;
+  padding: 20px 0 30px 0;
   text-align: center;
 }
+
 footer#content-footer nav#social {
   margin: 0 auto;
   padding: 0;
 }
+
 footer#content-footer nav#social ul, 
 footer#content-footer nav#social ul li {
   list-style: none;
@@ -442,11 +456,13 @@ footer#content-footer nav#social ul li {
   margin: 0;
   padding: 0;
 }
+
 footer#content-footer nav#social ul li a {
   border: none;
   margin: 0px;
   padding: 5px;
 }
+
 #github-fork {
   border: none;
   position: absolute;
@@ -461,39 +477,49 @@ section#content article header h3 {
   font-weight: normal;
   margin-bottom: 10px;
 }
+
 section#content article header a {
   color: #BA9471;
   text-decoration: none;
 }
+
 section#content article header a:hover {
   color: #CB6A1B;
 }
+
 section#content article .date, 
 section#content article .subscribe {
   color: #999;
   font-size: .9em;
 }
+
 section#content article .body {
   padding: 18px 0 40px 0;
 }
+
 section#content article .body h4 {
   font-weight: bold;
 }
+
 section#content article .subscribe {
   font-size: 16px;
 }
+
 section#content ul.archives .date {
   color: #999;
   display: block;
 }
+
 section#content ul.archives, section#content ul.archives li {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
+
 section#content ul.archives li {
   padding-bottom: 12px;
 }
+
 section#content .older {
   margin-bottom: 45px;
 }
@@ -504,11 +530,13 @@ section#content .older {
 	font-weight: bold;
 	margin: 0 0 8px 0;
 }
+
 .job-date {
   color: #888;
   font-size: 14px;
 	margin: 0 0 8px 0;
 }
+
 .figure {
 	background: #555;
 	display: block;
@@ -517,6 +545,7 @@ section#content .older {
 	margin: 0 1em 0 0;
 	text-align: center;
 }
+
 .figure img {
 	display: block;
 }
@@ -543,20 +572,24 @@ section#content .older {
 @media only screen and (max-device-width: 480px) 
 {
 	#container {
-		margin: 0;
+    border-width: 1px;
+    font-size: 1.1em;
+		margin: 1em;
 		padding: 1em;
 		width: auto;
 	}
+	
 	#banner {
-		
+		padding: 10px 0;
   }
+  
 	#nav {
-    border: none;
     font-weight: bold;
 		margin: 0;
 		padding: 0;
 		width: auto;
 	}
+	
 	#nav:after {
 		clear: both;
 		content: ".";
@@ -564,25 +597,27 @@ section#content .older {
 		font-size: 1px;
 		line-height: 1px;
 	}
-	#nav ul, #nav li {
-	}
+	
 	#nav ul {
+    margin: 0 0 0 -3px;
+    padding: 0;
+	}
+	
+	#nav ul li {
+		display: inline-block;
 		margin: 0;
 		padding: 0;
 	}
-	#nav ul li {
-		display: block;
-		float: left;
-		padding: 0;
-	}
+	
 	#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
 		display: block;
-		padding: 3px 9px 3px 0;
+		padding: 3px 5px 3px 5px;
 		-webkit-transition: none;
 		-moz-transition: none;
 		-o-transition: none;
 		transition: none;
 	}
+	
 	#social .elsewhere {
 		clear: left;
 		list-style: none;
@@ -591,19 +626,22 @@ section#content .older {
 		position: static;
 		text-align: center;
 	}
+	
 	#social .elsewhere li {
 		display: inline;
 		list-style: none;
 		margin: 0 6px;
 		padding: 0;
 	}
+	
 	#content {
 		padding: 0;
 	}
-	#footer {
-		font-size: 12px;
-		width: auto;
+	
+	footer#content-footer {
+    font-size: 0.9em;
 	}
+	
 	#github-fork {
     display: none;
   }
