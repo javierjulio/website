@@ -309,7 +309,7 @@ code {
 }
 pre {
   border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.09) 0 2px 3px inset;
+  box-shadow: rgba(0, 0, 0, 0.09) 0 1px 3px inset;
   margin: 0 0 18px 0;
   padding: 7px 5px;
 }
