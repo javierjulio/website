@@ -362,14 +362,14 @@ h5, h6 {
 /* layout 
 --------------------------------------------- */
 body {
-  background: #f5f6f6 url('/images/background-pattern.png');
+  background: #e3e4e5 url('/images/background-pattern.png');
   border-top: 10px solid #525B61;
   color: #525B61;
   font-family: "Helvetica Neue", Helvetica, Calibri, Arial, serif;
 }
 
 #container {
-  background-color: #fff; /* fallback */
+  background-color: #f1f1f1; /* fallback */
   background-color: rgba(255, 255, 255, 0.5);
   border: 3px solid #ddd;
   font-size: 1.3em;
