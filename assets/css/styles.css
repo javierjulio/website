@@ -377,10 +377,10 @@ body {
   -webkit-box-shadow: 0 0 5px #bbb;
   -moz-box-shadow: 0 0 5px #bbb;
   box-shadow: 0 0 5px #bbb;
-  font-size: 1.3em;
+  font-size: 1.2em;
 	margin: 30px auto;
 	padding: 0 30px;
-	width: 640px;
+	width: 600px;
 }
 
 #banner {
