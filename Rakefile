@@ -23,6 +23,7 @@ task :server do
   system "sass --watch assets/stylesheets:assets/stylesheets --style compressed"
 end
 
+desc "Stops the Thin server which runs as a daemon"
 task :stop do
   # Retrieve Thin pid so we can kill that process.
   file = File.open("tmp/pids/thin.pid", "rb")
@@ -37,6 +38,7 @@ task :stop do
   FileUtils.remove_dir("tmp") if File.directory? "tmp"
 end
 
+desc "Starts a server hosting your site on http://localhost:3000 and the SASS watcher"
 task :start => [:server, :stop] do
   puts "Bye!"
 end
