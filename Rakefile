@@ -1,5 +1,6 @@
 require 'serious'
 require 'serious/tasks'
+require 'fileutils'
 
 # http://jasonseifer.com/2010/04/06/rake-tutorial
 # http://tjstein.com/2011/04/classy-web-development-with-sinatra-and-heroku/
@@ -22,7 +23,8 @@ task :stop do
   
   system "kill #{process_id}"
   
-  File.delete("tmp/pids/thin.pid") if File.exists? "tmp/pids/thin.pid"
+  FileUtils.remove_dir("log") if File.directory? "log"
+  FileUtils.remove_dir("tmp") if File.directory? "tmp"
 end
 
 task :start => [:server, :stop] do
