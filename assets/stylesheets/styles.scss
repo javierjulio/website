@@ -325,8 +325,7 @@ section#content .older {
 @media only screen and (max-device-width: 480px) 
 {
 	#container {
-    font-size: 1.1em;
-    margin: 1em;
+    margin: 0.8em;
     padding: 1em;
     width: auto;
 	}
@@ -340,14 +339,6 @@ section#content .older {
     margin: 0;
     padding: 0;
     width: auto;
-	}
-	
-	#nav:after {
-    clear: both;
-    content: ".";
-    display: block;
-    font-size: 1px;
-    line-height: 1px;
 	}
 	
 	#nav ul {
@@ -371,19 +362,11 @@ section#content .older {
 	}
 	
 	#social .elsewhere {
-    clear: left;
-    list-style: none;
-    margin: 20px auto 0 auto;
-    padding: 0;
-    position: static;
-    text-align: center;
+    margin-top: 20px;
 	}
 	
 	#social .elsewhere li {
-    display: inline;
-    list-style: none;
     margin: 0 6px;
-    padding: 0;
 	}
 	
 	#content {
