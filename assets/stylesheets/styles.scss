@@ -1,0 +1,435 @@
+/* ==|== primary styles =====================================================
+   Author: Javier Julio
+   ========================================================================== */
+
+/* Enable an element to be resizable without JS */
+.resizable {
+  resize: both;
+  overflow: auto;
+}
+
+/* Shamelessly stolen from railscasts.com - thank you Ryan! */
+.CodeRay pre {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  color: #444;
+  font-family: 12px 'Bitstream Vera Sans Mono','Courier',monospace;
+  margin: 0;
+  overflow: auto;
+  padding: 5px;
+}
+.CodeRay .an { color:#E7BE69 }                      /* html attribute */
+.CodeRay .c  { color:#BC9358; font-style: italic; } /* comment */
+.CodeRay .ch { color:#509E4F }                      /* escaped character */
+.CodeRay .cl { color:#FFF }                         /* class */
+.CodeRay .co { color:#FFF }                         /* constant */
+.CodeRay .fl { color:#A4C260 }                      /* float */
+.CodeRay .fu { color:#FFC56D }                      /* function */
+.CodeRay .gv { color:#D0CFFE }                      /* global variable */
+.CodeRay .i  { color:#A4C260 }                      /* integer */
+.CodeRay .il { background:#151515 }                 /* inline code */
+.CodeRay .iv { color:#D0CFFE }                      /* instance variable */
+.CodeRay .pp { color:#E7BE69 }                      /* doctype */
+.CodeRay .r  { color:#CB7832 }                      /* keyword */
+.CodeRay .rx { color:#A4C260 }                      /* regex */
+.CodeRay .s  { color:#A4C260 }                      /* string */
+.CodeRay .sy { color:#6C9CBD }                      /* symbol */
+.CodeRay .ta { color:#E7BE69 }                      /* html tag */
+.CodeRay .pc { color:#6C9CBD }                      /* boolean */
+
+
+/* element specific default styles 
+--------------------------------------------- */
+
+a {
+  -webkit-transition: color 0.5s ease-out;
+	-moz-transition: color 0.5s ease-out;
+	-o-transition: color .0.5s ease-out;
+	transition: color 0.5s ease-out;
+}
+a:link, a:visited {
+	color: #6B8A96;
+	outline: none;
+	text-decoration: underline;
+}
+a:hover {
+	color: #BA9471;
+	text-decoration: underline;
+}
+pre, code {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #444;
+  font-family: 'Bitstream Vera Sans Mono','Courier',monospace;
+}
+code {
+  padding: 0 .2em;
+}
+pre {
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0 1px 3px inset;
+  margin: 0 0 18px 0;
+  padding: 7px 5px;
+}
+pre code {
+  border: none;
+  padding: 0;
+}
+blockquote {
+  border-left: 5px solid #dfdfdf;
+  color: #6D6E72;
+  padding: 0 0 0 12px;
+  margin: 5px 0 5px 2px;
+}
+p {
+	line-height: 150%;
+	margin: 0 0 18px 0;
+	padding: 0;
+}
+ul, ol {
+	padding: 0 0 0 25px;
+}
+li {
+  line-height: 1.8em;
+}
+h1, h2, h3, h4, h5 {
+  color: #666;
+  font-family: Georgia, Times, serif;
+  font-weight: normal;
+}
+h1 {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+h2 {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+h3 {
+	font-size: 22px;
+	margin-bottom: 15px;
+}
+h4 {
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+h5, h6 {
+	font-size: 14px;
+}
+
+
+/* layout 
+--------------------------------------------- */
+body {
+  background: #e3e4e5 url('/images/background-pattern.png');
+  border-top: 8px solid #525B61;
+  color: #525B61;
+  font-family: "Helvetica Neue", Helvetica, Calibri, Arial, serif;
+}
+
+#container {
+  background-color: #f1f1f1; /* fallback */
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 5px #bbb;
+  -moz-box-shadow: 0 0 5px #bbb;
+  box-shadow: 0 0 5px #bbb;
+  font-size: 1.2em;
+	margin: 30px auto;
+	padding: 0 30px;
+	width: 600px;
+}
+
+#banner {
+  padding-top: 30px;
+}
+
+#banner h1, 
+#nav {
+  font-weight: normal;
+}
+
+#banner h1 a {
+  color: #686F73;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.first-name, .last-name {
+  font-family: Menlo, "Helvetica Neue", Helvetica, Calibri, Arial, serif;
+}
+
+.last-name {
+  color: #9EA7AE;
+}
+
+#nav {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+#nav ul {
+  font-size: .9em;
+  list-style-image: none;
+  list-style-type: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+#nav li {
+  display: inline;
+}
+
+#nav ul li a {
+  border: none;
+  color: #6B8A96;
+  margin: 5px 5px 5px 0;
+	padding: 5px 5px 5px 0;
+	text-decoration: none;
+}
+
+#nav ul li a:hover, 
+#nav ul li.current a {
+  color: #BA9471;
+}
+
+#content {
+  padding: 10px 0;
+}
+
+footer#content-footer {
+  border-top: 1px solid #ddd;
+	color: #9EA7AE;
+	font-size: .8em;
+  margin-top: 20px;
+  padding: 20px 0 30px 0;
+  text-align: center;
+}
+
+footer#content-footer nav#social {
+  margin: 0 auto;
+  padding: 0;
+}
+
+footer#content-footer nav#social ul, 
+footer#content-footer nav#social ul li {
+  list-style: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+footer#content-footer nav#social ul li a {
+  border: none;
+  margin: 0px;
+  padding: 5px;
+}
+
+#github-fork {
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* blog specific styles 
+--------------------------------------------- */
+section#content article header h3 {
+  font-size: 1.4em;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+section#content article header a {
+  color: #BA9471;
+  text-decoration: none;
+}
+
+section#content article header a:hover {
+  color: #CB6A1B;
+}
+
+section#content article .date, 
+section#content article .subscribe {
+  color: #999;
+  font-size: .9em;
+}
+
+section#content article .body {
+  padding: 18px 0 40px 0;
+}
+
+section#content article .body h4 {
+  font-weight: bold;
+}
+
+section#content article .subscribe {
+  font-size: 16px;
+}
+
+section#content ul.archives .date {
+  color: #999;
+  display: block;
+}
+
+section#content ul.archives, section#content ul.archives li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+section#content ul.archives li {
+  padding-bottom: 12px;
+}
+
+section#content .older {
+  margin-bottom: 45px;
+}
+
+/* page specific styles 
+--------------------------------------------- */
+.job-title {
+	font-weight: bold;
+	margin: 0 0 8px 0;
+}
+
+.job-date {
+  color: #888;
+  font-size: 14px;
+	margin: 0 0 8px 0;
+}
+
+.figure {
+	background: #555;
+	display: block;
+	float: left;
+	padding: 2px;
+	margin: 0 1em 0 0;
+	text-align: center;
+}
+
+.figure img {
+	display: block;
+}
+
+
+/* ==|== media queries ======================================================
+   EXAMPLE Media Query for Responsive Design.
+   This example overrides the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+/* Mobile (tested: iPhone 4, Nexus One)
+--------------------------------------------- */
+@media only screen and (max-device-width: 480px) 
+{
+	#container {
+    border-width: 1px;
+    font-size: 1.1em;
+    margin: 1em;
+    padding: 1em;
+    width: auto;
+	}
+	
+	#banner {
+    padding: 10px 0;
+  }
+  
+	#nav {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    width: auto;
+	}
+	
+	#nav:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 1px;
+    line-height: 1px;
+	}
+	
+	#nav ul {
+    margin: 0 0 0 -3px;
+    padding: 0;
+	}
+	
+	#nav ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+	}
+	
+	#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
+    display: block;
+    padding: 3px 5px 3px 5px;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+	}
+	
+	#social .elsewhere {
+    clear: left;
+    list-style: none;
+    margin: 20px auto 0 auto;
+    padding: 0;
+    position: static;
+    text-align: center;
+	}
+	
+	#social .elsewhere li {
+    display: inline;
+    list-style: none;
+    margin: 0 6px;
+    padding: 0;
+	}
+	
+	#content {
+    padding: 0;
+	}
+	
+	footer#content-footer {
+    font-size: 0.9em;
+	}
+	
+	#github-fork {
+    display: none;
+  }
+}
+
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  /* reset any structural elements */
+  body, #container, #header, #primary, #secondary, #tertiary, #footer {
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+  }
+  
+  /* hide columns, nav, designated elements */
+  #nav, footer#content-footer, #github-fork, .hide {
+    display: none !important;
+  }
+  
+  /* remove any borders */
+  html, body, body *, #container {
+    border-width: 0;
+  }
+  
+  /* no need to differentiate links from text, remove formatting */
+  a, a:link, a:visited {
+    background-color: inherit;
+    color: inherit;
+    text-decoration: underline;
+  }
+}
