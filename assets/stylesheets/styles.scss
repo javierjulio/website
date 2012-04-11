@@ -82,7 +82,6 @@ blockquote {
   margin: 5px 0 5px 2px;
 }
 p {
-	line-height: 150%;
 	margin: 0 0 18px 0;
 	padding: 0;
 }
@@ -90,7 +89,7 @@ ul, ol {
 	padding: 0 0 0 25px;
 }
 li {
-  line-height: 1.8em;
+  padding-bottom: 5px;
 }
 h1, h2, h3, h4, h5 {
   color: #666;
