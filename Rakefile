@@ -12,6 +12,11 @@ require 'fileutils'
 Rake::Task['default'].clear
 Rake::Task['server'].clear
 
+desc "Deploy to Heroku"
+task :deploy do
+  system "git push heroku master"
+end
+
 namespace :server do
   desc "Starts the daemon Thin server and Sass watcher"
   task :processes do
