@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/javierjulio/serious.git
-  revision: a6d2e641cc6581fd7875cf67930a0700b21407a6
+  revision: c7aad870fb71428c1ff0d387eb492e2d08070ad5
   specs:
     serious (0.3.2)
       builder (>= 2.1.2)
@@ -11,10 +11,10 @@ GEM
   remote: http://rubygems.org/
   specs:
     builder (3.0.0)
-    coderay (1.0.5)
+    coderay (1.0.6)
     daemons (1.1.8)
     eventmachine (0.12.10)
-    rack (1.4.0)
+    rack (1.4.1)
     rack-protection (1.2.0)
       rack
     rake (0.9.2.2)
@@ -27,7 +27,7 @@ GEM
     stupid_formatter (0.2.0)
       coderay (>= 0.9.0)
       rdiscount (>= 1.5.0)
-    thin (1.2.11)
+    thin (1.3.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
