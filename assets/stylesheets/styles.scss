@@ -1,6 +1,4 @@
-/* ==|== primary styles =====================================================
-   Author: Javier Julio
-   ========================================================================== */
+@import "mixins";
 
 /* Enable an element to be resizable without JS */
 .resizable {
@@ -42,10 +40,7 @@
 --------------------------------------------- */
 
 a {
-  -webkit-transition: color 0.5s ease-out;
-	-moz-transition: color 0.5s ease-out;
-	-o-transition: color .0.5s ease-out;
-	transition: color 0.5s ease-out;
+  @include transition(color 0.5s ease-out);
 }
 a:link, a:visited {
 	color: #6B8A96;
@@ -66,8 +61,8 @@ code {
   padding: 0 .2em;
 }
 pre {
-  border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.09) 0 1px 3px inset;
+  @include border-radius(4px);
+  @include box-shadow(rgba(0, 0, 0, 0.09) 0 1px 3px inset);
   margin: 0 0 18px 0;
   padding: 7px 5px;
 }
@@ -130,12 +125,8 @@ body {
 #container {
   background-color: #f1f1f1; /* fallback */
   background-color: rgba(255, 255, 255, 0.5);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 0 5px #bbb;
-  -moz-box-shadow: 0 0 5px #bbb;
-  box-shadow: 0 0 5px #bbb;
+  @include border-radius(4px);
+  @include box-shadow(0 0 5px #bbb);
 	margin: 30px auto;
 	padding: 0 30px;
 	width: 600px;
@@ -340,10 +331,7 @@ section#content .older {
 	#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
     display: block;
     padding: 3px 5px 3px 5px;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -o-transition: none;
-    transition: none;
+    @include transition(none);
 	}
 	
 	#social .elsewhere {
