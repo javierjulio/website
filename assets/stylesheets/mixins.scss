@@ -10,6 +10,14 @@
           box-shadow: $shadow;
 }
 
+/* When setting box-sizing: border-box; when you apply a border and padding 
+ * to that element that value combined is part of the width set. So if you 
+ * have a 1px border, 5px padding and width of 100px, you're rendered width 
+ * remains at 100px but the default setting (content-box) the border and 
+ * padding are applied on top of the width so the actual rendered width in 
+ * that example would be 112px (1px + 1px + 5px + 5px).
+ * http://css-tricks.com/box-sizing/
+ */
 @mixin box-sizing($boxmodel) {
   -webkit-box-sizing: $boxmodel;
      -moz-box-sizing: $boxmodel;
