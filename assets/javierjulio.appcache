@@ -1,0 +1,15 @@
+CACHE MANIFEST
+
+# May 3, 2012 - v1
+
+# Resources
+# http://www.html5rocks.com/en/tutorials/appcache/beginner/
+# http://adam.heroku.com/past/2010/2/25/an_html5_offline_app_example/
+# http://www.catswhocode.com/blog/how-to-create-offline-html5-web-apps-in-5-easy-steps
+
+CACHE:
+/
+/stylesheets/app.css
+/images/*
+/recipes
+/archives

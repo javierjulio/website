@@ -2,9 +2,9 @@ require 'serious'
 
 class MyApp < Serious
 	
-	#
-	# Helpers
-	#
+	configure do
+    Rack::Mime::MIME_TYPES[".appcache"] = "text/cache-manifest"
+  end
 	
   helpers do
     
@@ -13,10 +13,6 @@ class MyApp < Serious
     end
     
   end
-  
-  # 
-  # Main Website Routes
-  # 
   
   get '/about/?' do
   	@contentTitle = 'About Me'
