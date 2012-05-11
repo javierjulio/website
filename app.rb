@@ -2,10 +2,6 @@ require 'serious'
 
 class MyApp < Serious
 	
-	configure do
-    Rack::Mime::MIME_TYPES[".appcache"] = "text/cache-manifest"
-  end
-	
   helpers do
     
     def urlContains(name)
