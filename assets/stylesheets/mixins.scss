@@ -19,10 +19,11 @@
           border-radius: $radius;
 }
 
-@mixin box-shadow($shadow) {
-  -webkit-box-shadow: $shadow;
-     -moz-box-shadow: $shadow;
-          box-shadow: $shadow;
+@mixin box-shadow($shadow-1, $shadow-2: false, $shadow-3: false, $shadow-4: false) {
+  $full: compact($shadow-1, $shadow-2, $shadow-3, $shadow-4);
+  -webkit-box-shadow: $full;
+     -moz-box-shadow: $full;
+          box-shadow: $full;
 }
 
 /* When setting box-sizing: border-box; when you apply a border and padding 
@@ -39,12 +40,13 @@
           box-sizing: $boxmodel;
 }
 
-@mixin transition($transition) {
-  -webkit-transition: $transition;
-     -moz-transition: $transition;
-      -ms-transition: $transition;
-       -o-transition: $transition;
-          transition: $transition;
+@mixin transition($transition-1, $transition-2: false, $transition-3: false, $transition-4: false) {
+  $full: compact($transition-1, $transition-2, $transition-3, $transition-4);
+  -webkit-transition: $full;
+     -moz-transition: $full;
+      -ms-transition: $full;
+       -o-transition: $full;
+          transition: $full;
 }
 
 @mixin vertical-gradient($startColor, $endColor) {
