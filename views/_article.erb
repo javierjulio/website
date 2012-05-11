@@ -9,16 +9,16 @@
   </div>
   
   <div class="body">
-    <% if summary_only -%>
+    <% if summary_only %>
       <%= article.summary.formatted %>
-      <% if article.summary.length != article.body.length -%>
+      <% if article.summary.length != article.body.length %>
         <span class="read-more"><a href="<%= article.url %>">read on...</a></span>
-      <% end -%>
-    <% else -%>
+      <% end %>
+    <% else %>
       <%= article.body.formatted %>
       
       <p class="subscribe">Enjoyed the read? Follow me on <a href="http://twitter.com/javierjulio">twitter</a> or subscribe to my <a href="<%= Serious.feed_url %>">feed</a>.</p>
-    <% end -%>
+    <% end %>
   </div>
   
 </article>

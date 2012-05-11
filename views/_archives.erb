@@ -1,10 +1,10 @@
 <ul class="archives">
-  <% articles.each do |article| -%>
+  <% articles.each do |article| %>
     <li>
       <a href="<%= article.url %>"><%= article.title %></a>
-      <% if article.date -%>
+      <% if article.date %>
         <span class="date"><time datetime="<%= article.date.strftime("%Y-%m-%d") %>"><%= article.date.formatted %></time</span>
-      <% end -%>
+      <% end %>
     </li>
-  <% end -%>
+  <% end %>
 </ul>
