@@ -4,7 +4,9 @@
     <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
   </header>
   
-  <div class="date"><time datetime="<%= article.date.strftime("%Y-%m-%d") %>"><%= article.date.formatted %></time></div> 
+  <div class="date">
+    <time datetime="<%= article.date.strftime("%Y-%m-%d") %>"><%= article.date.formatted %></time>
+  </div>
   
   <div class="body">
     <% if summary_only -%>
