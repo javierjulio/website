@@ -22,8 +22,6 @@ namespace :server do
   task :processes do
     puts "Start Thin server as a daemon and Sass watcher normally"
     
-    # Run Thin server as a daemon. We can retrieve its pid so we can kill 
-    # the process when we decide to quit.
     system "thin start -d"
     
     # Run Sass watcher as continuous process. Once we hit CTRL+C to quit 
@@ -31,17 +29,15 @@ namespace :server do
     system "sass --watch assets/stylesheets:assets/stylesheets --style compressed"
   end
   
-  desc "Stops the daemon Thin server and cleans up"
+  desc "Stops the daemon Thin server"
   task :stop do
-    # Retrieve Thin pid so we can kill that process.
     file = File.open("tmp/pids/thin.pid", "rb")
     process_id = file.read
     
-    puts "", "Stopping server (process #{process_id})"
+    puts "Stopping Thin server (process #{process_id})"
     
     system "kill #{process_id}"
     
-    # Thin gem generates log and tmp folder but we won't need them.
     FileUtils.remove_dir("log") if File.directory? "log"
     FileUtils.remove_dir("tmp") if File.directory? "tmp"
   end
