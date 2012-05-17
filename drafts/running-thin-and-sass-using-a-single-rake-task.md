@@ -1,14 +1,47 @@
 # Running Thin and Sass using a single Rake task
 
-Boy do I feel like an idiot. I spent an entire evening figuring out how to run a Thin server and Sass watcher (both running processes) using a single Rake task for when working on my site locally but I can do this all easily using the Foreman gem by just specifying each command in a Procfile. Well, either way I learned a lot.
+I've been working with Sass lately on [MyFDB](http://www.myfdb.com) and figured would be good to learn how to implement it on my site where I use Sinatra. 
 
-I've started using Sass on a large site redesign project (Rails) and figured would be good to learn how to implement Sass on my site where I use Sinatra. While Sinatra makes it easy to render Sass I wanted to compile the files locally so they don't have to be generated on each request as my site is hosted on Heroku.
+Sinatra has the capability built in to process Sass but I wanted to compile the files locally so they don't have to be generated on each request. Since I'm running a Thin server I needed to run a second process but without having to open a new Terminal tab to start it. Not only is it an unnecessary extra step, I was afraid I'd forget to. 
 
-I didn't want to open a new Terminal tab just to start the Sass watcher. Not only is it an unnecessary extra step, I was afraid I'd forget too. With Thin I found I can run it in the background as a daemon and since I would be focusing on content and CSS updates, any Ruby related error output wasn't vital. The trick is to start Thin first as a daemon and then the Sass watcher as its a continuous running process. Once you hit CTRL+C to quit a `server:stop` Rake task is run that terminates the Thin daemon and removes the `tmp` and `log` folders that it created.
+With Thin I found I can run it as a daemon and since I would be focusing on content and CSS updates, any Ruby related error output in Terminal wasn't vital. The trick is to start Thin first as a daemon and then the Sass watcher as it'll be the process that takes up that shell session. Once you quit (CTRL+C) a Rake task `server:stop` will run that terminates the Thin daemon and removes the `tmp` and `log` folders that Thin generated. Working `Rakefile`:
 
-The Foreman gem makes this all super easy. I thougt there was some more to it but its as simple as just giving a unique name to each command as Foreman will print any output with that identifier. The following is what I have in my `Procfile`
+  require 'fileutils'
+  
+  namespace :server do
+    desc "Starts the daemon Thin server and Sass watcher"
+    task :processes do
+      puts "Start Thin server as a daemon and Sass watcher normally"
+      
+      system "thin start -d"
+      
+      # Run Sass watcher as continuous process. Once we hit CTRL+C to quit 
+      # the start task will run the dependent stop task.
+      system "sass --watch assets/stylesheets:assets/stylesheets --style compressed"
+    end
+    
+    desc "Stops the daemon Thin server"
+    task :stop do
+      file = File.open("tmp/pids/thin.pid", "rb")
+      process_id = file.read
+      
+      puts "Stopping Thin server (process #{process_id})"
+      
+      system "kill #{process_id}"
+      
+      FileUtils.remove_dir("log") if File.directory? "log"
+      FileUtils.remove_dir("tmp") if File.directory? "tmp"
+    end
+    
+    desc "Starts a server hosting site on http://localhost:3000 with Sass enabled"
+    task :start => [:processes, :stop] do
+      puts "Bye!"
+    end
+  end
+
+While I learned a lot from that approach it was a bit of a waste since the Foreman gem solves this problem and makes it super easy to implement. You just specify a unique name for each command (used as identifier for any command output in Terminal) in a `Procfile`. The following is what I use for my site:
 
 web:    bundle exec shotgun --server=thin --port=3000
 sass:   bundle exec sass --watch assets/stylesheets:assets/stylesheets --style compressed
 
-With the above in the root of my project I just run `foreman start` and the gem handles the rest. I switched back to using the Shotgun gem as it reloads the app on every request (meaning it will pick up Ruby changes). I couldn't use it before because it didn't seem that I could pass extra options to Thin to have it run in the background but using Shotgun with Thin still proves to be fast.
+From there I just run `foreman start` and the gem handles the rest. I started off using Thin directly but switched to the Shotgun gem (which still uses Thin) as it reloads the entire Sinatra app on every request. If you ran the app with Thin directly you'd have to restart the server anytime you make Ruby/Sinatra related changes.
