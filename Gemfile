@@ -1,5 +1,6 @@
 source :rubygems
 
+gem 'erubis'
 gem 'rake'
 gem 'serious', :git => 'git://github.com/javierjulio/serious.git'
 
