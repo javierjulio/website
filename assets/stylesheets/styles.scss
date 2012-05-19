@@ -57,7 +57,8 @@ pre, code {
   font-family: 'Bitstream Vera Sans Mono','Courier',monospace;
 }
 code {
-  padding: 0 .2em;
+  @include border-radius(3px);
+  padding: 0 .3em;
 }
 pre {
   @include border-radius(4px);
