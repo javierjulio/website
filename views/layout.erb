@@ -41,12 +41,10 @@
     </ul>
   </nav>
   
-  <section>
-    <div id="content" role="main">
-      <% if @contentTitle %><h2><%= @contentTitle %></h2><% end %>
-      <%= yield %>
-    </div><!-- /inner --> 
-  </section><!-- /content --> 
+  <div id="content" role="main">
+    <% if @contentTitle %><h2><%= @contentTitle %></h2><% end %>
+    <%= yield %>
+  </div><!-- /content -->
 	
   <footer id="content-footer">
     <p>
