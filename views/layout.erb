@@ -41,8 +41,8 @@
     </ul>
   </nav>
   
-  <section id="content">
-    <div class="inner">
+  <section>
+    <div id="content" role="main">
       <% if @contentTitle %><h2><%= @contentTitle %></h2><% end %>
       <%= yield %>
     </div><!-- /inner --> 
