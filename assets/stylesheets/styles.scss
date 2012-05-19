@@ -306,22 +306,10 @@ footer#content-footer {
     padding: 0;
 	}
 	
-	#nav ul li a, #nav ul li a:active, #nav ul li a:visited {
+	#nav ul li a {
     display: block;
     padding: 3px 5px 3px 5px;
     @include transition(none);
-	}
-	
-	#social .elsewhere {
-    margin-top: 20px;
-	}
-	
-	#social .elsewhere li {
-    margin: 0 6px;
-	}
-	
-	#content {
-    padding: 0;
 	}
 	
 	footer#content-footer {
