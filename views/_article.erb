@@ -2,23 +2,18 @@
   
   <header>
     <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
+    <time class="date" datetime="<%= article.date.strftime("%Y-%m-%d") %>" pubdate><%= article.date.formatted %></time>
   </header>
-  
-  <div class="date">
-    <time datetime="<%= article.date.strftime("%Y-%m-%d") %>"><%= article.date.formatted %></time>
-  </div>
-  
-  <div class="body">
-    <% if summary_only %>
-      <%= article.summary.formatted %>
-      <% if article.summary.length != article.body.length %>
-        <span class="read-more"><a href="<%= article.url %>">read on...</a></span>
-      <% end %>
-    <% else %>
-      <%= article.body.formatted %>
-      
-      <p class="subscribe">Enjoyed the read? Follow me on <a href="http://twitter.com/javierjulio">twitter</a> or subscribe to my <a href="<%= Serious.feed_url %>">feed</a>.</p>
+
+  <% if summary_only %>
+    <%= article.summary.formatted %>
+    <% if article.summary.length != article.body.length %>
+      <span class="read-more"><a href="<%= article.url %>">read on...</a></span>
     <% end %>
-  </div>
+  <% else %>
+    <%= article.body.formatted %>
+    
+    <p class="subscribe">Enjoyed the read? Follow me on <a href="http://twitter.com/javierjulio">twitter</a> or subscribe to my <a href="<%= Serious.feed_url %>">feed</a>.</p>
+  <% end %>
   
 </article>
