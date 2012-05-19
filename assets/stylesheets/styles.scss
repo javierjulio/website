@@ -59,6 +59,7 @@ pre, code {
 code {
   @include border-radius(3px);
   padding: 0 .3em;
+  white-space: nowrap;
 }
 pre {
   @include border-radius(4px);
@@ -71,6 +72,8 @@ pre code {
   border: none;
   font-size: 90%;
   padding: 0;
+  white-space: pre;
+  white-space: pre-wrap;
 }
 blockquote {
   border-left: 5px solid #dfdfdf;
