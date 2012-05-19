@@ -266,15 +266,19 @@ footer#content-footer nav#social ul li a {
 
 /* page specific styles 
 --------------------------------------------- */
+.recipe-title {
+  margin-bottom: 0;
+}
+
 .job-title {
 	font-weight: bold;
-	margin: 0 0 8px 0;
+	margin: 0;
 }
 
 .job-date {
   color: #888;
   font-size: 14px;
-	margin: 0 0 8px 0;
+	margin: 0;
 }
 
 .figure {
