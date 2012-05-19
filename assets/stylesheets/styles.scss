@@ -186,7 +186,7 @@ footer#content-footer {
   text-align: center;
 }
 
-#github-fork {
+#github-ribbon {
   border: none;
   position: absolute;
   right: 0;
@@ -314,7 +314,7 @@ footer#content-footer {
     font-size: 0.9em;
 	}
 	
-	#github-fork {
+	#github-ribbon {
     display: none;
   }
 }
@@ -335,7 +335,7 @@ footer#content-footer {
   }
   
   /* hide columns, nav, designated elements */
-  #nav, footer#content-footer, #github-fork, .hide {
+  #nav, footer#content-footer, #github-ribbon, .hide {
     display: none !important;
   }
   
