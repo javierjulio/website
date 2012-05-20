@@ -7,4 +7,4 @@ This is the source for my personal website. For many years my website was on a t
 * Create `Procfile` with the following contents (not versioned since I don't want it deployed to Heroku)
 
         web:    bundle exec shotgun --server=thin --port=3000
-        sass:   bundle exec sass --watch assets/stylesheets:assets/stylesheets --style compressed
+        sass:   bundle exec sass --watch assets/stylesheets:assets --style compressed
