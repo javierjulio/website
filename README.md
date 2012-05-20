@@ -3,6 +3,11 @@ This is the source for my personal website. For many years my website was on a t
 # Installation
 
 * Clone repository
+
+        git clone git://github.com/javierjulio/website.git ~/Projects/website`
+        cd ~/Projects/website
+
+* Use Ruby 1.9.2 `rbenv local 1.9.2-p290`
 * Run `bundle install`
 * Create `Procfile` with the following contents (not versioned since I don't want it deployed to Heroku)
 
