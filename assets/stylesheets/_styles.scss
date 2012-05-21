@@ -256,17 +256,11 @@ footer#content-footer {
 	margin: 0;
 }
 
-.figure {
-	background: #555;
-	display: block;
-	float: left;
-	padding: 2px;
-	margin: 0 1em 0 0;
-	text-align: center;
-}
-
-.figure img {
-	display: block;
+img.portait {
+  border: 2px solid #555;
+  @include border-radius(3px);
+  float: left;
+  margin-right: 1em;
 }
 
 
