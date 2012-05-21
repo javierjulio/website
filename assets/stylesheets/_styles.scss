@@ -320,7 +320,7 @@ img.portait {
 
 @media print {
   /* reset any structural elements */
-  body, #container, #header, #footer {
+  body, #container, #site-header, #site-footer {
     float: none !important;
     margin: 0 !important;
     padding: 0 !important;
