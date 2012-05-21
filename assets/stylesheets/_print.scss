@@ -1,0 +1,31 @@
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  /* reset any structural elements */
+  body, #container, #site-header, #site-footer {
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+  }
+  
+  /* hide columns, nav, designated elements */
+  #nav, #site-footer, #github-ribbon, .hide {
+    display: none !important;
+  }
+  
+  /* remove any borders */
+  html, body, body * {
+    border-width: 0;
+  }
+  
+  /* no need to differentiate links from text, remove formatting */
+  a, a:link, a:visited {
+    background-color: inherit;
+    color: inherit;
+    text-decoration: underline;
+  }
+}
