@@ -130,11 +130,11 @@ body {
 	width: 600px;
 }
 
-#banner {
+#site-header {
   padding-top: 20px;
 }
 
-#banner h1 a {
+#site-header h1 a {
   color: #686F73;
   font-size: 1.2em;
   text-decoration: none;
@@ -176,7 +176,7 @@ body {
   color: #BA9471;
 }
 
-footer#content-footer {
+#site-footer {
   border-top: 1px solid #ddd;
 	color: #9EA7AE;
 	font-size: .8em;
@@ -276,7 +276,7 @@ img.portait {
     width: auto;
 	}
 	
-	#banner {
+	#site-header {
     padding: 0;
   }
   
@@ -302,7 +302,7 @@ img.portait {
     @include transition(none);
 	}
 	
-	footer#content-footer {
+	#site-footer {
     font-size: 0.9em;
 	}
 	
@@ -327,7 +327,7 @@ img.portait {
   }
   
   /* hide columns, nav, designated elements */
-  #nav, footer#content-footer, #github-ribbon, .hide {
+  #nav, #site-footer, #github-ribbon, .hide {
     display: none !important;
   }
   
