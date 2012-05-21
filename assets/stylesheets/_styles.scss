@@ -229,6 +229,15 @@ body {
   display: block;
 }
 
+#content ul.archives li h3 {
+  font-size: 18px;
+  margin-bottom: 0;
+  
+  a {
+    text-decoration: none;
+  }
+}
+
 #content ul.archives, 
 #content ul.archives li {
   list-style: none;
@@ -236,9 +245,6 @@ body {
   padding-left: 0;
 }
 
-#content ul.archives li {
-  margin-bottom: 20px;
-}
 
 /* page specific styles 
 --------------------------------------------- */
