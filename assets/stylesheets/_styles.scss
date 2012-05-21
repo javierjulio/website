@@ -132,48 +132,48 @@ body {
 
 #site-header {
   padding-top: 20px;
-}
-
-#site-header h1 a {
-  color: #686F73;
-  font-size: 1.2em;
-  text-decoration: none;
-}
-
-.first-name, .last-name {
-  font-family: Menlo, "Helvetica Neue", Helvetica, Calibri, Arial, serif;
-}
-
-.last-name {
-  color: #9EA7AE;
+  
+  h1 a {
+    color: #686F73;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  
+  .first-name, .last-name {
+    font-family: Menlo, "Helvetica Neue", Helvetica, Calibri, Arial, serif;
+  }
+  
+  .last-name {
+    color: #9EA7AE;
+  }
 }
 
 #nav {
   border-bottom: 1px solid #ddd;
   margin-bottom: 30px;
   padding-bottom: 20px;
-}
-
-#nav ul {
-  font-size: .9em;
-  padding: 0;
-}
-
-#nav li {
-  display: inline;
-}
-
-#nav ul li a {
-  border: none;
-  color: #6B8A96;
-  margin: 5px 5px 5px 0;
-	padding: 5px 5px 5px 0;
-	text-decoration: none;
-}
-
-#nav ul li a:hover, 
-#nav ul li.current a {
-  color: #BA9471;
+  
+  ul {
+    font-size: .9em;
+    padding: 0;
+    
+    li {
+      display: inline;
+      
+      a {
+        border: none;
+        color: #6B8A96;
+        margin: 5px 5px 5px 0;
+      	padding: 5px 5px 5px 0;
+      	text-decoration: none;
+      }
+    }
+    
+    li a:hover, 
+    li.current a {
+      color: #BA9471;
+    }
+  }
 }
 
 #site-footer {
@@ -229,7 +229,8 @@ body {
   display: block;
 }
 
-#content ul.archives, #content ul.archives li {
+#content ul.archives, 
+#content ul.archives li {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
@@ -283,23 +284,23 @@ img.portait {
 	#nav {
     font-weight: bold;
     width: auto;
-	}
-	
-	#nav ul {
-    margin: 0 0 0 -3px;
-    padding: 0;
-	}
-	
-	#nav ul li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-	}
-	
-	#nav ul li a {
-    display: block;
-    padding: 3px 5px 3px 5px;
-    @include transition(none);
+    
+    ul {
+      margin: 0 0 0 -3px;
+      padding: 0;
+      
+      li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        
+        a {
+          display: block;
+          padding: 3px 5px 3px 5px;
+          @include transition(none);
+      	}
+    	}
+  	}
 	}
 	
 	#site-footer {
