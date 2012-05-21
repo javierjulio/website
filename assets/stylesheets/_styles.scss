@@ -319,7 +319,7 @@ img.portait {
 
 @media print {
   /* reset any structural elements */
-  body, #container, #header, #primary, #secondary, #tertiary, #footer {
+  body, #container, #header, #footer {
     float: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -332,7 +332,7 @@ img.portait {
   }
   
   /* remove any borders */
-  html, body, body *, #container {
+  html, body, body * {
     border-width: 0;
   }
   
