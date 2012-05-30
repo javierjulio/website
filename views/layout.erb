@@ -11,8 +11,9 @@
   <meta name="author" content="Javier Julio">
   <meta name="viewport" content="width=device-width">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-  <link rel="shortcut icon" type="image/png" href="/images/avatar_32.png">
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+  <link rel="icon" href="/apple-touch-icon-precomposed.png" type="image/png">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/application.css">
   <link rel="alternate" type="application/atom+xml" title="<%= Serious.title %>" href="<%= Serious.feed_url %>" />
   <!--[if lt IE 9]>
@@ -40,7 +41,7 @@
       <li<% if urlContains 'about' %> class="current"<% end %>><a href="/about">About</a></li>
       <li><a href="mailto:jjfutbol@gmail.com">Contact</a></li>
     </ul>
-  </nav>
+  </nav> 
   
   <div id="content" role="main">
     <% if @contentTitle %><h2><%= @contentTitle %></h2><% end %>
