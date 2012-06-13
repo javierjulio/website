@@ -54,7 +54,7 @@ pre, code {
   background-color: #fff;
   border: 1px solid #ccc;
   color: #444;
-  font-family: 'Bitstream Vera Sans Mono','Courier',monospace;
+  font-family: Menlo, Consolas, Courier, monospace;
 }
 code {
   @include border-radius(3px);
