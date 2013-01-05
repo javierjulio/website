@@ -40,6 +40,11 @@
           box-sizing: $boxmodel;
 }
 
+@mixin opacity($opacity) {
+  filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
+  opacity: $opacity;
+}
+
 @mixin transition($transition-1, $transition-2: false, $transition-3: false, $transition-4: false) {
   $full: compact($transition-1, $transition-2, $transition-3, $transition-4);
   -webkit-transition: $full;
