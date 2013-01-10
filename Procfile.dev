@@ -1,0 +1,2 @@
+web: bundle exec shotgun --server=thin --port=3000 config.ru
+sass: bundle exec sass --watch assets/stylesheets:assets --style expanded

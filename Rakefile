@@ -18,7 +18,7 @@ end
 
 desc "Starts processes using Foreman"
 task :server do
-  system "bundle exec foreman start"
+  system "bundle exec foreman start -f Procfile.dev"
 end
 
 task :default => :"server"
