@@ -51,25 +51,25 @@ a:hover {
 	text-decoration: underline;
 }
 pre, code {
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
   color: #444;
   font-family: Menlo, Consolas, Courier, monospace;
 }
 code {
   @include border-radius(3px);
+  color: #C82829;
   padding: 0 .3em;
   white-space: nowrap;
 }
 pre {
-  @include border-radius(4px);
-  @include box-shadow(rgba(0, 0, 0, 0.09) 0 1px 3px inset);
   line-height: 1.2;
   margin: 0 0 18px 0;
-  padding: 7px 5px;
+  padding: 10px;
 }
 pre code {
   border: none;
+  color: #222;
   font-size: 90%;
   padding: 0;
   white-space: pre;
@@ -89,7 +89,6 @@ li {
 }
 h1, h2, h3, h4, h5 {
   color: #666;
-  font-family: Georgia, Times, serif;
   font-weight: normal;
   line-height: 1.4;
 }
@@ -113,20 +112,13 @@ h5, h6 {
 /* layout 
 --------------------------------------------- */
 body {
-  background: #e3e4e5 url('/images/background-pattern.png');
-  border-top: 8px solid #525B61;
   color: #525B61;
-  font-family: "Helvetica Neue", Helvetica, Calibri, Arial, serif;
+  font-family: 'Raleway', "Helvetica Neue", Helvetica, Calibri, Arial, serif;
   line-height: 1.6;
 }
 
 #container {
-  background-color: #f1f1f1; /* fallback */
-  background-color: rgba(255, 255, 255, 0.5);
-  @include border-radius(4px);
-  @include box-shadow(0 0 5px #bbb);
-	margin: 30px auto;
-	padding: 0 30px;
+	margin: 0 auto;
 	width: 600px;
 }
 
@@ -138,19 +130,11 @@ body {
     font-size: 1.2em;
     text-decoration: none;
   }
-  
-  .first-name, .last-name {
-    font-family: Menlo, "Helvetica Neue", Helvetica, Calibri, Arial, serif;
-  }
-  
-  .last-name {
-    color: #9EA7AE;
-  }
 }
 
 #nav {
   border-bottom: 1px solid #ddd;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   padding-bottom: 20px;
   
   ul {
@@ -158,10 +142,9 @@ body {
     padding: 0;
     
     li {
-      display: inline;
+      display: inline-block;
       
       a {
-        border: none;
         color: #6B8A96;
         margin: 5px 5px 5px 0;
       	padding: 5px 5px 5px 0;
@@ -202,16 +185,19 @@ body {
 }
 
 #content article header h3 {
+  font-size: 26px;
+  font-weight: bold;
   margin-bottom: 0;
 }
 
 #content article header a {
-  color: #BA9471;
+  color: #525B61;
   text-decoration: none;
 }
 
 #content article header a:hover {
   color: #CB6A1B;
+  text-decoration: underline;
 }
 
 #content time.date, 
@@ -264,7 +250,7 @@ body {
 }
 
 img.portait {
-  border: 3px solid #555;
+  border: 1px solid #555;
   @include border-radius(3px);
   float: left;
   margin-right: 0.8em;
@@ -278,7 +264,7 @@ img.portait {
 @media only screen and (max-device-width: 480px) 
 {
 	#container {
-    margin: 0.8em;
+    margin: 0 0.8em;
     padding: 1em;
     width: auto;
 	}
