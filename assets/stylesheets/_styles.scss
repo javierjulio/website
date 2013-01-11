@@ -63,6 +63,7 @@ code {
   white-space: nowrap;
 }
 pre {
+  @include border-radius(3px);
   line-height: 1.2;
   margin: 0 0 18px 0;
   padding: 10px;
@@ -112,14 +113,19 @@ h5, h6 {
 /* layout 
 --------------------------------------------- */
 body {
+  background-color: #f2f2f2;
   color: #525B61;
-  font-family: 'Raleway', "Helvetica Neue", Helvetica, Calibri, Arial, serif;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Calibri, Arial, serif;
   line-height: 1.6;
 }
 
 #container {
-	margin: 0 auto;
-	width: 600px;
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 600px;
 }
 
 #site-header {
