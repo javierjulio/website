@@ -1,6 +1,4 @@
-<% @recent.each do |article| %>
-  <%= render_article article, true %>
-<% end %>
+<%= render_archived @recent %>
 
 <div class="older">
   <a href="/archives">&larr; older entries</a>
