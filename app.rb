@@ -1,9 +1,11 @@
 require 'serious'
+require 'sinatra/content_for'
 
 class MyApp < Serious
-	
+
+  helpers Sinatra::ContentFor
+
   helpers do
-    
     def urlContains(name)
       request.path_info.include? name
     end
