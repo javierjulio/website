@@ -6,6 +6,7 @@ gem 'erubis'
 gem 'rake'
 gem 'thin'
 gem 'serious', :git => 'git://github.com/javierjulio/serious.git'
+gem 'sinatra-contrib'
 
 group :development do
   gem 'foreman'
