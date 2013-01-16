@@ -23,7 +23,7 @@
 <body>
 
 <div id="container">
-  
+
   <header id="site-header">
     <h1 class="title">
       <a href="/">
@@ -31,7 +31,7 @@
       </a>
     </h1>
   </header>
-  
+
   <nav id="nav">
     <ul>
       <li<% if urlContains 'resume' %> class="current"<% end %>><a href="/resume">Resume</a></li>
@@ -41,20 +41,20 @@
       <li<% if urlContains 'about' %> class="current"<% end %>><a href="/about">About</a></li>
       <li><a href="mailto:jjfutbol@gmail.com">Contact</a></li>
     </ul>
-  </nav> 
-  
+  </nav>
+
   <div id="content" role="main">
     <% if @contentTitle %><h2><%= @contentTitle %></h2><% end %>
     <%= yield %>
   </div><!-- /content -->
-	
+
   <footer id="site-footer">
     <p>
       &copy; 2004 - <%= Time.new.year() %> <a href="http://www.javier-julio.com/">Javier Julio</a>. 
       Powered by <a href="https://github.com/colszowka/serious">Serious</a> and <a href="http://www.heroku.com/">Heroku</a>.
     </p>
   </footer>
-	
+
 </div><!-- /container -->
 
 <div id="github-ribbon">
