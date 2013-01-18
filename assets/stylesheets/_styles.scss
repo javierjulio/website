@@ -44,10 +44,11 @@
   float: left;
   font-size: 20px;
   margin-bottom: 50px;
-  padding: 55px 10px 5px 10px;
 
   a {
     color: #fff;
+    display: block;
+    padding: 55px 10px 5px 10px;
     text-decoration: none;
   }
 }
