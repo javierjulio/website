@@ -1,11 +1,3 @@
-@import "mixins";
-
-/* Enable an element to be resizable without JS */
-.resizable {
-  resize: both;
-  overflow: auto;
-}
-
 /* Shamelessly stolen from railscasts.com - thank you Ryan! */
 .CodeRay pre {
   background-color: #eee;
@@ -36,128 +28,52 @@
 .CodeRay .pc { color:#6C9CBD }                      /* boolean */
 
 
-/* element specific default styles 
---------------------------------------------- */
-
-a {
-  @include transition(color 0.5s ease-out);
-}
-a:link, a:visited {
-	color: #6B8A96;
-	text-decoration: underline;
-}
-a:hover {
-	color: #BA9471;
-	text-decoration: underline;
-}
-pre, code {
-  background-color: #f2f2f2;
-  border: 1px solid #ddd;
-  color: #444;
-  font-family: Menlo, Consolas, Courier, monospace;
-}
-code {
-  @include border-radius(3px);
-  color: #C82829;
-  padding: 0 .3em;
-  white-space: nowrap;
-}
-pre {
-  @include border-radius(3px);
-  line-height: 1.2;
-  margin: 0 0 18px 0;
-  padding: 10px;
-}
-pre code {
-  border: none;
-  color: #222;
-  font-size: 90%;
-  padding: 0;
-  white-space: pre;
-  white-space: pre-wrap;
-}
-blockquote {
-  border-left: 5px solid #dfdfdf;
-  color: #6D6E72;
-  margin: 0 10px;
-  padding: 0 10px;
-}
-ul, ol {
-	padding-left: 25px;
-}
-li {
-  margin-bottom: 10px;
-}
-h1, h2, h3, h4, h5 {
-  color: #666;
-  font-weight: normal;
-  line-height: 1.4;
-}
-h1 {
-	font-size: 20px;
-}
-h2 {
-	font-size: 30px;
-}
-h3 {
-	font-size: 22px;
-}
-h4 {
-	font-size: 18px;
-}
-h5, h6 {
-	font-size: 14px;
-}
-
-
 /* layout 
 --------------------------------------------- */
-body {
-  color: #525B61;
-  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Calibri, Arial, serif;
-  line-height: 1.6;
-}
 
 #container {
+  background-color: #fff;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 60px;
   width: 600px;
 }
 
 #site-header {
-  padding-top: 20px;
-  
-  h1 a {
-    color: #686F73;
-    font-size: 1.2em;
+  background-color: #27313c;
+  color: #fff;
+  float: left;
+  font-size: 20px;
+  margin-bottom: 50px;
+  padding: 55px 10px 5px 10px;
+
+  a {
+    color: #fff;
     text-decoration: none;
   }
 }
 
-#nav {
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
+.nav {
+  list-style: none;
+  padding: 0;
+
+  li, li a {
+    display: inline-block;
+  }
+}
+
+.site-navigation {
+  float: left;
+  margin: 50px 0 50px 10px;
+
+  a {
+    color: #6B8A96;
+  	padding: 5px 10px;
+  	text-decoration: none;
+  }
   
-  ul {
-    font-size: .9em;
-    padding: 0;
-    
-    li {
-      display: inline-block;
-      
-      a {
-        color: #6B8A96;
-        margin: 5px 5px 5px 0;
-      	padding: 5px 5px 5px 0;
-      	text-decoration: none;
-      }
-    }
-    
-    li a:hover, 
-    li.current a {
-      color: #BA9471;
-    }
+  a:hover, 
+  .current a {
+    color: #BB4B39;
   }
 }
 
@@ -174,6 +90,10 @@ body {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+#content {
+  clear: both;
 }
 
 /* blog specific styles 
@@ -194,12 +114,10 @@ body {
 
 #content article header a {
   color: #525B61;
-  text-decoration: none;
 }
 
 #content article header a:hover {
-  color: #CB6A1B;
-  text-decoration: underline;
+
 }
 
 #content time.date, 
@@ -219,6 +137,7 @@ body {
 
 #content ul.archives li h3 {
   font-size: 18px;
+  font-weight: normal;
   margin-bottom: 0;
   
   a {
@@ -265,43 +184,32 @@ img.portait {
 --------------------------------------------- */
 @media only screen and (max-device-width: 480px) 
 {
-	#container {
-    margin: 0 0.8em;
-    padding: 1em;
+  #container {
+    font-size: 14px;
+    padding: 0 1em;
+    position: relative;
     width: auto;
-	}
-	
-	#site-header {
-    padding: 0;
   }
-  
-	#nav {
-    font-weight: bold;
-    width: auto;
-    
-    ul {
-      margin: 0 0 0 -3px;
-      padding: 0;
-      
-      li {
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        
-        a {
-          display: block;
-          padding: 3px 5px 3px 5px;
-          @include transition(none);
-      	}
-    	}
-  	}
-	}
-	
-	#site-footer {
+
+  .site-navigation {
+    float: none;
+    position: absolute;
+    margin: 0;
+    top: 36px;
+    left: 55px;
+    right: 10px;
+
+    a {
+      padding: 3px 5px 3px 5px;
+      @include transition(none);
+    }
+  }
+
+  #site-footer {
     font-size: 0.9em;
-	}
-	
-	#github-ribbon {
+  }
+
+  #github-ribbon {
     display: none;
   }
 }

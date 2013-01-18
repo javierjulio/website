@@ -14,7 +14,7 @@
   <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
   <link rel="icon" href="/apple-touch-icon-precomposed.png" type="image/png">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,600">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700">
   <link rel="stylesheet" href="/application.css">
   <link rel="alternate" type="application/atom+xml" title="<%= Serious.title %>" href="<%= Serious.feed_url %>" />
   <!--[if lt IE 9]>
@@ -25,15 +25,13 @@
 <div id="container">
 
   <header id="site-header">
-    <h1 class="title">
-      <a href="/">
-        <span class="first-name">Javier</span> <span class="last-name">Julio</span>
-      </a>
-    </h1>
+    <div class="logo">
+      <a href="/">JJ</a>
+    </div>
   </header>
 
-  <nav id="nav">
-    <ul>
+  <nav>
+    <ul class="nav site-navigation">
       <li<% if urlContains 'resume' %> class="current"<% end %>><a href="/resume">Resume</a></li>
       <li<% if urlContains 'recipes' %> class="current"<% end %>><a href="/recipes">Recipes</a></li>
       <li><a href="<%= Serious.feed_url %>">Subscribe</a></li>
@@ -49,7 +47,7 @@
 
   <footer id="site-footer">
     <p>
-      &copy; 2004 - <%= Time.new.year() %> <a href="http://www.javier-julio.com/">Javier Julio</a>. 
+      &copy; 2004 - <%= Time.new.year() %> <a href="http://www.javier-julio.com/">Javier Julio</a>.<br>
       Powered by <a href="https://github.com/colszowka/serious">Serious</a> and <a href="http://www.heroku.com/">Heroku</a>.
     </p>
   </footer>
