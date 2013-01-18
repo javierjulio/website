@@ -184,9 +184,13 @@ img.portait {
 --------------------------------------------- */
 @media only screen and (max-device-width: 480px) 
 {
+  body {
+    border-width: 4px 0 0 0;
+  }
+
   #container {
     font-size: 14px;
-    padding: 0 1em;
+    padding: 0 15px;
     position: relative;
     width: auto;
   }
