@@ -6,13 +6,18 @@ class MyApp < Serious
   helpers Sinatra::ContentFor
 
   helpers do
-    def urlContains(name)
+    def current_page?(name)
       request.path_info.include? name
     end
-    
+
+    def home_page?
+      true if request.path_info =~ /\d{4}/ || request.path_info.start_with?('/archives') || request.path_info == '/'
+    end
   end
   
   get '/about/?' do
+    @contentTitle = 'About'
+    
   	erb :about
   end
   

@@ -1,14 +1,13 @@
 body {
-  background-color: #27313c;
-  border: 10px solid #27313c;
-  border-width: 10px 0;
+  background-color: #f2f2f2;
+  border-top: 5px solid #27313c;
   color: #393939;
-  font-family: 'PT Sans', 'Helvetica Neue', Helvetica, Calibri, Arial, serif;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Calibri, Arial, serif;
   line-height: 1.6;
 }
 
 a:link, a:visited {
-	color: #DB6B59;
+	color: #DB6B59; //#BB4B39
 	text-decoration: none;
 }
 
@@ -22,7 +21,7 @@ a:hover {
 }
 
 pre, code {
-  background-color: #f8f8f8;
+  background-color: #f2f2f2;
   border: 1px solid #ddd;
   color: #444;
   font-family: Menlo, Consolas, Courier, monospace;
@@ -30,7 +29,6 @@ pre, code {
 
 code {
   @include border-radius(3px);
-  color: #C82829;
   padding: 0 .3em;
   white-space: nowrap;
 }
@@ -62,6 +60,8 @@ ul, ol {
 	padding-left: 25px;
 }
 
-h1,h2,h3,h4,h5,h6 {
+
+h1, h2, h3, h4, h5, h6 {
   color: #5E6775;
+  line-height: 1.2;
 }
