@@ -5,7 +5,7 @@
     <li>
       <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
       <% if article.date %>
-        <time class="date" datetime="<%= article.date.strftime("%Y-%m-%d") %>" pubdate><%= article.date.formatted %></time>
+        <time class="date" datetime="<%= article.date.strftime("%Y-%m-%d") %>"><%= article.date.formatted %></time>
       <% end %>
     </li>
   <% end %>

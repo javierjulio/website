@@ -2,7 +2,7 @@
   
   <header>
     <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
-    <time class="date" datetime="<%= article.date.strftime("%Y-%m-%d") %>" pubdate><%= article.date.formatted %></time>
+    <time class="date" datetime="<%= article.date.strftime("%Y-%m-%d") %>"><%= article.date.formatted %></time>
   </header>
 
   <% if summary_only %>
