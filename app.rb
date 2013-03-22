@@ -16,8 +16,6 @@ class MyApp < Serious
   end
   
   get '/about/?' do
-    @contentTitle = 'About'
-    
   	erb :about
   end
   
@@ -45,11 +43,11 @@ class MyApp < Serious
   get '/rss/?' do
     redirect to('http://feeds.feedburner.com/javierjulio')
   end
-  
+
   #
-  # RECIPES
+  # Recipes
   #
-  
+
   get '/recipes/paella' do
   	@title = 'Recipe for Paella'
   	@contentTitle = 'Paella'
