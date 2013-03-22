@@ -8,7 +8,7 @@ GIT
       stupid_formatter (>= 0.2.0)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     backports (2.6.7)
     builder (3.0.0)
