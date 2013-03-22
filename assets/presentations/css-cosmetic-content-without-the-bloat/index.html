@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>CSS: Cosmetic Content Without The Bloat</title>
+    <meta name="description" content="CSS: Cosmetic content without the bloat (no extra markup) by using pseudo classes and pseudo elements." />
+    <meta name="author" content="Javier Julio" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="normalize.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<!--
+    
+    Body element is used by impress.js to set some useful class names, that will allow you to detect
+    the support and state of the presentation in CSS or other scripts.
+    
+    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
+    support features required by impress.js, so you should apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+    
+    When impress.js script detects that browser supports all required features, this class name will
+    be removed.
+    
+    The class name on body element also depends on currently active presentation step. More details about
+    it can be found later, when `hint` element is being described.
+    
+-->
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    
+    Now that's the core element used by impress.js.
+    
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+    
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+    
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+    
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesing things
+    right around the corner of this tag ;)
+    
+-->
+<div id="impress">
+
+    <!--
+        
+        Here is where interesting thing start to happen.
+        
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+
+  <div class="step" data-x="0" data-y="0" data-perspective="500">
+    <h1>CSS</h1>
+    <h1>Pseudo Classes</h1>
+    <h1>Pseudo Elements</h1>
+  </div>
+
+  <div class="step" data-x="0" data-y="600">
+    <p>Some examples might not work in IE8 and below.</p>
+    <p>Use analytics to determine support!</p>
+    <p>Examples taken from <a href="http://www.myfdb.com">myfdb.com</a></p>
+  </div>
+
+  <div class="step" data-x="1000" data-y="0">
+    <h1>Pseudo Classes</h1>
+  </div>
+
+  <div class="step" data-x="1000" data-y="300">
+    <p>A <a href="#"><strong>pseudo class</strong></a> is a keyword added to a selector that targets a specific state of that element.</p>
+  </div>
+
+  <div id="pseudo-class-link" class="step" data-x="1000" data-y="700">
+    <div><span class="element">a</span>:link <span class="element">{ text-decoration: none; }</span></div>
+    <div><span class="element">a</span>:visited <span class="element">{ <span class="muted">...</span> }</span></div>
+    <div><span class="element">a</span>:active <span class="element">{ <span class="muted">...</span> }</span></div>
+    <div><span class="element">a</span>:hover <span class="element">{ text-decoration: underline; }</span></div>
+  </div>
+
+  <div id="pseudo-classes-adv" class="step" data-x="1000" data-y="1300">
+    <ul class="columnar">
+      <li>:first-child</li>
+      <li>:last-child</li>
+      <li>:only-child</li>
+      <li>:first-of-type</li>
+      <li>:last-of-type</li>
+      <li>:only-of-type</li>
+      <li>:nth-child()</li>
+      <li>:nth-last-child()</li>
+      <li>:nth-of-type()</li>
+      <li>:nth-last-of-type()</li>
+      <li>:not()</li>
+      <li>:checked</li>
+      <li>:enabled</li>
+      <li>:disabled</li>
+      <li><a href="http://www.w3.org/TR/selectors/#selectors" class="muted">more...</a></li>
+    </ul>
+  </div>
+
+  <div class="step" data-x="1000" data-y="2000">
+<pre>
+<code>.media:only-of-type {
+  margin-bottom: 0;
+}
+</code></pre>
+    
+<pre>
+<code>&lt;div class="profile-header"&gt;
+  <span class="muted">...</span>
+  &lt;div class="media"&gt;&lt;/div&gt;
+  <span class="muted">...</span>
+&lt;/div&gt;
+</code></pre>
+  </div>
+
+  <div class="step" data-x="1000" data-y="2800">
+<pre>
+<code>.credit-group:nth-of-type(5n) {
+  margin-right: 0;
+}
+</code></pre>
+    
+<pre>
+<code>&lt;div class="credit-groups"&gt;
+  &lt;header&gt;&lt;/header&gt;
+  &lt;div class="credit-group"&gt;&lt;/div&gt;
+  &lt;div class="credit-group"&gt;&lt;/div&gt;
+  <span class="muted">...</span>
+&lt;/div&gt;
+</code></pre>
+  </div>
+
+  <div class="step" data-x="2000" data-y="0">
+    <h1>Pseudo Elements</h1>
+  </div>
+
+  <div class="step" data-x="2000" data-y="300">
+    <p>A <strong>pseudo element</strong> is used just like a pseudo class but instead of selecting state it allows you to style certain parts of an element.</p>
+  </div>
+
+  <div class="step" data-x="2000" data-y="900">
+    <ul class="block-list">
+      <li>:after <small class="muted">(IE8+)*</small></li>
+      <li>:before <small class="muted">(IE8+)*</small></li>
+      <li>::first-letter</li>
+      <li>::first-line</li>
+      <li>::selection</li>
+    </ul>
+    <p class="footnote">* supported by IE8 when using single colon and in IE8 Standards mode <a href="http://msdn.microsoft.com/en-us/library/ie/cc304078%28v=vs.85%29.aspx">(source)</a></p>
+  </div>
+
+  <div class="step" data-x="2000" data-y="1600">
+    <h1><code>:before</code> and <code>:after</code></h1>
+    <ul>
+      <li>Think of it as a ghost or sub element.</li>
+      <li>CSS inheritance rules apply.</li>
+      <li>Inline by default.</li>
+      <li>Typically used for cosmetic content.</li>
+    </ul>
+  </div>
+
+  <div class="step" data-x="2000" data-y="2200">
+    <div class="footnote muted">Example:</div>
+    <h1>Divided Horizontal List</h1>
+  </div>
+
+  <div class="step" data-x="2000" data-y="2700">
+    <ul class="nav nav-divided">
+      <li><a href="#">View</a></li>
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Delete</a></li>
+    </ul>
+  </div>
+
+  <div class="step" data-x="2000" data-y="2900">
+<pre>
+<code>&lt;ul class="nav nav-divided"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;View&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Edit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Delete&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+  </div>
+
+  <div class="step" data-x="2000" data-y="3500">
+<pre>
+<code>.nav-divided li:after {
+  content: "\2022"; <span class="muted">/* &amp;#8226; */</span>
+  margin: 0 20px;
+}
+
+.nav-divided li:last-child:after {
+  content: '';
+  margin: 0;
+}
+</code></pre>
+  </div>
+
+  <div class="step" data-x="2000" data-y="4000">
+<pre>
+<code>.nav-divided li + li:before {
+  content: "\2022"; <span class="muted">/* &amp;#8226; */</span>
+  margin: 0 20px;
+}
+</code></pre>
+    <div class="footnote"><a href="http://www.evotech.net/articles/testjsentities.html">Entity Conversion Calculator</a></div>
+  </div>
+
+  <div class="step" data-x="2000" data-y="4600">
+    <div class="footnote muted">Example:</div>
+    <h1>Fixed Drop Shadow</h1>
+  </div>
+
+  <div id="modal-example" class="step" data-x="-2000" data-y="3500" data-scale="5" data-rotate="90">
+    <div class="modal">
+      <div class="modal-header">
+        Header
+      </div>
+      <div class="modal-body">
+        Drop shadow always appears on top of this scrollable area by using a pseudo element.<br><br><br><br><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="step" data-x="2000" data-y="5100">
+<pre>
+<code>.modal-header {
+  position: relative;
+}
+</code></pre>
+  </div>
+
+  <div class="step" data-x="2000" data-y="5500">
+<pre>
+<code>.modal-header:after {
+  box-shadow: inset 0 7px 4px -4px rgba(0,0,0,.2);
+  content: "";
+  height: 10px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 5;
+}
+</code></pre>
+  </div>
+
+  <div class="step" data-x="3000" data-y="0">
+    <div class="footnote muted">Example:</div>
+    <h1>Custom Checkboxes</h1>
+  </div>
+
+  <div class="step" data-x="3000" data-y="500">
+    <div class="form-share">
+      <div class="plain">
+        <div>
+          <input type="checkbox" id="s1">
+          <label class="facebook" for="s1">Facebook</label>
+        </div>
+        <div>
+          <input type="checkbox" id="s2">
+          <label class="twitter" for="s2">Twitter</label>
+        </div>
+      </div>
+      <div class="control-boolean">
+        <input type="checkbox" id="s1">
+        <label class="facebook" for="s1">Facebook</label>
+      </div>
+      <div class="control-boolean">
+        <input type="checkbox" id="s2">
+        <label class="twitter" for="s2">Twitter</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="step" data-x="3000" data-y="900">
+<pre>
+<code>&lt;div class="control-boolean"&gt;
+  &lt;input type="checkbox" id="s1"&gt;
+  &lt;label class="facebook" for="s1"&gt;Facebook&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="control-boolean"&gt;
+  &lt;input type="checkbox" id="s2"&gt;
+  &lt;label class="twitter" for="s2"&gt;Twitter&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+  </div>
+
+  <div class="step" data-x="3000" data-y="1500">
+<pre>
+<code>.control-boolean {
+  display: inline-block;
+  height: 60px;
+  position: relative;
+  width: 60px;
+}
+</code></pre>
+  </div>
+
+  <div class="step" data-x="3000" data-y="2200">
+<pre>
+<code>.control-boolean input {
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+</code></pre>
+  </div>
+
+  <div class="step" data-x="3000" data-y="2800">
+<pre>
+<code>.control-boolean label {
+  display: block;
+  height: 100%;
+  text-indent: -9999px;
+  width: 100%;
+}
+</code></pre>
+  </div>
+
+  <div class="step" data-x="3000" data-y="3500">
+<pre>
+<code>.control-boolean label:before {
+  float: left;
+  height: 100%;
+  text-indent: 0;
+  width: 100%;
+}
+control-boolean label.facebook:before {
+  content: "f";
+}
+<span class="muted">...</span>
+</code></pre>
+  </div>
+
+  <div class="step" data-x="3000" data-y="4100">
+<pre>
+<code>.control-boolean input:checked ~ label.facebook {
+  background-color: #5c7fc9;
+  color: #fff;
+  <span class="muted">...</span>
+}
+<span class="muted">...</span>
+</code></pre>
+  </div>
+
+  <div class="step" data-x="3000" data-y="4700">
+<pre>
+<code>.control-boolean:not(:checked) {
+  <span class="muted">... all those custom styles go here ...</span>
+}
+</code></pre>
+    <p class="footnote">Ignored by browsers that don't understand <code>:not</code>.</p>
+  </div>
+
+  <div class="step" data-x="4000" data-y="0">
+    <h1>So.. that <code>content</code> property</h1>
+    <p>How do we make dynamic content?</p>
+  </div>
+
+  <div class="step" data-x="4000" data-y="450">
+<pre>
+<code>&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;
+</code></pre>
+    <p class="footnote"><abbr class="print-attr" title="Cascading Style Sheets">CSS</abbr></p>
+  </div>
+<!--
+  <div class="step" data-x="4000" data-y="450">
+<pre>
+<code>a[href]:after {
+  content: " (" attr(href) ")";
+}
+</code></pre>
+    <p class="footnote"><a href="http://www.9mmedia.com/" class="print-attr">9mmedia</a></p>
+  </div>
+-->
+  <div class="step" data-x="4000" data-y="900">
+<pre>
+<code>abbr[title]:after {
+  content: " (" attr(title) ")";
+}
+</code></pre>
+  </div>
+
+  <div class="step" data-x="4000" data-y="1500">
+<pre>
+<code>.article abbr[title]:first-of-type:after {
+  content: " (" attr(title) ")";
+}
+</code></pre>
+    <p class="footnote">
+      <abbr class="print-attr" title="Cascading Style Sheets">CSS</abbr> ipsum dolor sit amet, consectetur adipiscing elit.
+      <abbr class="print-attr" title="Cascading Style Sheets">CSS</abbr> volutpat ullamcorper ligula, sed vulputate nibh interdum ut.
+      <abbr class="print-attr" title="Cascading Style Sheets">CSS</abbr> lobortis tellus id nulla convallis luctus.
+    </p>
+  </div>
+
+  <div class="step" data-x="4000" data-y="2100">
+    <div class="footnote muted">Example:</div>
+    <h1><a href="http://kushagragour.in/lab/hint/">hint.css</a></h1>
+  </div>
+
+  <div class="step" data-x="4000" data-y="2700">
+    <div style="text-align:center;">
+      <p>Pure, dynamic CSS tool tips...</p>
+      <a class="hint hint-left btn" data-hint="Favorite">&#x2665;</a>
+    </div>
+  </div>
+
+  <div class="step" data-x="4000" data-y="3000">
+<pre>
+<code>&lt;a class="hint hint-left" 
+      data-hint="Favorite"&gt;&amp;#x2665;&lt;/a&gt;
+</code></pre>
+  </div>
+
+  <div class="step" data-x="4000" data-y="3350">
+<pre>
+<code>.hint {
+  display: inline-block;
+  position: relative;
+}
+</code></pre>
+  </div>
+
+  <div class="step" data-x="4000" data-y="4000">
+    <p class="footnote"><code>:before</code> is the tooltip arrow <br><code>:after</code> is the tool tip body</p>
+<pre>
+<code>.hint:before, <span class="muted">/* tooltip arrow */</span>
+.hint:after {   <span class="muted">/* tooltip body */</span>
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1000;
+}
+</code></pre>
+  </div>
+
+  <div class="step" data-x="4000" data-y="4500">
+<pre>
+<code>.hint:hover:before, <span class="muted">/* tooltip arrow */</span>
+.hint:hover:after {   <span class="muted">/* tooltip body */</span>
+  opacity: 1;
+}
+</code></pre>
+  </div>
+
+  <div class="step" data-x="4000" data-y="4900">
+<pre>
+<code>.hint:before { <span class="muted">/* tooltip arrow */</span>
+  border: 10px solid transparent;
+  content: "";
+  z-index: 1001;
+}
+</code></pre>
+  </div>
+
+  <div class="step" data-x="4000" data-y="5300">
+<pre>
+<code>.hint:after { <span class="muted">/* tooltip body */</span>
+  content: attr(data-hint);
+}
+</code></pre>
+  </div>
+
+  <div class="step" data-x="4000" data-y="5800">
+<pre>
+<code>.hint-left:before { <span class="muted">/* tooltip arrow */</span>
+  bottom: 50%;
+  margin-bottom: -10px;
+  margin-right: -4px;
+}
+.hint-left:after { <span class="muted">/* tooltip body */</span>
+  bottom: 0;
+  margin-right: 15px;
+}
+</code></pre>
+    <div style="text-align:center;">
+      <a class="hint hint-left hint-always btn" data-hint="Favorite">&#x2665;</a>
+    </div>
+  </div>
+
+    <!--
+        
+        So to make a summary of all the possible attributes used to position presentation steps, we have:
+        
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` - defines the scale of step element; default value is 1
+        
+        These values are used by impress.js in CSS transformation functions, so for more information consult
+        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+        
+    -->
+    <div id="overview" class="step" data-x="2000" data-y="2600" data-scale="8">
+    </div>
+
+</div>
+
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+    
+-->
+<script src="impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
