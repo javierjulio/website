@@ -39,9 +39,13 @@ class MyApp < Serious
   	
   	erb :recipes
   end
-  
+
+  get '/feed/?' do
+    redirect to(Serious.feed_url)
+  end
+
   get '/rss/?' do
-    redirect to('http://feeds.feedburner.com/javierjulio')
+    redirect to(Serious.feed_url)
   end
 
   #
