@@ -7,7 +7,7 @@ require './app'
 Serious.set :title, 'Javier Julio'
 Serious.set :author, 'Javier Julio'
 Serious.set :url, 'http://www.javier-julio.com'
-Serious.set :feed_url, 'http://feeds.feedburner.com/javierjulio'
+Serious.set :feed_url, 'http://feeds.uri.lv/javierjulio'
 
 Serious.set :root, Dir.getwd
 Serious.set :public_folder, File.join(Dir.getwd, 'assets')
