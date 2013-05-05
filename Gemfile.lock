@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/javierjulio/serious.git
   revision: c7aad870fb71428c1ff0d387eb492e2d08070ad5
+  branch: javierjulio-master
   specs:
     serious (0.3.2)
       builder (>= 2.1.2)
@@ -11,8 +12,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (2.6.7)
-    builder (3.0.0)
-    coderay (1.0.6)
+    builder (3.2.0)
+    coderay (1.0.9)
     daemons (1.1.8)
     erubis (2.7.0)
     eventmachine (0.12.10)
@@ -56,6 +57,7 @@ DEPENDENCIES
   erubis
   foreman
   rake
+  rdiscount (~> 1.6.8)
   sass
   serious!
   shotgun
