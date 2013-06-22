@@ -1,0 +1,34 @@
+Ember Talk
+
+- Intro
+-	Fundamentals
+-	Code demo app
+- URLs
+-	how we share content on the web
+	- share an article, a file.. you see the same thing
+-	not something you opt-in
+-	first class citizen in Ember
+-	think real hard about whether you should not have a URL
+- Client side framework requires different thinking
+-	short lived app vs long lived app
+-	different data reflects app lifecycle
+-	models: data persists across all sessions
+-	controllers: data for that one session
+-	views/templates: what is currently on screen
+-	divides: what's easy to regenerate and what's not
+- Why does it matter how long these live?
+-	Garbage collection
+- Ember decides when and how to render content
+-	careful, DOM elements might not exist
+-	cannot use jQuery whenever wherever
+-	has its own run loop
+- Ember is HTML
+- resources, routes, models, controllers, transitions/redirects, views, templates, partials, layouts, helpers, data binding
+- Code setup: jQuery, Handlebars, Ember, Ember Data
+- Code demo
+- Resources
+-	http://emberjs.com/guides/concepts/naming-conventions/
+-	http://www.youtube.com/watch?v=u6RFyVN9sNg
+-	http://slid.es/ryanto/prototyping-ember-applications
+-	http://ryanto.github.io/#posts/prototyping-ember-applications
+-	http://www.youtube.com/watch?v=ysduY0ocUoA&t=59m55s
