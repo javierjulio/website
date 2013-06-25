@@ -11,6 +11,7 @@ gem 'rdiscount', '~> 1.6.8'
 
 group :development do
   gem 'foreman'
-  gem 'sass'
   gem 'shotgun'
+  gem 'sass'
+  gem 'rb-fsevent'
 end
