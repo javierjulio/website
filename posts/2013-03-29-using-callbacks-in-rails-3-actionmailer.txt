@@ -22,7 +22,7 @@ Besides access to `message` we also have access to `mail` in callbacks. This is 
 
     after_filter :stop_delivery_if_staging
     
-    def send_delivery_if_staging
+    def stop_delivery_if_staging
       if Rails.env.staging?
         mail.perform_deliveries = false
       end
