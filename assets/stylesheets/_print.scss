@@ -5,7 +5,7 @@
 
 @media print {
   /* reset any structural elements */
-  body, #container, #site-header, #site-footer {
+  body, .site-container, .site-header, .site-footer {
     float: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -13,7 +13,7 @@
   }
   
   /* hide columns, nav, designated elements */
-  #nav, #site-footer, #github-ribbon, .hide {
+  .site-navigation, .site-footer, .github-ribbon, .hide {
     display: none !important;
   }
   
