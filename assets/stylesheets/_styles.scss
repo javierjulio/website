@@ -33,7 +33,6 @@
 
 .site-container {
   margin: 0 auto;
-  padding: 20px 0;
   width: 660px;
   opacity: 1;
   -webkit-animation: fadein 0.6s 0s ease-out; // fade in on site load
@@ -204,10 +203,14 @@
     font-size: 16px;
   }
 
+  .site-navigation {
+    margin: 50px 0;
+  }
+
   .site-container {
     border: none;
     margin: 0;
-    padding: 20px 15px;
+    padding: 0 15px;
     width: auto;
   }
 
