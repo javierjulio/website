@@ -2,12 +2,21 @@
   @include box-sizing(border-box);
 }
 
+html {
+  border-top: 4px solid #323232;
+}
+
 body {
   background-color: #fff;
-  border-top: 3px solid #27313c;
-  color: #424B51;
-  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Calibri, Arial, serif;
+  color: #474747;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Calibri, Arial, serif;
+  font-size: 18px;
   line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 700;
 }
 
 a:link, a:visited {
@@ -62,11 +71,4 @@ blockquote {
 
 ul, ol {
 	padding-left: 25px;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-  color: #393939; //#5E6775;
-  font-weight: normal;
-  line-height: 1.2;
 }
