@@ -108,10 +108,14 @@
 }
 
 .github-ribbon {
+  background-image: url('https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png');
+  background-repeat: no-repeat;
   border: none;
+  height: 149px;
   position: absolute;
   right: 0;
   top: 0;
+  width: 149px;
 }
 
 .muted {
