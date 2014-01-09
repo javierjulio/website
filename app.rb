@@ -13,6 +13,14 @@ class MyApp < Serious
     def home_page?
       true if request.path_info =~ /\d{4}/ || request.path_info.start_with?('/archives') || request.path_info == '/'
     end
+
+    def page_title
+      if @title
+        "#{@title} - "
+      elsif @article
+        "#{@article.title} - "
+      end
+    end
   end
   
   get '/about/?' do
