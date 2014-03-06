@@ -2,13 +2,9 @@
   @include box-sizing(border-box);
 }
 
-html {
-  border-top: 4px solid #323232;
-}
-
 body {
   background-color: #fff;
-  color: #474747;
+  color: #343838;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Calibri, Arial, serif;
   font-size: 18px;
   line-height: 1.6;
@@ -20,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a:link, a:visited {
-	color: #DB6B59; //#BB4B39
+	color: #00A8C6; //#BB4B39 #0098c6
 	text-decoration: none;
 }
 
@@ -64,7 +60,7 @@ pre code {
 
 blockquote {
   border-left: 3px solid #dfdfdf;
-  color: #727B81; //#6D6E72;
+  color: #727B81;
   margin: 0;
   padding: 0 20px;
 }

@@ -1,6 +1,14 @@
 /* layout 
 --------------------------------------------- */
 
+/*
+.container {
+  margin: 0 auto;
+  max-width: 660px;
+  width: 90%;
+}
+*/
+
 .site-container {
   margin: 0 auto;
   max-width: 660px;
@@ -33,21 +41,22 @@
   text-align: center;
 
   a {
-    color: #828282; //#9e9e9e;
-  	padding: 5px 8px;
+    color: #999;
+  	padding: 5px 10px;
   	text-decoration: none;
   }
-  
+
   a:hover,
   .logo a:hover,
   .current a {
-    color: #DB6B59;
+    color: #424B51;
   }
   
   .logo {
+    border-bottom: 1px solid #eee;
     display: block;
-    font-size: 28px;
-    
+    font-size: 32px;
+
     a {
       color: #474747;
     }
@@ -56,9 +65,9 @@
 
 .about-me-short {
   color: #595959;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
-  margin: 70px 15px;
+  margin: 70px 25px;
   text-align: center;
 }
 
@@ -71,38 +80,24 @@
   text-align: center;
 }
 
-.github-ribbon {
-  background-image: url('https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png');
-  background-repeat: no-repeat;
-  border: none;
-  height: 149px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 149px;
-}
-
 .muted {
   color: #9EA7AE;
 }
 
 /* blog specific styles 
 --------------------------------------------- */
-.site-main-content article:first-child {
-  margin-top: 0;
-}
-
 .site-main-content article header h3 {
   font-size: 28px;
   margin-bottom: 0;
 }
 
 .site-main-content article header a,
-.site-main-content ul.archives li h3 a {
+.site-main-content ul.archives li h3 a,
+.site-main-content .recipe-title a {
   color: #424B51;
   
   &:hover {
-    color: #DB6B59;
+    color: #00A8C6;
   }
 }
 
@@ -110,10 +105,6 @@
 .site-main-content p.subscribe {
   color: #9EA7AE;
   font-size: .9em;
-}
-
-.site-main-content article h4 {
-  //font-weight: bold;
 }
 
 .site-main-content ul.archives .date {
@@ -128,7 +119,6 @@
 .site-main-content ul.archives, 
 .site-main-content ul.archives li {
   list-style: none;
-  margin-left: 0;
   padding-left: 0;
 }
 
@@ -160,7 +150,6 @@
   margin-right: 0.8em;
 }
 
-
 /* ==|== media queries ====================================================== */
 
 /* Mobile (tested: iPhone 4-5, Nexus One)
@@ -179,7 +168,8 @@
     margin: 0;
   }
 
-  .github-ribbon {
-    display: none;
+  .about-me-short {
+    font-size: 18px;
+    margin: 50px 10px;
   }
 }
