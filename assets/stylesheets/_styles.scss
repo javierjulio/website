@@ -148,7 +148,7 @@
 }
 
 .self-portrait {
-  @include border-radius(3px);
+  border-radius: 3px;
   float: left;
   margin-right: 0.8em;
 }
