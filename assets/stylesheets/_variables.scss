@@ -1,5 +1,5 @@
 $base-font-size: 18px;
-$base-line-height: 28px;
+$base-line-height: 27px; // 18 * 1.5
 $line-height-ratio: $base-line-height / $base-font-size;
 
 $base-text-color: #343838;
@@ -12,7 +12,10 @@ $heading-font-family: 'Merriweather', sans-serif;
  * Spacing (for margins and padding).
  */
 $base-spacing-unit: $base-line-height;
+$double-spacing-unit: $base-line-height * 2;
+$quadruple-spacing-unit: $base-spacing-unit * 4;
 $half-spacing-unit: $base-spacing-unit / 2;
+$quarter-spacing-unit: $base-spacing-unit / 4;
 
 
 /**

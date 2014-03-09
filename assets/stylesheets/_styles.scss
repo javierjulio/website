@@ -1,4 +1,4 @@
-/* layout 
+/* layout
 --------------------------------------------- */
 
 /*
@@ -42,7 +42,7 @@
 
   a {
     color: #999;
-  	padding: 5px 10px;
+  	padding: $quarter-spacing-unit $half-spacing-unit;
   	text-decoration: none;
   }
 
@@ -84,13 +84,13 @@
   color: #9EA7AE;
 }
 
-/* blog specific styles 
+/* blog specific styles
 --------------------------------------------- */
 .post-header {
   margin-bottom: $base-spacing-unit;
 }
 
-.post-date, 
+.post-date,
 .post-subscribe-message {
   color: #9EA7AE;
   @include font-size($h5-size);
