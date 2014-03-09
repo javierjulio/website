@@ -4,14 +4,14 @@
 
 body {
   background-color: #fff;
-  color: #343838;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Calibri, Arial, serif;
+  color: $base-text-color;
+  font-family: $base-font-family;
   font-size: ($base-font-size / 16px) * 1em;
   line-height: $line-height-ratio;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Merriweather', sans-serif;
+  font-family: $heading-font-family;
   font-weight: 700;
 }
 
@@ -37,7 +37,6 @@ pre, code {
   background-color: #f2f2f2;
   border: 1px solid #ddd;
   border-radius: 3px;
-  color: #444;
   font-family: Menlo, Consolas, Courier, monospace;
 }
 
@@ -54,7 +53,6 @@ pre {
 
 pre code {
   border: none;
-  color: #222;
   padding: 0;
   white-space: pre;
   white-space: pre-wrap;
