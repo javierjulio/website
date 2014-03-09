@@ -2,12 +2,12 @@
   <h2><%= @title %></h2>
 <% end %>
 
-<ul class="archives">
+<ul class="blog-archives">
   <% articles.each do |article| %>
-    <li>
-      <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
+    <li class="post-header">
+      <h3 class="hN"><a href="<%= article.url %>"><%= article.title %></a></h3>
       <% if article.date %>
-        <time class="date" datetime="<%= article.date.strftime("%Y-%m-%d") %>"><%= article.date.formatted %></time>
+        <time class="post-date" datetime="<%= article.date.strftime("%Y-%m-%d") %>"><%= article.date.formatted %></time>
       <% end %>
     </li>
   <% end %>

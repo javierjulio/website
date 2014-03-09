@@ -51,7 +51,7 @@
   .is-selected a {
     color: #424B51;
   }
-  
+
   .logo {
     border-bottom: 1px solid #eee;
     display: block;
@@ -86,58 +86,35 @@
 
 /* blog specific styles 
 --------------------------------------------- */
-.site-main-content {
+.post-header {
+  margin-bottom: $base-spacing-unit;
+}
 
-  article header h3 {
-    font-size: 28px;
-    margin-bottom: 0;
-  }
+.post-date, 
+.post-subscribe-message {
+  color: #9EA7AE;
+  @include font-size($h5-size);
+}
 
-  article header:first-of-type {
-    margin-bottom: $base-spacing-unit;
-  }
+.post-header a,
+.recipe-title a {
+  color: #424B51;
 
-  article header a,
-  ul.archives li h3 a,
-  .recipe-title a {
-    color: #424B51;
-
-    &:hover {
-      color: #00A8C6;
-    }
-  }
-
-  time.date, 
-  p.subscribe {
-    color: #9EA7AE;
-    @include font-size($h5-size);
-  }
-
-  ul.archives {
-    &, li {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    li {
-      margin-bottom: $base-spacing-unit;
-
-      h3 {
-        margin-bottom: 0;
-      }
-    }
-
-    .date {
-      color: #9EA7AE;
-      display: block;
-    }
+  &:hover {
+    color: #00A8C6;
   }
 }
 
-/* page specific styles 
---------------------------------------------- */
-.recipe-title {
-  margin-bottom: 0;
+.blog-archives {
+  &, li {
+    list-style: none;
+    margin-bottom: $base-spacing-unit;
+    padding-left: 0;
+  }
+
+  .post-date {
+    display: block;
+  }
 }
 
 .job-title {
@@ -154,7 +131,7 @@
 .self-portrait {
   border-radius: 3px;
   float: left;
-  margin-right: 0.8em;
+  margin: 0 $half-spacing-unit ($half-spacing-unit / 2) 0;
 }
 
 /* ==|== media queries ====================================================== */
