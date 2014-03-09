@@ -10,14 +10,14 @@
 */
 
 .site-container {
+  @include animation(fadein 0.6s 0s ease-in);
   margin: 0 auto;
-  max-width: 660px;
+  max-width: 640px;
   opacity: 1;
-  padding: 0 15px;
-  -webkit-animation: fadein 0.6s 0s ease-out; // fade in on site load
+  width: 90%;
 }
 
-@-webkit-keyframes fadein {
+@include keyframes(fadein) {
   0% {
     opacity: 0;
   }
@@ -37,7 +37,7 @@
 }
 
 .site-navigation {
-  margin: 70px 0;
+  margin: ($base-spacing-unit * 2) 0;
   text-align: center;
 
   a {
@@ -48,14 +48,14 @@
 
   a:hover,
   .logo a:hover,
-  .current a {
+  .is-selected a {
     color: #424B51;
   }
   
   .logo {
     border-bottom: 1px solid #eee;
     display: block;
-    font-size: 32px;
+    @include font-size($h2-size);
 
     a {
       color: #474747;
@@ -65,18 +65,18 @@
 
 .about-me-short {
   color: #595959;
-  font-size: 20px;
+  @include font-size($h3-size, false);
   font-weight: 400;
-  margin: 70px 25px;
+  margin: ($base-spacing-unit * 2) $base-spacing-unit;
   text-align: center;
 }
 
 .site-footer {
   border-top: 1px solid #e9e9e9;
-	color: #9EA7AE;
-	font-size: .8em;
-  margin-top: 30px;
-  padding: 20px 0;
+  color: #9EA7AE;
+  @include font-size($h5-size, false);
+  margin-top: $base-spacing-unit;
+  padding: $base-spacing-unit 0;
   text-align: center;
 }
 
@@ -93,6 +93,10 @@
     margin-bottom: 0;
   }
 
+  article header:first-of-type {
+    margin-bottom: $base-spacing-unit;
+  }
+
   article header a,
   ul.archives li h3 a,
   .recipe-title a {
@@ -106,7 +110,7 @@
   time.date, 
   p.subscribe {
     color: #9EA7AE;
-    font-size: .9em;
+    @include font-size($h5-size);
   }
 
   ul.archives {
@@ -116,7 +120,7 @@
     }
 
     li {
-      margin-bottom: 20px;
+      margin-bottom: $base-spacing-unit;
 
       h3 {
         margin-bottom: 0;
@@ -143,7 +147,7 @@
 
 .job-date {
   color: #9EA7AE;
-  font-size: .9em;
+  @include font-size($h5-size);
 	margin: 0;
 }
 
@@ -159,20 +163,9 @@
 --------------------------------------------- */
 @media all and (max-width: 480px)
 {
-  body {
-    font-size: 16px;
-  }
-
-  .site-navigation {
-    margin: 50px 0;
-  }
-
-  .site-container {
-    margin: 0;
-  }
-
   .about-me-short {
-    font-size: 18px;
-    margin: 50px 10px;
+    @include font-size($h4-size);
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }

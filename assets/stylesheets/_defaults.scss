@@ -6,8 +6,8 @@ body {
   background-color: #fff;
   color: #343838;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Calibri, Arial, serif;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: ($base-font-size / 16px) * 1em;
+  line-height: $line-height-ratio;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,6 +29,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+p {
+  margin: 0 0 $base-spacing-unit 0;
+}
+
 pre, code {
   background-color: #f2f2f2;
   border: 1px solid #ddd;
@@ -43,15 +47,14 @@ code {
 }
 
 pre {
-  line-height: 1.2;
-  margin: 0 0 18px 0;
-  padding: 10px;
+  @include font-size($base-font-size);
+  margin: 0 0 $base-spacing-unit 0;
+  padding: $half-spacing-unit;
 }
 
 pre code {
   border: none;
   color: #222;
-  font-size: 90%;
   padding: 0;
   white-space: pre;
   white-space: pre-wrap;
@@ -60,10 +63,10 @@ pre code {
 blockquote {
   border-left: 3px solid #dfdfdf;
   color: #727B81;
-  margin: 0;
-  padding: 0 20px;
+  margin: 0 0 0 2px;
+  padding: 0 $half-spacing-unit;
 }
 
 ul, ol {
-	padding-left: 25px;
+	padding-left: $base-spacing-unit;
 }
