@@ -25,9 +25,9 @@
     <nav>
       <ul class="nav">
         <li class="logo"><a href="/">Javier Julio</a></li>
-        <li<%= ' class="current"' if current_page? 'resume' %>><a href="/resume">Resume</a></li>
-        <li<%= ' class="current"' if current_page? 'recipes' %>><a href="/recipes">Recipes</a></li>
-        <li<%= ' class="current"' if current_page? 'about' %>><a href="/about">About</a></li>
+        <li<%= ' class="is-selected"' if current_page? 'resume' %>><a href="/resume">Resume</a></li>
+        <li<%= ' class="is-selected"' if current_page? 'recipes' %>><a href="/recipes">Recipes</a></li>
+        <li<%= ' class="is-selected"' if current_page? 'about' %>><a href="/about">About</a></li>
       </ul>
     </nav>
   </div>
