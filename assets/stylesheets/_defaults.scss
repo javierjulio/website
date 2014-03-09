@@ -68,5 +68,6 @@ blockquote {
 }
 
 ul, ol {
+	margin-bottom: $base-spacing-unit;
 	padding-left: $base-spacing-unit;
 }
