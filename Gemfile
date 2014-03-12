@@ -12,6 +12,6 @@ gem 'rdiscount', '~> 1.6.8'
 group :development do
   gem 'foreman'
   gem 'shotgun'
-  gem 'sass'
+  gem 'sass' # if sass-cache error occurs, specify to 3.2.15
   gem 'rb-fsevent'
 end
