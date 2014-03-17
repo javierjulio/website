@@ -67,6 +67,13 @@ class MyApp < Serious
     erb :'recipes/marinara_sauce'
   end
 
+  get '/recipes/eggplant-fritters' do
+    @title = 'Recipe for eggplant fritters'
+    @contentTitle = 'Eggplant Fritters'
+
+    erb :'recipes/eggplant_fritters'
+  end
+
   get '/recipes/paella' do
   	@title = 'Recipe for Paella'
   	@contentTitle = 'Paella'
