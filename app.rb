@@ -36,8 +36,6 @@ class MyApp < Serious
 
   get '/resume/?' do
   	@title = 'Resume'
-  	@contentTitle = 'Resume'
-
   	erb :resume
   end
 
