@@ -4,6 +4,17 @@
    ========================================================================== */
 
 @media print {
+  body {
+    background-color: #fff;
+    color: #000;
+    font-family: Georgia, serif;
+    font-size: 12pt;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+  }
+
   /* reset any structural elements */
   body, .site-container, .site-header, .site-footer {
     float: none !important;
