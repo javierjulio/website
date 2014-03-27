@@ -39,4 +39,12 @@
     color: inherit;
     text-decoration: underline;
   }
+
+  .is-print-only {
+    display: inherit !important;
+  }
+
+  h1 {
+    @include font-size($h3-size);
+  }
 }
