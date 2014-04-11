@@ -72,6 +72,13 @@ class MyApp < Serious
     erb :'recipes/eggplant_fritters'
   end
 
+  get '/recipes/broccoli-with-lemon-butter-sauce' do
+    @title = 'Recipe for Broccoli with Lemon Butter sauce'
+    @contentTitle = 'Broccoli with Lemon Butter sauce'
+
+    erb :'recipes/broccoli_with_butter_lemon_sauce'
+  end
+
   get '/recipes/paella' do
   	@title = 'Recipe for Paella'
   	@contentTitle = 'Paella'
