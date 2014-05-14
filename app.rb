@@ -192,6 +192,13 @@ class MyApp < Serious
   	erb :'recipes/meat/garlic_chicken'
   end
 
+  get '/recipes/paprika-chicken' do
+    @title = 'Recipe for Paprika Chicken'
+    @contentTitle = 'Paprika Chicken'
+
+    erb :'recipes/meat/paprika_chicken'
+  end
+
   get '/recipes/italian-hamburgers' do
   	@title = 'Recipe for Italian Hamburgers aka Javi-burgers'
   	@contentTitle = 'Italian Hamburgers aka Javi-burgers'
