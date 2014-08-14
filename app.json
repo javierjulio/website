@@ -1,12 +1,6 @@
 {
   "name": "Javier Julio",
-  "description": "",
   "website": "http://www.javier-julio.com",
   "repository": "https://github.com/javierjulio/website",
   "success_url": "/",
-  "scripts": {
-    //"postdeploy": "bundle exec rake bootstrap"
-  },
-  "env": {},
-  "addons": []
 }
