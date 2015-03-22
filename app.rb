@@ -11,7 +11,7 @@ class MyApp < Serious
     end
 
     def home_page?
-      true if request.path_info =~ /\d{4}/ || request.path_info.start_with?('/archives') || request.path_info == '/'
+      request.path_info.start_with?('/archives') || request.path_info == '/'
     end
 
     def page_title
@@ -23,7 +23,15 @@ class MyApp < Serious
     end
   end
 
+  configure do
+    set :erb, layout: :'layouts/layout'
+    enable :logging
+  end
+
   get '/about/?' do
+    @title = 'About'
+    @contentTitle = "Hi, I'm Javier."
+
   	erb :about
   end
 
@@ -36,6 +44,8 @@ class MyApp < Serious
 
   get '/resume/?' do
   	@title = 'Resume'
+  	@contentTitle = "Javier Julio's Resume"
+
   	erb :resume
   end
 
