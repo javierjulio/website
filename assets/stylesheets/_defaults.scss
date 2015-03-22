@@ -34,25 +34,25 @@ p {
 }
 
 pre, code {
-  background-color: #f2f2f2;
-  border: 1px solid #ddd;
+  background-color: rgba(0,0,0,0.04);
   border-radius: 3px;
-  font-family: Menlo, Consolas, Courier, monospace;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 code {
-  padding: 0 .3em;
+  font-size: 1rem;
+  padding: .2em .3em;
   white-space: nowrap;
 }
 
 pre {
-  @include font-size($base-font-size);
+  line-height: 1;
   margin: 0 0 $base-spacing-unit 0;
   padding: $half-spacing-unit;
 }
 
 pre code {
-  border: none;
+  background-color: transparent;
   padding: 0;
   white-space: pre;
   white-space: pre-wrap;
@@ -66,6 +66,6 @@ blockquote {
 }
 
 ul, ol {
-	margin-bottom: $base-spacing-unit;
-	padding-left: $base-spacing-unit;
+	margin: 0 0 $base-spacing-unit 0;
+	padding: 0 0 0 $base-spacing-unit;
 }
