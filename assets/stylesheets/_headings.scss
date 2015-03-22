@@ -1,32 +1,19 @@
-h1, .alpha {
-  @include font-size($h1-size);
-}
-h2, .beta {
-  @include font-size($h2-size);
-}
-h3, .gamma {
-  @include font-size($h3-size);
-}
-h4, .delta {
-  @include font-size($h4-size);
-}
-h5, .epsilon {
-  @include font-size($h5-size);
-}
-h6, .zeta {
-  @include font-size($h6-size);
-}
-
-.giga {
-  @include font-size($giga-size);
-}
-.mega {
-  @include font-size($mega-size);
-}
-.kilo {
-  @include font-size($kilo-size);
-}
+h1, .heading-1 { font-size: $h1-font-size - $h1-font-reduction; }
+h2, .heading-2 { font-size: $h2-font-size - $h2-font-reduction; }
+h3, .heading-3 { font-size: $h3-font-size - $h3-font-reduction; }
+h4, .heading-4 { font-size: $h4-font-size - $h4-font-reduction; }
+h5, .heading-5 { font-size: $h5-font-size - $h5-font-reduction; }
+h6, .heading-6 { font-size: $h6-font-size - $h6-font-reduction; }
 
 .hN {
   margin-bottom: 0;
+}
+
+@media #{$medium-up} {
+  h1 { font-size: $h1-font-size; }
+  h2 { font-size: $h2-font-size; }
+  h3 { font-size: $h3-font-size; }
+  h4 { font-size: $h4-font-size; }
+  h5 { font-size: $h5-font-size; }
+  h6 { font-size: $h6-font-size; }
 }

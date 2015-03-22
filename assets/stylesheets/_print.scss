@@ -45,6 +45,6 @@
   }
 
   h1 {
-    @include font-size($h3-size);
+    font-size: $h3-font-size;
   }
 }

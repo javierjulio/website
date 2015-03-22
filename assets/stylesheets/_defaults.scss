@@ -6,17 +6,23 @@ body {
   background-color: #fff;
   color: $base-text-color;
   font-family: $base-font-family;
-  font-size: ($base-font-size / 16px) * 1em;
-  line-height: $line-height-ratio;
+  //font-size: $base-font-size;
+  font-weight: $font-weight-light;
+  line-height: $base-line-height;
+
+  //18 * 1.4 = 25.2 - 18 = 7.2 / 10 = 0.72 - 2
+//   test: (convert-to-rem($base-font-size) * $base-line-height - (convert-to-rem($base-font-size) / 10)) - 2;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font-family;
-  font-weight: 700;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  margin-bottom: 0.3em;
 }
 
 a:link, a:visited {
-	color: #00A8C6; //#BB4B39 #0098c6
+	color: #C0392B; //#BB4B39 #0098c6
 	text-decoration: none;
 }
 
