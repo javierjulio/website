@@ -20,6 +20,6 @@ Serious.set :archived_on_index, 25
 
 Serious.set :summary_delimiter, '[END-SUMMARY]'
 
-Serious.set :date_format, '%A, %B %o %Y'
+Serious.set :date_format, '%A, %B %o, %Y'
 
 run MyApp
