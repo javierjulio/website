@@ -1,7 +1,7 @@
 <article>
-  
+
   <header class="post-header">
-    <h3 class="hN"><a href="<%= article.url %>"><%= article.title %></a></h3>
+    <h1 class="hN"><%= article.title %></h1>
     <time class="post-date" datetime="<%= article.date.strftime("%Y-%m-%d") %>"><%= article.date.formatted %></time>
   </header>
 
@@ -11,9 +11,10 @@
       <span class="read-more"><a href="<%= article.url %>">read on...</a></span>
     <% end %>
   <% else %>
+    <hr class="divider">
     <%= article.body.formatted %>
-    
-    <p class="post-subscribe-message">Enjoyed the read? <a href="http://twitter.com/javierjulio">Follow me on Twitter</a> or <a href="<%= Serious.feed_url %>">subscribe to my feed</a>.</p>
   <% end %>
-  
+
 </article>
+
+<p class="post-subscribe-message">Enjoyed the read? <a href="http://twitter.com/javierjulio">Follow me on Twitter</a> or <a href="<%= Serious.feed_url %>">subscribe to my feed</a>.</p>
