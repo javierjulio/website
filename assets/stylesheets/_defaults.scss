@@ -6,7 +6,7 @@ body {
   background-color: #fff;
   color: $base-text-color;
   font-family: $base-font-family;
-  //font-size: $base-font-size;
+  font-size: 18px;
   font-weight: $font-weight-light;
   line-height: $base-line-height;
 
@@ -72,6 +72,13 @@ blockquote {
 }
 
 ul, ol {
-	margin: 0 0 $base-spacing-unit 0;
-	padding: 0 0 0 $base-spacing-unit;
+  margin: 0 0 $base-spacing-unit 0;
+}
+
+ul {
+  padding: 0 0 0 $base-spacing-unit;
+}
+
+ol {
+  padding: 0 0 0 1.8em;
 }
