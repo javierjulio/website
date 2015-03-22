@@ -11,42 +11,50 @@
   <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
   <link rel="icon" href="/apple-touch-icon-precomposed.png" type="image/png">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,700">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:300,700|Lato:300,400,700">
   <link rel="stylesheet" href="/application.css">
   <link rel="alternate" type="application/atom+xml" title="<%= Serious.title %>" href="<%= Serious.feed_url %>" />
   <!--[if lt IE 9]>
   <script src="/assets/javascripts/html5.js"></script>
   <![endif]-->
+</head>
 <body>
 
-<div class="site-container">
+<div class="navbar">
+  <ul class="nav nav-pills">
+    <li<%= ' class="active"' if home_page? %>><a href="/">Home</a></li>
+    <li<%= ' class="active"' if current_page? 'resume' %>><a href="/resume">Resume</a></li>
+    <li<%= ' class="active"' if current_page? 'recipes' %>><a href="/recipes">Recipes</a></li>
+  </ul>
+</div>
 
-  <div class="site-navigation">
-    <nav>
-      <ul class="nav">
-        <li class="logo"><a href="/">Javier Julio</a></li>
-        <li<%= ' class="is-selected"' if current_page? 'resume' %>><a href="/resume">Resume</a></li>
-        <li<%= ' class="is-selected"' if current_page? 'recipes' %>><a href="/recipes">Recipes</a></li>
-        <li<%= ' class="is-selected"' if current_page? 'about' %>><a href="/about">About</a></li>
-      </ul>
-    </nav>
+<% if home_page? %>
+<div class="site-header">
+  <div class="content-container">
+    <h1 class="logo"><a href="/">Javier Julio</a></h1>
+    <h2>A Brooklyn based <a href="/resume">full stack software engineer</a> with an eye for design and details. Say <a href="mailto:jjfutbol@gmail.com">hello</a>.. &rarr; <a href="/about">About Me</a></h2>
   </div>
+</div>
+<% end %>
 
-  <div class="site-main-content" role="main">
+<div class="c1">
+
+  <div class="content" role="main">
     <% unless @contentTitle.nil? %>
-      <h2><%= @contentTitle %></h2>
+      <h1 style="margin: 110px 0 20px;text-align: center;"><%= @contentTitle %></h1>
+      <hr class="divider">
     <% end %>
     <%= yield %>
-  </div><!-- /content -->
+    <div class="site-footer">
+      <p>
+        &copy; 2004 - <%= Time.new.year() %> <a href="<%= Serious.url %>">Javier Julio</a>
+      </p>
+    </div>
+  </div>
 
-  <footer class="site-footer">
-    <p>
-      &copy; 2004 - <%= Time.new.year() %> <a href="<%= Serious.url %>">Javier Julio</a>
-    </p>
-  </footer>
+</div>
 
-</div><!-- /container -->
-
+<% if ENV['RACK_ENV'] == "production" %>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -56,6 +64,7 @@ var pageTracker = _gat._getTracker("UA-3924916-1");
 pageTracker._initData();
 pageTracker._trackPageview();
 </script>
+<% end %>
 
 </body>
 </html>
