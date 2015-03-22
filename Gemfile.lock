@@ -14,14 +14,10 @@ GEM
     backports (3.6.4)
     builder (3.2.2)
     coderay (1.1.0)
-    daemons (1.1.9)
-    dotenv (1.0.2)
+    daemons (1.2.2)
     erubis (2.7.0)
-    eventmachine (1.0.4)
-    foreman (0.77.0)
-      dotenv (~> 1.0.2)
-      thor (~> 0.19.1)
-    multi_json (1.10.1)
+    eventmachine (1.0.7)
+    multi_json (1.11.0)
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
@@ -30,8 +26,8 @@ GEM
     rake (10.4.2)
     rb-fsevent (0.9.4)
     rdiscount (1.6.8)
-    sass (3.4.9)
-    shotgun (0.9)
+    sass (3.4.13)
+    shotgun (0.9.1)
       rack (>= 1.0)
     sinatra (1.4.5)
       rack (~> 1.4)
@@ -51,7 +47,6 @@ GEM
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0)
       rack (~> 1.0)
-    thor (0.19.1)
     tilt (1.4.1)
 
 PLATFORMS
@@ -59,7 +54,6 @@ PLATFORMS
 
 DEPENDENCIES
   erubis
-  foreman
   rake
   rb-fsevent
   rdiscount (~> 1.6.8)
