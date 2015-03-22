@@ -1,3 +1,139 @@
+.c1 {
+//   font-size: 1.125rem; // 22px
+
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.navbar {
+  background-color: #34495E;
+//   margin-bottom: 5em;
+  padding: 0;
+}
+
+.nav {
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 700px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+
+  > li {
+    position: relative;
+    display: inline-block;
+
+    > a {
+      position: relative;
+      display: inline-block;
+      padding: 14px 15px;
+      transition: all 0.3s ease;
+//       border: 1px solid transparent;
+      color: white;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: lighten(#34495E, 8%) ; // #337ab7
+//         border: 1px solid #3498DB;
+      }
+    }
+  }
+}
+
+.nav-pills {
+  > li {
+//     float: left;
+
+    // Links rendered as pills
+    > a {
+//       border-radius: 4px;
+    }
+/*
+    + li {
+      margin-left: 2px;
+    }
+*/
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: lighten(#34495E, 8%); // #337ab7
+      }
+    }
+  }
+}
+
+.content-container {
+  margin: 0 auto;
+  max-width: 740px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.site-header {
+  background-color: #f5f4f2;
+  margin-bottom: 4em;
+  padding-bottom: 4.5em;
+  padding-top: 4.5em;
+//   text-align: center;
+
+  h1 {
+    margin-top: 0;
+
+    a {
+      color: $base-text-color;
+      padding: 0;
+    }
+  }
+
+  h2 {
+    font-size: $h4-font-size;
+    font-weight: $font-weight-light;
+    line-height: 1.3;
+  }
+
+}
+
+@media only screen and (min-width: 567px) {
+  body {
+    font-size: $base-font-size;
+  }
+
+  .c1 {
+//     font-size: 1.25rem;
+  }
+  .site-header h2 {
+//     padding: 0 3em;
+  }
+}
+
+@media only screen and (min-width: 759px) {
+  .c1 {
+//     font-size: 1.375rem;
+    max-width: 740px;
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+
+}
+
+// We use these as default colors throughout
+/*
+$primary-color: #008CBA !default;   // bondi-blue
+$secondary-color: #f8f8f8 !default; // white-lilac
+$alert-color: #f04124 !default;     // cinnabar
+$success-color: #43AC6A !default;   // sea-green
+$warning-color: #f08a24 !default;   // carrot
+$info-color: #a0d3e8 !default;      // cornflower
+*/
+
 .is-print-only {
   display: none;
 }
@@ -14,9 +150,9 @@
 */
 
 .site-container {
-  @include animation(fadein 0.6s 0s ease-in);
+  @include animation(fadein 0.4s 0s ease-in);
   margin: 0 auto;
-  max-width: 640px;
+  max-width: 700px;
   opacity: 1;
   width: 90%;
 }
@@ -31,17 +167,26 @@
   }
 }
 
-.nav {
-  list-style: none;
-  padding: 0;
-
-  li, li a {
-    display: inline-block;
-  }
+.logo {
+  font-family: $base-font-family;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
+/*
+.logo {
+  display: block;
+  font-size: $h2-font-size;
+
+  a {
+    color: $base-text-color;
+    padding: 0;
+  }
+}
+*/
+
 .site-navigation {
-  margin: ($base-spacing-unit * 2) 0;
+  margin: $double-spacing-unit 0;
   text-align: center;
 
   a {
@@ -55,57 +200,63 @@
   .is-selected a {
     color: #424B51;
   }
-
-  .logo {
-    border-bottom: 1px solid #eee;
-    display: block;
-    @include font-size($h2-size);
-
-    a {
-      color: #474747;
-    }
-  }
-}
-
-.about-me-short {
-  color: #595959;
-  @include font-size($h3-size, false);
-  font-weight: 400;
-  margin: ($base-spacing-unit * 2) $base-spacing-unit;
-  text-align: center;
 }
 
 .site-footer {
-  border-top: 1px solid #e9e9e9;
   color: #9EA7AE;
-  @include font-size($h5-size, false);
-  margin-top: $base-spacing-unit;
+  font-size: $h5-font-size;
+  margin-top: $double-spacing-unit;
   padding: $base-spacing-unit 0;
   text-align: center;
 }
 
-.muted {
-  color: #9EA7AE;
+.divider {
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  display: block;
+  margin: 41px auto 41px auto;
+  width: 120px;
 }
 
 /* blog specific styles
 --------------------------------------------- */
+.post-info {
+  margin-bottom: 2em;
+}
+
 .post-header {
-  margin-bottom: $base-spacing-unit;
+  margin: 120px auto 20px auto;
+  text-align: center;
+
+  @media only screen and (max-width: 767px) {
+    margin: 50px auto 30px auto;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .post-header + .divider {
+    display: none;
+  }
 }
 
 .post-date,
 .post-subscribe-message {
   color: #9EA7AE;
-  @include font-size($h5-size);
+  font-size: 0.85em;
+}
+
+.post-subscribe-message {
+
 }
 
 .post-header a,
+.post-info a,
 .recipe-title a {
-  color: #424B51;
+  color: $base-text-color;
 
   &:hover {
-    color: #00A8C6;
+    color: #C0392B;
   }
 }
 
@@ -122,31 +273,17 @@
 }
 
 .job-title {
-	font-weight: bold;
-	margin: 0;
+  margin-bottom: 0.2em;
 }
 
 .job-date {
   color: #9EA7AE;
-  @include font-size($h5-size);
-	margin: 0;
+  font-size: 0.85em;
+  margin: 0 0 0.8em 0;
 }
 
 .self-portrait {
   border-radius: 3px;
   float: left;
-  margin: 0 $half-spacing-unit ($half-spacing-unit / 2) 0;
-}
-
-/* ==|== media queries ====================================================== */
-
-/* Mobile (tested: iPhone 4-5, Nexus One)
---------------------------------------------- */
-@media all and (max-width: 480px)
-{
-  .about-me-short {
-    @include font-size($h4-size);
-    margin-left: 10px;
-    margin-right: 10px;
-  }
+  margin: 0 $half-spacing-unit $quarter-spacing-unit 0;
 }
