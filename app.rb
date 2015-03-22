@@ -24,7 +24,7 @@ class MyApp < Serious
   end
 
   configure do
-    set :erb, layout: :'layouts/layout'
+    set :erb, layout: :layout
     enable :logging
   end
 
