@@ -21,7 +21,7 @@
   -moz-animation: #{$str};
   -ms-animation: #{$str};
   -o-animation: #{$str};
-  animation: #{$str};      
+  animation: #{$str};
 }
 
 @mixin box-shadow($shadows) {

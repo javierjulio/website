@@ -1,6 +1,14 @@
 require 'serious'
 require 'sinatra/content_for'
 
+class Serious::Article
+
+  def url
+    @url ||= "/blog/#{permalink}/"
+  end
+
+end
+
 class MyApp < Serious
 
   helpers Sinatra::ContentFor
@@ -26,6 +34,18 @@ class MyApp < Serious
   configure do
     set :erb, layout: :layout
     enable :logging
+  end
+
+  # New article route
+  get %r{^/blog/([^\/]+)} do
+    halt 404 unless @article = Article.first(*params[:captures])
+    render_article @article
+  end
+
+  # Redirect from previous article route
+  get %r{^/\d{4}/\d{1,2}/\d{1,2}/([^\/]+)} do
+    halt 404 unless @article = Article.first(*params[:captures])
+    redirect to(@article.url)
   end
 
   get '/about/?' do
